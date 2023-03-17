@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="1082.0" stylesheets="@styles_topbarimageLibrarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.abdullah.LibrarianDashboardController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="1082.0" stylesheets="@styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.abdullah.LibrarianDashboardController">
    <center>
       <BorderPane prefHeight="476.0" prefWidth="647.0" BorderPane.alignment="CENTER">
          <top>
@@ -85,20 +85,32 @@
       </MenuBar>
    </top>
    <left>
-      <VBox prefHeight="476.0" prefWidth="194.0" style="-fx-background-color: dedede;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="623.0" prefWidth="185.0" style="-fx-background-color: dedede;" BorderPane.alignment="CENTER">
          <children>
-            <Hyperlink fx:id="Btn_AddRemoveBook" onMouseClicked="#click_InitAddRemoveBook" text="Add/Remove Book" textFill="#000001" wrapText="true" />
-            <Hyperlink fx:id="Btn_SeeMemberQueries" onMouseClicked="#click_InitSeeMemberQueries" text="See Member suggestions" textFill="#000001" wrapText="true" />
-            <Hyperlink fx:id="Btn_MembershipRenewal" onMouseClicked="#click_InitMembershipRenewal" text="Membership Renewal Requests" textFill="#000001" wrapText="true" />
-            <Hyperlink fx:id="Btn_DetailedLibraryStatusView" layoutX="20.0" layoutY="49.0" onMouseClicked="#click_InitDetailedLibraryStatusView" text="Detailed Library Status" textFill="#000001" wrapText="true" />
-            <Hyperlink fx:id="Btn_ReviewApplicationForms" layoutX="20.0" layoutY="128.0" onMouseClicked="#click_InitReviewApplicationForms" text="Review Membership Application Forms" textFill="#000001" wrapText="true" />
+            <Hyperlink fx:id="Btn_AddRemoveBook" onMouseClicked="#click_InitAddRemoveBook" text="Add/Remove Book" textFill="#000001" wrapText="true">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Hyperlink>
+            <Hyperlink fx:id="Btn_SeeMemberQueries" onMouseClicked="#click_InitSeeMemberQueries" prefWidth="187.0" style="-fx-background-color: #939393;" text="See Member suggestions" textFill="#000001" wrapText="true">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Hyperlink>
+            <Hyperlink fx:id="Btn_MembershipRenewal" onMouseClicked="#click_InitMembershipRenewal" text="Membership Renewal Requests" textFill="#000001" wrapText="true">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Hyperlink>
+            <Hyperlink fx:id="Btn_DetailedLibraryStatusView" layoutX="20.0" layoutY="49.0" onMouseClicked="#click_InitDetailedLibraryStatusView" text="Detailed Library Status" textFill="#000001" wrapText="true">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Hyperlink>
+            <Hyperlink fx:id="Btn_ReviewApplicationForms" layoutX="20.0" layoutY="128.0" onMouseClicked="#click_InitReviewApplicationForms" text="Review Membership Application Forms" textFill="#000001" wrapText="true">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Hyperlink>
          </children>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>

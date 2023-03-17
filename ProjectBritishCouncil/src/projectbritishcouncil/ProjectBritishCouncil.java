@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import projectbritishcouncil.util.SceneSwitcher;
 
 /**
  *
@@ -18,6 +19,12 @@ public class ProjectBritishCouncil extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        ///// Global function setups
+        SceneSwitcher.global_class_handle = getClass();
+        SceneSwitcher.mainstage = stage;
+        
+        
+        ///// Initializing login screen (and creating window for it)
         Parent root = FXMLLoader.load(getClass().getResource("/FXMLScenes/LogonUI.fxml"));
         
         Scene scene = new Scene(root);

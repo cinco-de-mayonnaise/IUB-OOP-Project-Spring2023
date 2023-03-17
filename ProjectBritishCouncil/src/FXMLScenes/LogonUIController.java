@@ -22,6 +22,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import projectbritishcouncil.Users.protik.LibraryMember;  // this is how you import other people's user if you need it
+import projectbritishcouncil.util.SceneSwitcher;
 
 /**
  * FXML Controller class
@@ -65,20 +66,8 @@ public class LogonUIController implements Initializable {
                 
         if (event.getSource().equals(Debug_OpenLibrarianDashboard))
         {
-            try
-            {
-                Parent root = FXMLLoader.load(getClass().getResource("/FXMLScenes/Users/abdullah/LibrarianDashboard.fxml"));
-
-                Scene scene = new Scene(root);
-                cur_stage.setScene(scene);
-                cur_stage.setResizable(true);
-                cur_stage.show();
-            }
-            catch (Throwable t)
-            {
-                t.printStackTrace();
-            }
-        
+            //SceneSwitcher.SwitchToScene(cur_stage);
+            SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/abdullah/LibrarianDashboard.fxml");
         }
         
     }

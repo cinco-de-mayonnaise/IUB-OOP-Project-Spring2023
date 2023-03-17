@@ -13,6 +13,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
+import projectbritishcouncil.util.SceneSwitcher;
 
 /**
  * FXML Controller class
@@ -47,7 +48,9 @@ public class LibrarianDashboardController implements Initializable {
     }    
 
     @FXML
-    private void click_InitAddRemoveBook(MouseEvent event) {
+    private void click_InitAddRemoveBook(MouseEvent event)
+    {
+        SceneSwitcher.CreateStagewithScene("/FXMLScenes/Users/abdullah/AddRemoveBookPhase/Librarian_AddRemBookPhase_StartScene.fxml", false);
     }
 
     @FXML

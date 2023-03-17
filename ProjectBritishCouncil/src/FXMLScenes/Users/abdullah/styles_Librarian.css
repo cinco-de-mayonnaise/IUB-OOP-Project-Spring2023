@@ -1,0 +1,24 @@
+#topbarimageLibrarian{
+    -fx-background-image: url("red.jpg");
+    -fx-background-repeat: repeat; 
+    -fx-background-position: top left;
+    -fx-background-size: auto 85%;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.1, 0, 0); 
+}
+/*//////////////////////////////////////////*/
+
+#centerWizardAnchorpaneLibrarian{
+    -fx-background-color: DEDEDE;
+}
+
+#topbarWizardHBoxLibrarian{
+    -fx-background-color: ECE9D8;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.05, -10, 0); 
+}
+
+#leftbarWizardHBoxLibrarian{
+    -fx-background-color: ECE9D8;
+    -fx-effect: dropshadow(three-pass-box, black, 30.0, 0, 0.0, 20); 
+    
+}
+
