@@ -9,7 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import projectbritishcouncil.util.SceneSwitcher;
+import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
  *
