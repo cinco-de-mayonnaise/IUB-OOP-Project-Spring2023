@@ -13,7 +13,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
-import projectbritishcouncil.util.SceneSwitcher;
+import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
  * FXML Controller class

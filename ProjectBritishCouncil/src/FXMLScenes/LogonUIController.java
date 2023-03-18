@@ -22,7 +22,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import projectbritishcouncil.Users.protik.LibraryMember;  // this is how you import other people's user if you need it
-import projectbritishcouncil.util.SceneSwitcher;
+import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
  * FXML Controller class
