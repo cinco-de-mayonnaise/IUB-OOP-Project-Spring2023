@@ -8,9 +8,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import projectbritishcouncil.common.util.SceneSwitcher;
@@ -50,13 +52,15 @@ public class LibrarianDashboardController implements Initializable {
     @FXML
     private void click_InitAddRemoveBook(MouseEvent event)
     {
-        SceneSwitcher.CreateStagewithScene("/FXMLScenes/Users/abdullah/AddRemoveBookPhase/Librarian_AddRemBookPhase_StartScene.fxml", false);
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/abdullah/AddRemoveBookPhase/Librarian_AddRemBookPhase_StartScene.fxml", false);
     }
 
     @FXML
-    private void click_InitSeeMemberQueries(MouseEvent event) {
+    private void click_InitSeeMemberQueries(MouseEvent event)
+    {
+        
     }
-
+    
     @FXML
     private void click_InitMembershipRenewal(MouseEvent event) {
     }

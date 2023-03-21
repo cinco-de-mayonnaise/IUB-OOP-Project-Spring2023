@@ -17,23 +17,17 @@ import javafx.stage.Stage;
  */
 public class SceneSwitcher
 {
-    /* holds a getClass() to the project that allows us to get URLs to FXML files easily*/
-    static public Class<?> global_class_handle; 
-    
-    /* the top level highest window/stage of this application. 
-    This may change fron login screen to a dashboard, but 
-    will always be the parent of all other created windows. 
-    If this window is closed, the application exits.*/
-    static public Stage mainstage;              
-
-
-    // Changes the window(in cur_stage) to the Scene(fxml_url) described in 
+    // Changes the window(in cur_stage) to the Scene(in fxml_url). No other properties are changed. 
     public static void switchToScene(Stage cur_stage, String fxml_url)
     {
+        CommonInstancesClass CIC = CommonInstancesClass.getInstance();
+        
+        Class <?> global_class_handle = (Class<?>) CIC.getObject("global_class_handle");
         try
         {
-            Parent root = FXMLLoader.load(global_class_handle.getResource(fxml_url));
-
+            FXMLLoader loader = new FXMLLoader(global_class_handle.getResource(fxml_url));
+            Parent root = loader.load();
+                    
             Scene scene = new Scene(root);
             cur_stage.setScene(scene);
             cur_stage.show();
@@ -44,9 +38,13 @@ public class SceneSwitcher
         }
     }
     
-    // Creates a new window with the Scene, and returns the stage associated with the window.
-    public static Stage CreateStagewithScene(String fxml_url, boolean resizable)
+    // Creates a new child window with the Scene, and returns the stage associated with the window.
+    public static Stage createStagewithScene(String fxml_url, boolean resizable)
     {
+        CommonInstancesClass CIC = CommonInstancesClass.getInstance();
+        Class <?> global_class_handle = (Class<?>) CIC.getObject("global_class_handle");
+        Stage mainstage = (Stage) CIC.getObject("main_stage");
+        
         Stage newstage = new Stage();
         try
         {
@@ -66,8 +64,12 @@ public class SceneSwitcher
         return newstage;
     }
     
-    public static Stage CreateStagewithScene(String fxml_url, boolean resizable, int width, int height)
+    public static Stage createStagewithScene(String fxml_url, boolean resizable, int width, int height)
     {
+        CommonInstancesClass CIC = CommonInstancesClass.getInstance();
+        Class <?> global_class_handle = (Class<?>) CIC.getObject("global_class_handle");
+        Stage mainstage = (Stage) CIC.getObject("main_stage");
+        
         Stage newstage = new Stage();
         try
         {
@@ -85,5 +87,24 @@ public class SceneSwitcher
         }
         
         return newstage;
+    }
+    
+    public static Parent getRootNodeFromURL(String fxml_url)
+    {
+        CommonInstancesClass CIC = CommonInstancesClass.getInstance();
+        
+        Class <?> global_class_handle = (Class<?>) CIC.getObject("global_class_handle");
+        try
+        {
+            FXMLLoader loader = new FXMLLoader(global_class_handle.getResource(fxml_url));
+            Parent root = loader.load();
+            
+            return root;
+        }
+        catch (Throwable t)
+        { 
+            t.printStackTrace();
+            return null;
+        }
     }
 }
