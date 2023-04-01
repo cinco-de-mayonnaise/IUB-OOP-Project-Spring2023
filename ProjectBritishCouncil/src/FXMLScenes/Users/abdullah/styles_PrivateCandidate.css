@@ -1,4 +1,4 @@
-#topbarimageLibrarian{
+#topbarimagePriCand{
     -fx-background-image: url("red.jpg");
     -fx-background-repeat: repeat; 
     -fx-background-position: top left;
@@ -7,22 +7,18 @@
 }
 /*//////////////////////////////////////////*/
 
-#centerWizardAnchorpaneLibrarian{
-    -fx-background-color: DEDEDE;
+#centerWizardAnchorpanePriCand{
+    -fx-background-color: #DEDEDE;
 }
 
-#topbarWizardHBoxLibrarian{
-    -fx-background-color: ECE9D8;
+#topbarWizardHBoxPriCand{
+    -fx-background-color: #fff5f0;
     -fx-effect: dropshadow(three-pass-box, black, 30, 0.05, -10, 0); 
 }
 
-#leftbarWizardHBoxLibrarian{
-    -fx-background-color: ECE9D8;
+#leftbarWizardHBoxPriCand{
+    -fx-background-color: #fff5f0;
     -fx-effect: dropshadow(three-pass-box, black, 30.0, 0, 0.0, 20); 
     
-}
-
-#topbarMemberQuerSuggLibrarian{
-    -fx-background-color: ffdbdb;
 }
 

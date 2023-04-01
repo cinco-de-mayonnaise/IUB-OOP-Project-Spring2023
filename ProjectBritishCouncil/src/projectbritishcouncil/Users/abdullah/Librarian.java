@@ -4,10 +4,17 @@
  */
 package projectbritishcouncil.Users.abdullah;
 
+import java.util.Date;
+import projectbritishcouncil.common.BasicUser;
+
 /**
  *
  * @author Abdullah
  */
-public class Librarian {
+public class Librarian extends BasicUser
+{
+    public Librarian(String Email, String Password, Date DOJ, Date DOB) {
+        super(Email, Password, DOJ, DOB);
+    }
     
 }

@@ -11,16 +11,18 @@ import java.util.Date;
  * @author Abdullah
  */
 // All users of British council have the following things in common. Ensure to inherit from this
-abstract class BasicUser
+public abstract class BasicUser
 {
     final protected String Email;
     protected String Password;
     final protected Date DOJ;
+    final protected Date DOB;
 
-    public BasicUser(String Email, String Password, Date DOJ) {
+    public BasicUser(String Email, String Password, Date DOJ, Date DOB) {
         this.Email = Email;
         this.Password = Password;
         this.DOJ = DOJ;
+        this.DOB = DOB;
     }
     
     public String getEmail() {
@@ -39,4 +41,8 @@ abstract class BasicUser
         return DOJ;
     }
 
+    public Date getDOB() {
+        return DOB;
+    }
+    
 }

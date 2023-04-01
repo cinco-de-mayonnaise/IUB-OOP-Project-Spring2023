@@ -4,7 +4,6 @@
  */
 package projectbritishcouncil.common;
 
-import java.io.IOException;
 import javafx.scene.image.Image;
 
 /**

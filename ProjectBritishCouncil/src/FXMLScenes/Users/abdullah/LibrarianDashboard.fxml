@@ -58,6 +58,11 @@
                               <Font name="System Bold" size="28.0" />
                            </font>
                         </Text>
+                        <Text layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="       ... if you see this outside Debug, it's a bug!" wrappingWidth="380.908203125">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
                      </children>
                   </TextFlow>
                </children>

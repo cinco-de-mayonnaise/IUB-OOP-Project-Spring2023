@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="584.0" maxWidth="843.0" minHeight="553.0" minWidth="794.0" prefHeight="584.0" prefWidth="843.0" stylesheets="@../styles_PrivateCandidate.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <StackPane alignment="BOTTOM_LEFT" prefHeight="98.0" prefWidth="733.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="topbarWizardHBoxPriCand" alignment="CENTER_LEFT" prefHeight="98.0" prefWidth="762.0">
+               <children>
+                  <Label text="Exam registration">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" right="25.0" top="25.0" />
+               </padding>
+            </HBox>
+            <Line endX="782.0" endY="90.0" startX="-9.0" startY="90.0" strokeWidth="3.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="#ff2424e0" offset="0.2581699346405229" />
+                        <Stop color="#ff4d4dd3" offset="0.500355214549588" />
+                        <Stop color="#ff8787b4" offset="0.7156862745098038" />
+                        <Stop color="#ffcfcf60" offset="0.860471724921853" />
+                        <Stop color="#ffffff02" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+         </children>
+      </StackPane>
+   </top>
+   <left>
+      <HBox fx:id="leftbarWizardHBoxPriCand" prefHeight="392.0" prefWidth="122.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <StackPane alignment="TOP_LEFT" prefHeight="61.0" prefWidth="652.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="815.0" spacing="30.0" style="-fx-background-color: e6e6e6;">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Button fx:id="Btn_Close" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Close" />
+                  <Button fx:id="Btn_Next" layoutX="666.0" layoutY="25.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Next" />
+               </children>
+            </HBox>
+            <Line endX="792.0" endY="492.0" startX="1.0" startY="492.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="TRANSPARENT" />
+                        <Stop color="TRANSPARENT" offset="0.007662835249042145" />
+                        <Stop color="BLACK" offset="0.11877394636015322" />
+                        <Stop color="BLACK" offset="0.8965517241379307" />
+                        <Stop color="TRANSPARENT" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke></Line>
+         </children>
+      </StackPane>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Welcome!">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label text="Here you can register for your IGCSE/IAL examinations. Before continuing, please ensure you have the relevant information required to register." wrapText="true" />
+            <Label layoutX="60.0" layoutY="118.0" text="You are registering for the May 2023 session." wrapText="true" />
+            <Label layoutX="60.0" layoutY="155.0" text="To continue, click Next." wrapText="true" />
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

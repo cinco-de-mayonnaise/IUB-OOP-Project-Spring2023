@@ -14,7 +14,7 @@ import javafx.scene.image.Image;
 // ALL PICTURES/IMAGES USED IN THIS PROJECT MUST USE THIS CLASS
 public class DataImage extends ResourceImage
 {
-    protected String description;
+    protected String description = "None";
     
     public DataImage(String url) {
         super(url);

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minWidth="-Infinity" prefHeight="615.0" prefWidth="995.0" stylesheets="@../styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane prefHeight="541.0" prefWidth="785.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="360.0" minHeight="10.0" prefHeight="360.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="175.0" minHeight="3.0" prefHeight="3.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="2">
+              <columns>
+                <TableColumn prefWidth="129.0" text="Time" />
+                <TableColumn prefWidth="100.0" text="Query Type" />
+                  <TableColumn prefWidth="452.0" text="Subject" />
+                  <TableColumn prefWidth="158.0" text="User" />
+                  <TableColumn prefWidth="96.0" text="Resolved" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="30.0" right="30.0" top="30.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <StackPane alignment="BOTTOM_LEFT" prefHeight="74.0" prefWidth="995.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="topbarMemberQuerSuggLibrarian" alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="74.0" prefWidth="868.0">
+               <children>
+                  <Label text="Library Member Queries and Suggestions">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <Line endX="894.2929077148438" startX="-100.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="BLACK" offset="0.6862745098039216" />
+                        <Stop color="#000000b1" offset="0.7810457516339869" />
+                        <Stop color="#00000071" offset="0.8725490196078431" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Line>
+         </children>
+      </StackPane>
+   </top>
+</BorderPane>
