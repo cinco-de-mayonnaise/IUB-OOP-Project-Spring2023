@@ -27,7 +27,7 @@ public class SceneSwitcher
         {
             FXMLLoader loader = new FXMLLoader(global_class_handle.getResource(fxml_url));
             Parent root = loader.load();
-                    
+            
             Scene scene = new Scene(root);
             cur_stage.setScene(scene);
             cur_stage.show();
@@ -35,6 +35,10 @@ public class SceneSwitcher
         catch (Throwable t)
         { 
             t.printStackTrace();
+            if (global_class_handle.getResource(fxml_url) == null)
+            {
+                System.out.println("\n-----getResource failed! Ensure fxml_url is correct...\nfxml_url: " + fxml_url + "\n");
+            }
         }
     }
     
@@ -49,7 +53,7 @@ public class SceneSwitcher
         try
         {
             Parent root = FXMLLoader.load(global_class_handle.getResource(fxml_url));
-
+            
             Scene scene = new Scene(root);
             newstage.setScene(scene);
             newstage.setResizable(resizable);
@@ -59,6 +63,10 @@ public class SceneSwitcher
         catch (Throwable t)
         { 
             t.printStackTrace();
+            if (global_class_handle.getResource(fxml_url) == null)
+            {
+                System.out.println("\n-----getResource failed! Ensure fxml_url is correct...\nfxml_url: " + fxml_url + "\n");
+            }
         }
         
         return newstage;
@@ -84,6 +92,10 @@ public class SceneSwitcher
         catch (Throwable t)
         { 
             t.printStackTrace();
+            if (global_class_handle.getResource(fxml_url) == null)
+            {
+                System.out.println("\n-----getResource failed! Ensure fxml_url is correct...\nfxml_url: " + fxml_url + "\n");
+            }
         }
         
         return newstage;
@@ -96,14 +108,17 @@ public class SceneSwitcher
         Class <?> global_class_handle = (Class<?>) CIC.getObject("global_class_handle");
         try
         {
-            FXMLLoader loader = new FXMLLoader(global_class_handle.getResource(fxml_url));
-            Parent root = loader.load();
+            Parent root = FXMLLoader.load(global_class_handle.getResource(fxml_url));
             
             return root;
         }
         catch (Throwable t)
         { 
             t.printStackTrace();
+            if (global_class_handle.getResource(fxml_url) == null)
+            {
+                System.out.println("\n-----getResource failed! Ensure fxml_url is correct...\nfxml_url: " + fxml_url + "\n");
+            }
             return null;
         }
     }

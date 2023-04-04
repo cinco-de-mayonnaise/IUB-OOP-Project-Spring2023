@@ -6,11 +6,9 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -18,7 +16,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="1082.0" stylesheets="@styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.abdullah.LibrarianDashboardController">
    <center>
-      <BorderPane prefHeight="476.0" prefWidth="647.0" BorderPane.alignment="CENTER">
+      <BorderPane fx:id="LibrarianDashboard_BorderPane" prefHeight="476.0" prefWidth="647.0" BorderPane.alignment="CENTER">
          <top>
             <HBox fx:id="topbarimageLibrarian" alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="888.0" BorderPane.alignment="CENTER">
                <children>
@@ -32,21 +30,9 @@
                </padding></HBox>
          </top>
          <center>
-            <GridPane BorderPane.alignment="CENTER">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextFlow maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="296.0" GridPane.columnSpan="2">
+                  <TextFlow layoutX="48.0" layoutY="36.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="793.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, ">
                            <font>
@@ -66,10 +52,7 @@
                      </children>
                   </TextFlow>
                </children>
-               <padding>
-                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
-               </padding>
-            </GridPane>
+            </AnchorPane>
          </center>
       </BorderPane>
    </center>
