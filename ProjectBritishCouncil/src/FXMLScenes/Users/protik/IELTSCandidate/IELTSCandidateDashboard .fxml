@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: fade;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.protik.IELTSCandidate.IELTSCandidateDashboardController">
+   <children>
+      <Label layoutX="180.0" layoutY="8.0" prefHeight="33.0" prefWidth="223.0" text="hello">
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="52.0" prefHeight="228.0" prefWidth="142.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#registerforIELTSonClick" prefHeight="50.0" prefWidth="142.0" text="Register for IELTS" />
+            <Button mnemonicParsing="false" onAction="#cancelRegistrationonClick" prefHeight="49.0" prefWidth="143.0" text="Cancel Registration" />
+            <Button mnemonicParsing="false" onAction="#makePaymentonClick" prefHeight="48.0" prefWidth="152.0" text="Make Payment" />
+            <Button mnemonicParsing="false" onAction="#ieltsCertificateonClick" prefHeight="46.0" prefWidth="150.0" text="IELTS Certificate" />
+            <Button mnemonicParsing="false" onAction="#IeltsResourcesOnClick" prefHeight="49.0" prefWidth="142.0" text="IELTS Resources" />
+         </children>
+      </VBox>
+      <Button fx:id="logoutfxId" layoutX="479.0" layoutY="325.0" mnemonicParsing="false" onAction="#logOutButtonOnClick" text="Logout" />
+   </children>
+</AnchorPane>
