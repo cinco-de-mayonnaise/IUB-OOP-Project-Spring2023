@@ -9,8 +9,6 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 
@@ -19,37 +17,25 @@ import javafx.scene.layout.HBox;
  *
  * @author Abdullah
  */
-public class Librarian_AddRemBookPhase_StartSceneController implements Initializable {
+public class Librarian_AddRemBookPhase_ModifyCountController implements Initializable {
 
-    @FXML
-    private Button Btn_Close;
-    @FXML
-    private Button Btn_Next;
-    @FXML
-    private RadioButton RB_AddBook;
-    @FXML
-    private RadioButton RB_RemoveBook;
-    @FXML
-    private RadioButton RB_ModifyCount;
-
-    private ToggleGroup TG_RB;
     @FXML
     private HBox topbarWizardHBoxLibrarian;
     @FXML
     private HBox leftbarWizardHBoxLibrarian;
     @FXML
+    private Button Btn_Close;
+    @FXML
+    private Button Btn_Next;
+    @FXML
     private AnchorPane centerWizardAnchorpaneLibrarian;
+
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb)
-    {
-        TG_RB = new ToggleGroup();
-        
-        TG_RB.getToggles().add(RB_AddBook);
-        TG_RB.getToggles().add(RB_RemoveBook);
-        TG_RB.getToggles().add(RB_ModifyCount);
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
     }    
     
 }

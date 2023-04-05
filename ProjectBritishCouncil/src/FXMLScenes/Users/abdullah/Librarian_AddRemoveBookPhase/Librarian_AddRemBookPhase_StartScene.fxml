@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="553.0" maxWidth="794.0" minHeight="553.0" minWidth="794.0" prefHeight="553.0" prefWidth="794.0" stylesheets="@../styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="553.0" maxWidth="794.0" minHeight="553.0" minWidth="794.0" prefHeight="553.0" prefWidth="794.0" stylesheets="@../styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.abdullah.Librarian_AddRemoveBookPhase.Librarian_AddRemBookPhase_StartSceneController">
    <center>
       <AnchorPane fx:id="centerWizardAnchorpaneLibrarian" prefHeight="367.0" prefWidth="655.0" BorderPane.alignment="CENTER">
          <children>

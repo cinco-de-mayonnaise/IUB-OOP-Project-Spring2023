@@ -69,6 +69,7 @@ public class LogonUIController implements Initializable {
         if (event.getSource().equals(Debug_OpenLibrarianDashboard))
         {
             //SceneSwitcher.SwitchToScene(cur_stage);
+            cur_stage.setResizable(true);
             SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/abdullah/LibrarianDashboard.fxml");
         }
         
