@@ -1,27 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="FXMLScenes.Users.protik.IELTSCandidate.IELTSRegistrationSceneController">
+<AnchorPane id="AnchorPane" prefHeight="687.0" prefWidth="902.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.protik.IELTSCandidate.IELTSRegistrationSceneController">
    <children>
-      <Label layoutX="40.0" layoutY="57.0" text="Your Name" />
-      <Label layoutX="40.0" layoutY="92.0" text="Mothers Name" />
-      <Label layoutX="40.0" layoutY="124.0" text="Fathers Name" />
-      <Label layoutX="40.0" layoutY="158.0" text="Passport No" />
-      <Label layoutX="40.0" layoutY="193.0" text="Contact No" />
-      <Label layoutX="40.0" layoutY="226.0" text="Gender" />
-      <TextField fx:id="namefxid" layoutX="131.0" layoutY="53.0" />
-      <TextField fx:id="mothersnamefxid" layoutX="131.0" layoutY="88.0" />
-      <TextField fx:id="passportnofxid" layoutX="131.0" layoutY="154.0" />
-      <TextField fx:id="fathersnamefxid" layoutX="131.0" layoutY="120.0" />
-      <TextField fx:id="contactnofxid" layoutX="131.0" layoutY="189.0" />
-      <RadioButton fx:id="maleradiofxid" layoutX="131.0" layoutY="226.0" mnemonicParsing="false" text="Male" />
-      <RadioButton fx:id="femaleradiofxid" layoutX="194.0" layoutY="226.0" mnemonicParsing="false" text="Female" />
-      <Button layoutX="497.0" layoutY="332.0" mnemonicParsing="false" onAction="#goBackbuttonOnClick" text="Back" />
+      <Label layoutX="538.0" layoutY="56.0" text="Your Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="538.0" layoutY="104.0" text="Mothers Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="541.0" layoutY="145.0" text="Fathers Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="545.0" layoutY="186.0" prefHeight="26.0" prefWidth="69.0" text="Passport No">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="541.0" layoutY="243.0" text="Contact No">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="552.0" layoutY="287.0" text="Gender">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="namefxid" layoutX="660.0" layoutY="48.0" prefHeight="34.0" prefWidth="180.0" />
+      <TextField fx:id="mothersnamefxid" layoutX="660.0" layoutY="91.0" prefHeight="34.0" prefWidth="180.0" />
+      <TextField fx:id="passportnofxid" layoutX="660.0" layoutY="179.0" prefHeight="34.0" prefWidth="180.0" />
+      <TextField fx:id="fathersnamefxid" layoutX="660.0" layoutY="136.0" prefHeight="34.0" prefWidth="180.0" />
+      <TextField fx:id="contactnofxid" layoutX="660.0" layoutY="226.0" prefHeight="34.0" prefWidth="180.0" />
+      <RadioButton fx:id="maleradiofxid" layoutX="681.0" layoutY="287.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="femaleradiofxid" layoutX="750.0" layoutY="287.0" mnemonicParsing="false" text="Female" />
+      <Button layoutX="802.0" layoutY="614.0" mnemonicParsing="false" onAction="#goBackbuttonOnClick" text="Back" />
+      <Label layoutX="61.0" layoutY="56.0" text="Start By Scelecting Country">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="127.0" text="Test Type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="127.0" text="Disability Requirements">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="56.0" text="City">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="262.0" layoutY="78.0" prefWidth="150.0" />
+      <ComboBox layoutX="57.0" layoutY="78.0" prefWidth="150.0" />
+      <ComboBox layoutX="57.0" layoutY="150.0" prefWidth="150.0" />
+      <ComboBox layoutX="262.0" layoutY="150.0" prefWidth="150.0" />
+      <Label layoutX="61.0" layoutY="204.0" text="Choose Venue">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="57.0" layoutY="230.0" prefWidth="150.0" />
+      <Label layoutX="262.0" layoutY="204.0" text="Choose Date and Time">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="262.0" layoutY="230.0" prefWidth="150.0" />
+      <Button layoutX="259.0" layoutY="355.0" mnemonicParsing="false" onAction="#RegisterbuttonOnClick" prefHeight="34.0" prefWidth="206.0" text="Register">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

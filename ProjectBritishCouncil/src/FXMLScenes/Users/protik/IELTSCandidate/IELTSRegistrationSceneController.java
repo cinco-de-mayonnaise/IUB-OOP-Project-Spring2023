@@ -10,8 +10,10 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
@@ -48,7 +50,12 @@ public class IELTSRegistrationSceneController implements Initializable {
 
     @FXML
     private void goBackbuttonOnClick(ActionEvent event) {
-        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/IELTSCandidateDashboard.fxml", false);
+    Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    stage.close();
+    }
+
+    @FXML
+    private void RegisterbuttonOnClick(ActionEvent event) {
     }
     
 }
