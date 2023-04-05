@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="798.0" type="BorderPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.AdminDashboardSceneController">
    <left>
       <VBox prefHeight="400.0" prefWidth="111.0" style="-fx-background-color: #14242B; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" BorderPane.alignment="CENTER">
          <children>
@@ -40,4 +40,4 @@
          </children>
       </AnchorPane>
    </center>
-</BorderPane>
+</fx:root>
