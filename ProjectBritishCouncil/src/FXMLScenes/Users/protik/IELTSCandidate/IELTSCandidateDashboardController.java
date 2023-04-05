@@ -34,10 +34,12 @@ public class IELTSCandidateDashboardController implements Initializable {
 
     @FXML
     private void registerforIELTSonClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/IELTSRegistrationScene.fxml", false);
     }
 
     @FXML
     private void cancelRegistrationonClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/CancelRegistration.fxml", false);
     }
 
     @FXML
@@ -54,6 +56,7 @@ public class IELTSCandidateDashboardController implements Initializable {
 
     @FXML
     private void logOutButtonOnClick(ActionEvent event) {
+    SceneSwitcher.createStagewithScene("/FXMLScenes/LogonUI.fxml", false);
 
     }
 }
