@@ -30,7 +30,7 @@
                </padding></HBox>
          </top>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="BlankLibrarianDashboardCenter" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
                   <TextFlow layoutX="48.0" layoutY="36.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="793.0">
                      <children>

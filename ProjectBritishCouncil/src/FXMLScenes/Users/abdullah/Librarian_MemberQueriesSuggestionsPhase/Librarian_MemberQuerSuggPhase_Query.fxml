@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="890.0" maxWidth="794.0" minHeight="553.0" minWidth="794.0" prefHeight="806.0" prefWidth="794.0" stylesheets="@../styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="890.0" maxWidth="794.0" minHeight="553.0" minWidth="794.0" prefHeight="806.0" prefWidth="794.0" stylesheets="@../styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.abdullah.Librarian_MemberQueriesSuggestionsPhase.Librarian_MemberQuerSuggPhase_QueryController">
    <top>
       <StackPane alignment="BOTTOM_LEFT" prefHeight="98.0" prefWidth="733.0" BorderPane.alignment="CENTER">
          <children>
@@ -58,7 +58,7 @@
                <children>
                   <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" text="Unresolved" />
                   <Button layoutX="666.0" layoutY="25.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="118.0" text="Resolved" />
-                  <Button fx:id="Btn_Close" layoutX="572.0" layoutY="25.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Close" />
+                  <Button fx:id="Btn_Close" layoutX="572.0" layoutY="25.0" mnemonicParsing="false" onAction="#click_Close" prefHeight="31.0" prefWidth="96.0" text="Close" />
                </children>
             </HBox>
             <Line endX="792.0" endY="492.0" startX="1.0" startY="492.0">
