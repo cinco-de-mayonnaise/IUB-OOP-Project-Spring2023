@@ -47,18 +47,6 @@ public class LibrarianDashboardController implements Initializable {
     
     private int dashboard_state = 0;
     
-    enum dashboard_states
-    {
-        MEMBERQUERSUGGPHASE (1),
-        s (2);
-        
-        private final int mass;
-                
-        dashboard_states(int a)
-        {
-            this.mass = a;
-        }
-    };
     
     
     
@@ -67,7 +55,7 @@ public class LibrarianDashboardController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        MemberQuerSuggPhase = false;
+        
     }    
 
     @FXML
@@ -80,18 +68,7 @@ public class LibrarianDashboardController implements Initializable {
     @FXML
     private void click_InitSeeMemberQueries(MouseEvent event)
     {
-        // load node into center region of borderpane!!
-        if (MemberQuerSuggPhase)
-        {
-            LibrarianDashboard_BorderPane.setCenter(BlankLibrarianDashboardCenter);
-            MemberQuerSuggPhase = false;
-        }
-        else
-        {
-            LibrarianDashboard_BorderPane.setCenter(SceneSwitcher.getRootNodeFromURL("/FXMLScenes/Users/abdullah/Librarian_MemberQueriesSuggestionsPhase/Librarian_MemberQuerSuggPhase_Main__frame.fxml"));
-            MemberQuerSuggPhase = true;
-        }
-            
+
     }
     
     @FXML

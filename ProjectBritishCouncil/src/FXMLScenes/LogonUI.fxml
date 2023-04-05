@@ -25,6 +25,7 @@
                     <items>
                         <MenuItem fx:id="Debug_OpenIELTSCandidateDashboard" mnemonicParsing="false" onAction="#Debug_OpenIELTSCandidateDashboard" text="IELTSCandidateDashboard" />
                       <MenuItem fx:id="Debug_OpenLibrarianDashboard" mnemonicParsing="false" onAction="#Debug_OpenDashboard" text="LibrarianDashboard" />
+                        <MenuItem fx:id="Debug_OpenAdminDashboard" mnemonicParsing="false" onAction="#Debug_OpenAdminDashboard" text="AdminDashboard" />
                     </items>
                   </Menu>
                </items>
