@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package FXMLScenes.Users.protik.IELTSCandidate;
 
 import java.net.URL;
@@ -10,6 +5,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import projectbritishcouncil.common.util.SceneSwitcher;
@@ -34,10 +30,16 @@ public class IELTSCandidateDashboardController implements Initializable {
 
     @FXML
     private void registerforIELTSonClick(ActionEvent event) {
+
+    SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/IELTSRegistrationScene.fxml", false);
+
+    //SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(), "/FXMLScenes/Users/protik/IELTSCandidate/IELTSRegistrationScene.fxml");
+
     }
 
     @FXML
     private void cancelRegistrationonClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/CancelRegistration.fxml", false);
     }
 
     @FXML
@@ -54,6 +56,9 @@ public class IELTSCandidateDashboardController implements Initializable {
 
     @FXML
     private void logOutButtonOnClick(ActionEvent event) {
+
+    //SceneSwitcher.createStagewithScene("/FXMLScenes/LogonUI.fxml", false);
+    SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(), "/FXMLScenes/LogonUI.fxml");
 
     }
 }

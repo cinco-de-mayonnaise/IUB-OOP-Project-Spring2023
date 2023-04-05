@@ -79,6 +79,7 @@ public class LogonUIController implements Initializable {
 private void Debug_OpenIELTSCandidateDashboard(ActionEvent event){
     Stage cur_stage = (Stage) Btn_Login.getScene().getWindow();
     if (event.getSource().equals(Debug_OpenIELTSCandidateDashboard)){
+        cur_stage.setResizable(true);
         SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/protik/IELTSCandidate/IELTSCandidateDashboard .fxml");
     } 
 }}

@@ -8,7 +8,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.input.MouseEvent;
@@ -16,7 +15,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
@@ -44,10 +42,25 @@ public class LibrarianDashboardController implements Initializable {
     private Text Text_LibrarianNameInDashboard;
     @FXML
     private BorderPane LibrarianDashboard_BorderPane;
-    
-    private Boolean MemberQuerSuggPhase;
     @FXML
     private AnchorPane BlankLibrarianDashboardCenter;
+    
+    private int dashboard_state = 0;
+    
+    enum dashboard_states
+    {
+        MEMBERQUERSUGGPHASE (1),
+        s (2);
+        
+        private final int mass;
+                
+        dashboard_states(int a)
+        {
+            this.mass = a;
+        }
+    };
+    
+    
     
     /**
      * Initializes the controller class.
@@ -86,11 +99,15 @@ public class LibrarianDashboardController implements Initializable {
     }
 
     @FXML
-    private void click_InitDetailedLibraryStatusView(MouseEvent event) {
+    private void click_InitDetailedLibraryStatusView(MouseEvent event)
+    {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/abdullah/Librarian_BorrowersListPhase/Librarian_BorrowersListPhase_Main.fxml", true);
     }
 
     @FXML
-    private void click_InitReviewApplicationForms(MouseEvent event) {
+    private void click_InitReviewApplicationForms(MouseEvent event)
+    {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
     
 }

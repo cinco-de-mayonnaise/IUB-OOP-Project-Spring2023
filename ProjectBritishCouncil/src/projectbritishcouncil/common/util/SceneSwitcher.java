@@ -11,6 +11,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 /**
@@ -128,5 +130,13 @@ public class SceneSwitcher
     public static Stage getStageFromEvent(Event event)
     {
         return (Stage)((Node)event.getSource()).getScene().getWindow();
+    }
+    
+    public static void raiseAlert_NotImplemented()
+    {
+        Alert win = new Alert(AlertType.WARNING);
+        win.setContentText("This feature has not been implemented yet.");
+    
+        win.showAndWait();
     }
 }
