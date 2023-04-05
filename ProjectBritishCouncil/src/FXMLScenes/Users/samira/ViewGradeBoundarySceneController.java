@@ -41,9 +41,9 @@ public class ViewGradeBoundarySceneController implements Initializable {
     @FXML
     private TableColumn<GradeBoundary, String> yearColumn;
     @FXML
-    private ComboBox<?> yearComboBox;
+    private ComboBox<String> yearComboBox;
     @FXML
-    private ComboBox<?> monthComboBox;
+    private ComboBox<String> monthComboBox;
     @FXML
     private Hyperlink hyperlink;
     @FXML
@@ -96,13 +96,13 @@ public class ViewGradeBoundarySceneController implements Initializable {
          stage.close();
     }
 
-   /* @FXML
+   @FXML
     private void hyperlink(ActionEvent event) throws IOException {
         Desktop desktop = Desktop.getDesktop();
         desktop.browse(java.net.URI.create("https://www.google.com/search?q=igcse+2017+mark+schemes&rlz=1C1BNSD_enBD1030BD1030&oq=igcse+2017+mark+schemes&aqs=chrome..69i57j0i22i30l2j0i390i650l2.11687j0j15&sourceid=chrome&ie=UTF-8"));
     }
 
-    @FXML
+   /* @FXML
     private void hyperlink2(ActionEvent event) {
         Desktop desktop = Desktop.getDesktop();
         desktop.browse(java.net.URI.create("https://www.google.com/search?q=igcse+june+2017+mark+schemes&rlz=1C1BNSD_enBD1030BD1030&sxsrf=APwXEdeSGrM75pNYOHCYAmoTn_5s-zF8lw%3A1680730818396&ei=wuotZID0F7C74-EP7oGfkAo&ved=0ahUKEwiA3ZKb2pP-AhWw3TgGHe7AB6IQ4dUDCA8&uact=5&oq=igcse+june+2017+mark+schemes&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEMgUIABCiBDoKCAAQRxDWBBCwAzoGCAAQBxAeOgUIABCABDoICAAQBRAHEB46BggAEAUQHjoICAAQigUQhgM6CAghEKABEMMESgQIQRgAUNIrWMVcYPZraAFwAHgAgAHXAYgB6QqSAQU4LjQuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"));
