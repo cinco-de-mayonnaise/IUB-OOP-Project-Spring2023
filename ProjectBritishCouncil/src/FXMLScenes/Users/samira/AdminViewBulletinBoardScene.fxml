@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="111.0" style="-fx-background-color: #14242B; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goHomeButtonOnClick" prefHeight="46.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="#eeebeb">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="menuComboBox" layoutX="10.0" layoutY="49.0" prefHeight="43.0" prefWidth="111.0" promptText="Menu" style="-fx-background-color: #5f5f5f; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <ComboBox fx:id="SettingsComboBox" layoutX="10.0" layoutY="56.0" prefHeight="43.0" prefWidth="111.0" promptText="Settings" style="-fx-background-color: #5f5f5f; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="anchorPane" prefHeight="415.0" prefWidth="489.0" style="-fx-background-color: #0D1824; -fx-border-width: 0px 0px 2px 0px;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="74.0" layoutY="87.0" prefHeight="17.0" prefWidth="153.0" textFill="#f8f6f6">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="noticeTextArea" layoutX="122.0" layoutY="87.0" prefHeight="179.0" prefWidth="505.0" />
+            <Label layoutX="54.0" layoutY="61.0" prefHeight="26.0" prefWidth="193.0" text="Write Notice:" textFill="#f2f0f0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="allUserRB" layoutX="79.0" layoutY="316.0" mnemonicParsing="false" text="All Users" textFill="#eeeaea" />
+            <RadioButton fx:id="specificUserRB" layoutX="204.0" layoutY="316.0" mnemonicParsing="false" text="Specific Users" textFill="#f5f4f4" />
+            <ComboBox fx:id="specifyUsersComboBox" layoutX="356.0" layoutY="312.0" prefHeight="25.0" prefWidth="224.0" promptText="Specify Users" />
+            <Button layoutY="1.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="12.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 2px 2px 0px;" text="Back" textFill="#eeebeb" />
+            <Button layoutX="309.0" layoutY="373.0" mnemonicParsing="false" onAction="#postButtonOnClick" prefHeight="27.0" prefWidth="106.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px px 2px 1px;" text="Post" textFill="#eeebeb" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
