@@ -1,11 +1,15 @@
 **/nbproject/private/
 **/nbproject/Makefile-*.mk
 **/nbproject/Package-*.bash
-/ProjectBritishCouncil/build/
-/ProjectBritishCouncil/nbbuild/
-/ProjectBritishCouncil/dist/
-/ProjectBritishCouncil/nbdist/
-/ProjectBritishCouncil/.nb-gradle/
-/ProjectBritishCouncil/nbproject/*
-!/ProjectBritishCouncil/nbproject/project.properties
-!/ProjectBritishCouncil/nbproject/project.xml
+ProjectBritishCouncil/build/
+ProjectBritishCouncil/nbbuild/
+ProjectBritishCouncil/dist/
+ProjectBritishCouncil/nbdist/
+ProjectBritishCouncil/.nb-gradle/
+
+# don't update this folder
+ProjectBritishCouncil/nbproject/*
+
+# but do update these two files in that folder
+!ProjectBritishCouncil/nbproject/project.properties
+!ProjectBritishCouncil/nbproject/project.xml
