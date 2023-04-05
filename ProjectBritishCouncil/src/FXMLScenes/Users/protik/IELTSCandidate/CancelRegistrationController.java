@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
  * FXML Controller class
@@ -32,6 +33,7 @@ public class CancelRegistrationController implements Initializable {
 
     @FXML
     private void NoButtonOnClick(ActionEvent event) {
+    SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/IELTSCandidateDashboard", false);
     }
     
 }
