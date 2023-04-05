@@ -6,3 +6,6 @@ ProjectBritishCouncil/nbbuild/
 ProjectBritishCouncil/dist/
 ProjectBritishCouncil/nbdist/
 ProjectBritishCouncil/.nb-gradle/
+ProjectBritishCouncil/nbproject/*
+!ProjectBritishCouncil/nbproject/project.properties
+!ProjectBritishCouncil/nbproject/project.xml
