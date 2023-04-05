@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.sopen.Instructor.StudentRegistrationAndResultController">
+   <children>
+      <BorderPane prefHeight="503.0" prefWidth="750.0">
+         <left>
+            <HBox prefHeight="365.0" prefWidth="90.0" style="-fx-background-color: CFF2B7;" BorderPane.alignment="CENTER" />
+         </left>
+         <top>
+            <HBox prefHeight="73.0" prefWidth="700.0" style="-fx-background-color: A6ED8D;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="74.0" prefWidth="238.0" text="  Registration">
+                     <font>
+                        <Font name="Calibri Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="63.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="63.0" prefWidth="754.0">
+                     <children>
+                        <Button layoutX="642.0" layoutY="7.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="98.0" style="-fx-background-color: transparent; -fx-border-color: #74C454; -fx-border-width: 1px 1px 3px 1px;" text="Submit" />
+                        <Text layoutX="41.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <TextField layoutX="375.0" layoutY="18.0" prefHeight="26.0" prefWidth="198.0" promptText="Enter your TxID " />
+                        <RadioButton layoutX="262.0" layoutY="33.0" mnemonicParsing="false" text="A-Level" />
+                        <RadioButton layoutX="262.0" layoutY="12.0" mnemonicParsing="false" text="O-Level" />
+                        <Text layoutX="41.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Information:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <RadioButton layoutX="206.0" layoutY="23.0" mnemonicParsing="false" text="IELTS" />
+                     </children>
+                  </AnchorPane>
+               </children></HBox>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="378.0" prefWidth="660.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endX="602.6000366210938" endY="-1.5258789289873675E-6" layoutX="7.0" startX="-100.0" strokeWidth="3.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.8852583765983582" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.8852583765983582" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.15465646850277387">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.7272036671638489" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.31007123395594655">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.5965045690536499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.4678495223714013">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.45668694376945496" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6192462987886943">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.27431610226631165" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.7703903095558544">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.05547112599015236" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9121951219512195">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.05999999865889549" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.05999999865889549" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.07450980693101883" green="0.6509804129600525" blue="0.062745101749897" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="0.07450980693101883" green="0.6509804129600525" blue="0.062745101749897" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.14282572300823934">
+                                 <color>
+                                    <Color red="0.09279999881982803" green="0.6399999856948853" blue="0.06400000303983688" opacity="0.8761398196220398" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.27929947805534583">
+                                 <color>
+                                    <Color red="0.09733500331640244" green="0.6299999952316284" blue="0.06930000334978104" opacity="0.7667173147201538" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.4268292682926829">
+                                 <color>
+                                    <Color red="0.09733500331640244" green="0.6299999952316284" blue="0.06930000334978104" opacity="0.6846504807472229" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5560975609756097">
+                                 <color>
+                                    <Color red="0.09733500331640244" green="0.6299999952316284" blue="0.06930000334978104" opacity="0.5630698800086975" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.8506647408331417">
+                                 <color>
+                                    <Color red="0.11077333241701126" green="0.6200000047683716" blue="0.07440000027418137" opacity="0.15881459414958954" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.11077333241701126" green="0.6200000047683716" blue="0.07440000027418137" opacity="0.15881459414958954" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Line>
+                  <Line endX="41.00001525878906" endY="427.79998779296875" layoutX="-41.0" layoutY="-63.0" startX="39.07868957519531" startY="63.0" strokeWidth="3.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.8852583765983582" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.8852583765983582" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.15465646850277387">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.7272036671638489" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.31007123395594655">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.5965045690536499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.4678495223714013">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.45668694376945496" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6192462987886943">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.27431610226631165" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.7703903095558544">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.05547112599015236" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9121951219512195">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.05999999865889549" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.05999999865889549" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.07450980693101883" green="0.6509804129600525" blue="0.062745101749897" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="0.07450980693101883" green="0.6509804129600525" blue="0.062745101749897" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.14282572300823934">
+                                 <color>
+                                    <Color red="0.09279999881982803" green="0.6399999856948853" blue="0.06400000303983688" opacity="0.8761398196220398" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.27929947805534583">
+                                 <color>
+                                    <Color red="0.09733500331640244" green="0.6299999952316284" blue="0.06930000334978104" opacity="0.7667173147201538" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.4268292682926829">
+                                 <color>
+                                    <Color red="0.09733500331640244" green="0.6299999952316284" blue="0.06930000334978104" opacity="0.6846504807472229" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5560975609756097">
+                                 <color>
+                                    <Color red="0.09733500331640244" green="0.6299999952316284" blue="0.06930000334978104" opacity="0.5630698800086975" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.8506647408331417">
+                                 <color>
+                                    <Color red="0.11077333241701126" green="0.6200000047683716" blue="0.07440000027418137" opacity="0.15881459414958954" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.11077333241701126" green="0.6200000047683716" blue="0.07440000027418137" opacity="0.15881459414958954" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Line>
+                  <Line endX="-100.00003051757812" endY="236.60000610351562" layoutX="408.0" layoutY="121.0" startX="-100.00003051757812" startY="-97.00000762939453" />
+                  <Text layoutX="8.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Your IELTS Exam">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="318.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration for O-Level/A-level">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="7.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country:" />
+                  <ComboBox layoutX="59.0" layoutY="43.0" prefHeight="26.0" prefWidth="98.0" />
+                  <Text layoutX="166.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City:" />
+                  <ComboBox layoutX="202.0" layoutY="43.0" prefHeight="26.0" prefWidth="88.0" />
+                  <Text layoutX="7.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test Format:" />
+                  <RadioButton layoutX="83.0" layoutY="75.0" mnemonicParsing="false" text="On Paper" />
+                  <RadioButton layoutX="160.0" layoutY="75.0" mnemonicParsing="false" text="Online" />
+                  <Text layoutX="7.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Venue:" />
+                  <ComboBox layoutX="60.0" layoutY="97.0" prefHeight="26.0" prefWidth="98.0" />
+                  <Text layoutX="163.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+                  <DatePicker layoutX="196.0" layoutY="96.0" prefHeight="26.0" prefWidth="98.0" />
+                  <Text layoutX="7.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
+                  <TextField layoutX="73.0" layoutY="130.0" prefHeight="26.0" prefWidth="84.0" />
+                  <Text layoutX="165.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surame:" />
+                  <TextField layoutX="214.0" layoutY="130.0" prefHeight="26.0" prefWidth="78.0" />
+                  <Text layoutX="7.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth: " />
+                  <DatePicker layoutX="90.0" layoutY="162.0" prefHeight="26.0" prefWidth="199.0" promptText="Enter your Date of Birth" />
+                  <Text layoutX="7.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NID no:" />
+                  <TextField layoutX="91.0" layoutY="258.0" prefHeight="26.0" prefWidth="198.0" promptText="Enter your National ID Number" />
+                  <Text layoutX="7.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Doc. No:" />
+                  <TextField layoutX="76.0" layoutY="290.0" prefHeight="26.0" prefWidth="79.0" />
+                  <Text layoutX="166.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expiry Date:" />
+                  <DatePicker layoutX="235.0" layoutY="291.0" prefHeight="26.0" prefWidth="54.0" />
+                  <Text layoutX="7.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Adress:" />
+                  <TextField layoutX="91.0" layoutY="194.0" prefHeight="26.0" prefWidth="198.0" promptText="Enter your Email Address" />
+                  <Text layoutX="7.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone No:" />
+                  <TextField layoutX="91.0" layoutY="226.0" prefHeight="26.0" prefWidth="198.0" promptText="Enter your Phone Number" />
+                  <Text layoutX="317.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country:" />
+                  <ComboBox layoutX="371.0" layoutY="40.0" prefHeight="26.0" prefWidth="105.0" />
+                  <Text layoutX="490.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loation:" />
+                  <ComboBox layoutX="537.0" layoutY="40.0" prefHeight="26.0" prefWidth="101.0" />
+                  <Text layoutX="317.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Awarding Body:" />
+                  <ComboBox layoutX="408.0" layoutY="68.0" prefHeight="26.0" prefWidth="69.0" />
+                  <Text layoutX="493.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Session:" />
+                  <ComboBox layoutX="537.0" layoutY="68.0" prefHeight="26.0" prefWidth="103.0" />
+                  <Text layoutX="317.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualification Level:" />
+                  <ComboBox layoutX="424.0" layoutY="96.0" prefHeight="26.0" prefWidth="214.0" promptText="Enter your Qualification Level" />
+                  <Text layoutX="317.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subjects:" wrappingWidth="63.199951171875" />
+                  <ComboBox layoutX="424.0" layoutY="124.0" prefHeight="26.0" prefWidth="214.0" promptText="Select Subjects" />
+                  <TextArea layoutX="317.0" layoutY="164.0" prefHeight="66.0" prefWidth="322.0" />
+                  <Text layoutX="319.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected subjects are-">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="318.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
+                  <TextField layoutX="396.0" layoutY="232.0" prefHeight="26.0" prefWidth="86.0" />
+                  <Text layoutX="492.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surame:" />
+                  <TextField layoutX="542.0" layoutY="232.0" prefHeight="26.0" prefWidth="98.0" />
+                  <Text layoutX="318.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" />
+                  <RadioButton layoutX="372.0" layoutY="263.0" mnemonicParsing="false" text="Male" />
+                  <RadioButton layoutX="421.0" layoutY="263.0" mnemonicParsing="false" text="Female" />
+                  <Text layoutX="318.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eng. Native langua.:" />
+                  <Text layoutX="321.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address:" />
+                  <TextField layoutX="400.0" layoutY="288.0" prefHeight="26.0" prefWidth="70.0" promptText="Enter your Email Address" />
+                  <ComboBox layoutX="448.0" layoutY="315.0" prefHeight="26.0" prefWidth="182.0" />
+                  <Text layoutX="492.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+                  <TextField layoutX="545.0" layoutY="287.0" prefHeight="26.0" prefWidth="95.0" promptText="Enter your Address" />
+                  <Text layoutX="319.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id Doc No:" />
+                  <TextField layoutX="397.0" layoutY="344.0" prefHeight="26.0" prefWidth="85.0" />
+                  <Text layoutX="491.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expiry Date:" />
+                  <DatePicker layoutX="562.0" layoutY="343.0" prefHeight="26.0" prefWidth="79.0" promptText="Enter your Date of Birth" />
+                  <Text layoutX="5.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+                  <TextField layoutX="77.0" layoutY="323.0" prefHeight="26.0" prefWidth="215.0" promptText="Enter your Address" />
+                  <Line endX="684.6786499023438" endY="427.7999572753906" layoutX="-31.0" layoutY="-53.0" startX="-60.19999694824219" startY="427.7999572753906" strokeWidth="3.0">
+                     <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.8852583765983582" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.8852583765983582" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.15465646850277387">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.7272036671638489" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.31007123395594655">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.5965045690536499" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.4678495223714013">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.45668694376945496" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.6192462987886943">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.27431610226631165" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.7703903095558544">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.05547112599015236" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.9121951219512195">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.05999999865889549" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.08449999988079071" green="0.6499999761581421" blue="0.06499999761581421" opacity="0.05999999865889549" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.07450980693101883" green="0.6509804129600525" blue="0.062745101749897" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006729475100942127">
+                                 <color>
+                                    <Color red="0.07450980693101883" green="0.6509804129600525" blue="0.062745101749897" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.14282572300823934">
+                                 <color>
+                                    <Color red="0.09279999881982803" green="0.6399999856948853" blue="0.06400000303983688" opacity="0.8761398196220398" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.27929947805534583">
+                                 <color>
+                                    <Color red="0.09733500331640244" green="0.6299999952316284" blue="0.06930000334978104" opacity="0.7667173147201538" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.4268292682926829">
+                                 <color>
+                                    <Color red="0.09733500331640244" green="0.6299999952316284" blue="0.06930000334978104" opacity="0.6846504807472229" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5560975609756097">
+                                 <color>
+                                    <Color red="0.09733500331640244" green="0.6299999952316284" blue="0.06930000334978104" opacity="0.5630698800086975" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.8506647408331417">
+                                 <color>
+                                    <Color red="0.11077333241701126" green="0.6200000047683716" blue="0.07440000027418137" opacity="0.15881459414958954" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.11077333241701126" green="0.6200000047683716" blue="0.07440000027418137" opacity="0.15881459414958954" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Line>
+                  <Text layoutX="494.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOB:" wrappingWidth="30.66290283203125" />
+                  <DatePicker layoutX="543.0" layoutY="260.0" prefHeight="26.0" prefWidth="98.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

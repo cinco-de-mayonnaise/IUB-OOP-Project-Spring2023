@@ -41,6 +41,8 @@ public class LogonUIController implements Initializable {
     private Button Btn_Login;
     @FXML
     private MenuItem Debug_OpenLibrarianDashboard;
+    @FXML
+    private MenuItem Debug_OpenIELTSCandidateDashboard;
 
     /**
      * Initializes the controller class.
@@ -67,9 +69,16 @@ public class LogonUIController implements Initializable {
         if (event.getSource().equals(Debug_OpenLibrarianDashboard))
         {
             //SceneSwitcher.SwitchToScene(cur_stage);
+            cur_stage.setResizable(true);
             SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/abdullah/LibrarianDashboard.fxml");
         }
         
     }
-    
-}
+
+    @FXML
+private void Debug_OpenIELTSCandidateDashboard(ActionEvent event){
+    Stage cur_stage = (Stage) Btn_Login.getScene().getWindow();
+    if (event.getSource().equals(Debug_OpenIELTSCandidateDashboard)){
+        SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/protik/IELTSCandidate/IELTSCandidateDashboard .fxml");
+    } 
+}}

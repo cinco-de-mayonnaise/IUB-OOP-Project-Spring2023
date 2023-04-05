@@ -2,8 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
@@ -19,7 +19,7 @@
          <children>
             <HBox fx:id="topbarWizardHBoxPriCand" alignment="CENTER_LEFT" prefHeight="98.0" prefWidth="762.0">
                <children>
-                  <Label text="Options">
+                  <Label text="Registration Completed">
                      <font>
                         <Font name="System Bold" size="19.0" />
                      </font>
@@ -57,8 +57,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <children>
-                  <Button fx:id="Btn_Close" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Cancel" />
-                  <Button fx:id="Btn_Next" layoutX="666.0" layoutY="25.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Next" />
+                  <Button fx:id="Btn_Next" layoutX="666.0" layoutY="25.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Finish" />
                </children>
             </HBox>
             <Line endX="792.0" endY="492.0" startX="1.0" startY="492.0">
@@ -79,25 +78,34 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Select if any of these apply to you:" wrapText="true" />
-            <VBox prefHeight="34.0" prefWidth="572.0" spacing="10.0">
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
+            <Label text="Thank you! We have now recieved enough information to process your registration. Please do the following." wrapText="true" />
+            <VBox prefHeight="33.0" prefWidth="572.0">
                <children>
-                  <CheckBox mnemonicParsing="false" text="Physical disability (wheelchair assistance, broken arm, etc.)" />
-                  <CheckBox layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Visual disability " />
-                  <CheckBox layoutX="20.0" layoutY="47.0" mnemonicParsing="false" text="Mental disability (ADHD, dyslexia, etc.)" />
-                  <CheckBox layoutX="20.0" layoutY="74.0" mnemonicParsing="false" text="Medical disability which may require special assistance" />
-                  <CheckBox layoutX="20.0" layoutY="101.0" mnemonicParsing="false" text="Exam clashes with another board " />
-                  <CheckBox layoutX="20.0" layoutY="74.0" mnemonicParsing="false" text="Secondary help needed" />
-                  <CheckBox layoutX="20.0" layoutY="128.0" mnemonicParsing="false" text="Possible medical emergency " />
+                  <Label text="Registration ID">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField editable="false">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
                </children>
+            </VBox>
+            <Label layoutX="60.0" layoutY="60.0" text="Please use this registration ID when making the payment. You can use the following payment systems:" wrapText="true" />
+            <VBox prefHeight="63.0" prefWidth="572.0" spacing="5.0">
+               <children>
+                  <Label text="• Any branch of Standard Chartered" />
+                  <Label layoutX="10.0" layoutY="10.0" text="• Bkash/Nagad/Online Payment (use the registration ID as referral)" />
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
                <VBox.margin>
                   <Insets top="-10.0" />
                </VBox.margin>
             </VBox>
-            <Label text="Disregard if none apply, and click Next." />
          </children>
          <padding>
             <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />

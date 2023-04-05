@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
@@ -14,8 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="553.0" maxWidth="794.0" minHeight="553.0" minWidth="794.0" prefHeight="553.0" prefWidth="794.0" stylesheets="@../styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="553.0" maxWidth="794.0" minHeight="553.0" minWidth="794.0" prefHeight="553.0" prefWidth="794.0" stylesheets="@../styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.abdullah.Librarian_AddRemoveBookPhase.Librarian_AddRemBookPhase_ModifyCountController">
    <top>
       <StackPane alignment="BOTTOM_LEFT" prefHeight="98.0" prefWidth="733.0" BorderPane.alignment="CENTER">
          <children>
@@ -59,8 +59,8 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <children>
-                  <Button fx:id="Btn_Close" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Close" />
-                  <Button fx:id="Btn_Next" layoutX="666.0" layoutY="25.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="96.0" text="Next" />
+                  <Button fx:id="Btn_Close" mnemonicParsing="false" onAction="#click_Close" prefHeight="31.0" prefWidth="96.0" text="Close" />
+                  <Button fx:id="Btn_Modify_Count" layoutX="666.0" layoutY="25.0" mnemonicParsing="false" onAction="#click_Modify_Count" prefHeight="31.0" prefWidth="120.0" text="Modify Count" />
                </children>
             </HBox>
             <Line endX="792.0" endY="492.0" startX="1.0" startY="492.0">
@@ -87,15 +87,15 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="120.0" layoutY="121.0" prefHeight="31.0" prefWidth="182.0" />
+            <TextField fx:id="TF_Name" layoutX="120.0" layoutY="121.0" prefHeight="31.0" prefWidth="182.0" />
             <Label layoutX="56.0" layoutY="126.0" text="Name" />
-            <TextField layoutX="120.0" layoutY="170.0" prefHeight="31.0" prefWidth="182.0" />
+            <TextField fx:id="TF_ISBN" layoutX="120.0" layoutY="170.0" prefHeight="31.0" prefWidth="182.0" />
             <Label layoutX="56.0" layoutY="175.0" text="ISBN" />
             <Label layoutX="56.0" layoutY="222.0" text="Category" />
             <StackPane layoutX="385.0" layoutY="52.0" prefHeight="265.0" prefWidth="224.0" style="-fx-background-color: ece98d;">
                <children>
                   <Label text="No image selected!" />
-                  <ImageView fitHeight="257.0" fitWidth="216.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="IV_BookImage" fitHeight="257.0" fitWidth="216.0" pickOnBounds="true" preserveRatio="true" />
                </children>
                <padding>
                   <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
@@ -107,8 +107,12 @@
                   <Label text="Invalid Input Information here" />
                </children>
             </HBox>
-            <TextField editable="false" layoutX="153.0" layoutY="217.0" prefHeight="31.0" prefWidth="152.0" />
             <Label layoutX="39.0" layoutY="56.0" prefHeight="43.0" prefWidth="277.0" text="If multiple copies of an existing book need to be added/removed, do so here" wrapText="true" />
+            <ComboBox fx:id="CB_Category" layoutX="152.0" layoutY="217.0" prefWidth="150.0" />
+            <TextField fx:id="TF_ISBN1" layoutX="119.0" layoutY="265.0" prefHeight="31.0" prefWidth="112.0" />
+            <Label layoutX="55.0" layoutY="270.0" text="Count" />
+            <Button layoutX="238.0" layoutY="265.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" text="+" />
+            <Button layoutX="271.0" layoutY="265.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" text="-" />
          </children>
       </AnchorPane>
    </center>
