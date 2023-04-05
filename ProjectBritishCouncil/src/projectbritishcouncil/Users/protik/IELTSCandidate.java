@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projectbritishcouncil.Users.protik;
 
-/**
- *
- * @author Abdullah
- */
+import java.util.Date;
+
 public class IELTSCandidate {
+    String name;
+    int id, age, passportNo;
+    Date birthday , passportExpiryDate;
     
 }

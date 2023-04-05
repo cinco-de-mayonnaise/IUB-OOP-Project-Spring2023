@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.LogonUIController">
+<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.LogonUIController">
    <children>
       <TextField fx:id="TF_EmailID" layoutX="19.0" layoutY="351.0" prefHeight="31.0" prefWidth="320.0" />
       <PasswordField fx:id="PasswordField_AccPassword" layoutX="19.0" layoutY="405.0" prefHeight="31.0" prefWidth="320.0" />
@@ -17,12 +17,13 @@
       <Label layoutX="21.0" layoutY="383.0" text="Password" />
       <Label fx:id="Label_Forgot_Password" alignment="CENTER_RIGHT" layoutX="221.0" layoutY="441.0" onMouseClicked="#click_Forgot_Password" text="Forgot Password?" underline="true" />
       <Button fx:id="Btn_Login" layoutX="25.0" layoutY="475.0" mnemonicParsing="false" onMouseClicked="#click_Login" prefHeight="31.0" prefWidth="103.0" text="Login" />
-      <MenuBar layoutX="1.0" layoutY="-2.0" prefHeight="32.0" prefWidth="362.0">
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="362.0">
         <menus>
           <Menu mnemonicParsing="false" text="Debug">
                <items>
                   <Menu mnemonicParsing="false" text="Force Open a User Dashboard">
                     <items>
+                        <MenuItem fx:id="Debug_OpenIELTSCandidateDashboard" mnemonicParsing="false" onAction="#Debug_OpenIELTSCandidateDashboard" text="IELTSCandidateDashboard" />
                       <MenuItem fx:id="Debug_OpenLibrarianDashboard" mnemonicParsing="false" onAction="#Debug_OpenDashboard" text="LibrarianDashboard" />
                     </items>
                   </Menu>
