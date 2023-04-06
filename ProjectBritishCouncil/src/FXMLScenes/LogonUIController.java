@@ -45,6 +45,12 @@ public class LogonUIController implements Initializable {
     private MenuItem Debug_OpenIELTSCandidateDashboard;
     @FXML
     private MenuItem Debug_OpenAdminDashboard;
+    @FXML
+    private MenuItem Debug_OpenInstructorDashboard;
+    @FXML
+    private MenuItem Debug_OpenLibraryMemberDashboard;
+    @FXML
+    private MenuItem Debug_OpenInvigilatorDashboard;
 
     /**
      * Initializes the controller class.
@@ -95,6 +101,33 @@ private void Debug_OpenIELTSCandidateDashboard(ActionEvent event){
     }
 
    }
+
+    @FXML
+    private void Debug_OpenInstructorDashboard(ActionEvent event) {
+        Stage cur_stage = (Stage) Btn_Login.getScene().getWindow();
+    if (event.getSource().equals(Debug_OpenInstructorDashboard)){
+        cur_stage.setResizable(true);
+        SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/sopen/InstructorDashboard.fxml");
+    }
+    }
+
+    @FXML
+    private void Debug_OpenLibraryMemberDashboard(ActionEvent event) {
+        Stage cur_stage = (Stage) Btn_Login.getScene().getWindow();
+    if (event.getSource().equals(Debug_OpenLibraryMemberDashboard)){
+        cur_stage.setResizable(true);
+        SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/protik/LibraryMember/LibraryMemberDashboard.fxml");
+    }
+    }
+
+    @FXML
+    private void Debug_OpenInvigilatorDashboard(ActionEvent event) {
+        Stage cur_stage = (Stage) Btn_Login.getScene().getWindow();
+    if (event.getSource().equals(Debug_OpenInvigilatorDashboard)){
+        cur_stage.setResizable(true);
+        SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/sopen/InvigilatorDeshboard.fxml");
+    }
+    }
 
    
 }
