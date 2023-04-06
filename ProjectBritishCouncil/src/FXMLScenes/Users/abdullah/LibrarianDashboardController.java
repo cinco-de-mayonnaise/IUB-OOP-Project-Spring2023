@@ -8,7 +8,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.input.MouseEvent;
@@ -46,16 +45,8 @@ public class LibrarianDashboardController implements Initializable {
     @FXML
     private AnchorPane BlankLibrarianDashboardCenter;
     
-    private Node InteractiveUserDashboard;
+    private int dashboard_state = 0;
     
-    private states dashboard_state;
-    
-    enum states
-    {   
-        UserDashboard,
-        MemberQuerSuggPhase,
-        
-    };
     
     
     
@@ -64,34 +55,20 @@ public class LibrarianDashboardController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        dashboard_state = states.UserDashboard;
-        InteractiveUserDashboard = SceneSwitcher.getRootNodeFromURL("/FXMLScenes/Users/abdullah/Librarian_InteractiveUserDashboard/Librarian_InteractiveUserDashboard_Main__frame.fxml");
-        
-        LibrarianDashboard_BorderPane.setCenter(InteractiveUserDashboard);
         
     }    
 
     @FXML
     private void click_InitAddRemoveBook(MouseEvent event)
     {
+        //SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(), "FXMLScenes/Users/abdullah/AddRemoveBookPhase/Librarian_AddRemBookPhase_StartScene.fxml");
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/abdullah/Librarian_AddRemoveBookPhase/Librarian_AddRemBookPhase_StartScene.fxml", true);
     }
 
     @FXML
     private void click_InitSeeMemberQueries(MouseEvent event)
     {
-        // load node into center region of borderpane!!
-        if (dashboard_state == states.MemberQuerSuggPhase)
-        {
-            LibrarianDashboard_BorderPane.setCenter(BlankLibrarianDashboardCenter);
-            dashboard_state = states.UserDashboard;
-        }
-        else
-        {
-            LibrarianDashboard_BorderPane.setCenter(SceneSwitcher.getRootNodeFromURL("/FXMLScenes/Users/abdullah/Librarian_MemberQueriesSuggestionsPhase/Librarian_MemberQuerSuggPhase_Main__frame.fxml"));
-            dashboard_state =  states.MemberQuerSuggPhase;
-        }
-            
+
     }
     
     @FXML
