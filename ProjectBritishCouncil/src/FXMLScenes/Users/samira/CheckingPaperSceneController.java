@@ -11,34 +11,32 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuButton;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
  *
  * @author samir
  */
-public class AdminViewBulletinBoardSceneController implements Initializable {
+public class CheckingPaperSceneController implements Initializable {
 
-    @FXML
-    private BorderPane borderPane;
     @FXML
     private MenuButton MenuMenuBar;
     @FXML
     private MenuButton settignsMenuBar;
     @FXML
-    private AnchorPane anchorPane;
+    private ComboBox<?> studentIDComboBox;
     @FXML
-    private TextArea noticeTextArea;
+    private TextArea answerTextArea;
     @FXML
-    private RadioButton allUserRB;
+    private TextArea MSanswerTextArea;
     @FXML
-    private RadioButton specificUserRB;
+    private ComboBox<?> QuestionNumberComboBox1;
     @FXML
-    private ComboBox<?> specifyUsersComboBox;
+    private ComboBox<?> selectMarkSchemeComboBox2;
+    @FXML
+    private TextField marksTextField;
 
     /**
      * Initializes the controller class.
@@ -61,11 +59,11 @@ public class AdminViewBulletinBoardSceneController implements Initializable {
     }
 
     @FXML
-    private void goBackButtonOnClick(ActionEvent event) {
+    private void goToNextSceneButtonOnClick(ActionEvent event) {
     }
 
     @FXML
-    private void postButtonOnClick(ActionEvent event) {
+    private void goBackButtonOnClick(ActionEvent event) {
     }
     
 }

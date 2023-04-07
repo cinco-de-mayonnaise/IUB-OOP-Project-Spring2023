@@ -16,6 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -30,32 +32,17 @@ import projectbritishcouncil.common.util.SceneSwitcher;
  */
 public class ViewGradeBoundarySceneController implements Initializable {
 
-    @FXML
-    private ComboBox<String> menuComboBox;
-    @FXML
-    private ComboBox<String> settingsComboBox;
-    @FXML
     private TableView<GradeBoundary> gbTtableView;
-    @FXML
     private TableColumn<GradeBoundary, String> monthColumn;
-    @FXML
     private TableColumn<GradeBoundary, String> yearColumn;
     @FXML
-    private ComboBox<String> yearComboBox;
-    @FXML
-    private ComboBox<String> monthComboBox;
-    @FXML
-    private Hyperlink hyperlink;
-    @FXML
-    private Hyperlink hyperlink2;
-    @FXML
-    private Hyperlink hyperlink3;
-    @FXML
-    private Hyperlink hyperlink4;
-    @FXML
-    private Hyperlink hyperlink5;
-    @FXML
     private AnchorPane anchorpane;
+    @FXML
+    private MenuButton MenuMenuBar;
+    @FXML
+    private MenuButton settignsMenuBar;
+    @FXML
+    private Label complaintMadeByWhichUserLabel;
 
     /**
      * Initializes the controller class.
@@ -86,9 +73,6 @@ public class ViewGradeBoundarySceneController implements Initializable {
          SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/ExaminerDashboardScene.fxml", false);
     }
 
-    @FXML
-    private void viewGradeBoundaryButtonOnClick(ActionEvent event) {
-    }
 
     @FXML
     private void goBackButtonOnClick(ActionEvent event) {
@@ -96,7 +80,6 @@ public class ViewGradeBoundarySceneController implements Initializable {
          stage.close();
     }
 
-   @FXML
     private void hyperlink(ActionEvent event) throws IOException {
         Desktop desktop = Desktop.getDesktop();
         desktop.browse(java.net.URI.create("https://www.google.com/search?q=igcse+2017+mark+schemes&rlz=1C1BNSD_enBD1030BD1030&oq=igcse+2017+mark+schemes&aqs=chrome..69i57j0i22i30l2j0i390i650l2.11687j0j15&sourceid=chrome&ie=UTF-8"));
@@ -125,5 +108,18 @@ public class ViewGradeBoundarySceneController implements Initializable {
         Desktop desktop = Desktop.getDesktop();
         desktop.browse(java.net.URI.create
     }*/
+
+    @FXML
+    private void showMenuOptionsOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void showSettingsOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void writeAReplyButtonOnClick(ActionEvent event) {
+    }
+
     
 }

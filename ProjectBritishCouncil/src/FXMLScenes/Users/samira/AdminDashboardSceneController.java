@@ -14,8 +14,11 @@ import projectbritishcouncil.common.util.SceneSwitcher;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 /**
  * FXML Controller class
@@ -23,16 +26,21 @@ import javafx.stage.Stage;
  * @author samir
  */
 public class AdminDashboardSceneController implements Initializable {
-     @FXML
-    ImageView myImageView;
+     ImageView myImageView;
     
     Image myImage = new Image(getClass().getResourceAsStream("BClogo.png"));
+    @FXML
+    private BorderPane borderPane;
+    @FXML
+    private MenuButton MenuMenuBar;
+    @FXML
+    private MenuButton settignsMenuBar;
+    @FXML
+    private AnchorPane anchorPane;
     public void displayImage(){
         myImageView.setImage(myImage);
     }
-    @FXML
     private ComboBox<String> MenuComboBox;
-    @FXML
     private ComboBox<String> settingsComboBox;
 
     /**
@@ -45,9 +53,24 @@ public class AdminDashboardSceneController implements Initializable {
         // TODO
     }    
 
-    @FXML
     private void goHomeButtonOnClick(ActionEvent event) {
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/AdminDashboardScene.fxml", false);
+    }
+
+    @FXML
+    private void goHomeButtonOnClick(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void showMenuOptionsOnClick(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void showSettingsOnClick(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void goBackButtonOnClick(javafx.event.ActionEvent event) {
     }
   
 }

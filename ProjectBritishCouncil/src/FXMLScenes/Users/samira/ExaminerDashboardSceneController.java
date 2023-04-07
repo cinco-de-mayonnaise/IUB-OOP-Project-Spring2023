@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.MenuButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import projectbritishcouncil.common.util.SceneSwitcher;
@@ -21,13 +22,15 @@ import projectbritishcouncil.common.util.SceneSwitcher;
  */
 public class ExaminerDashboardSceneController implements Initializable {
 
-    @FXML
     private ComboBox<String> menuComboBox;
-    @FXML
     private ComboBox<String> settingsComboBox;
     @FXML
     private ImageView myImageView;
      Image myImage = new Image(getClass().getResourceAsStream("BClogo.png"));
+    @FXML
+    private MenuButton MenuMenuBar;
+    @FXML
+    private MenuButton settignsMenuBar;
     public void displayImage(){
         myImageView.setImage(myImage);
     }
@@ -45,6 +48,14 @@ public class ExaminerDashboardSceneController implements Initializable {
     @FXML
     private void goHomeButtonOnClick(ActionEvent event) {
          SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/ExaminerDashboardScene.fxml", false);
+    }
+
+    @FXML
+    private void showMenuOptionsOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void showSettingsOnClick(ActionEvent event) {
     }
     
 }

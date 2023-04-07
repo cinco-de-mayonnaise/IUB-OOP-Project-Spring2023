@@ -13,6 +13,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -27,15 +28,18 @@ public class ApplyForLeaveSceneController implements Initializable {
 
     @FXML
     private TextArea applicationTextArea;
-    @FXML
     private ComboBox<String> menuComboBox;
-    @FXML
      private ComboBox<String> settingsComboBox;
     @FXML
      private TextField employeeIdTextField;
-     @FXML
      private AnchorPane scenePane;
      Stage stage;
+    @FXML
+    private MenuButton MenuMenuBar;
+    @FXML
+    private MenuButton settignsMenuBar;
+    @FXML
+    private ComboBox<?> employeeCategoryComboBox;
 
     /**
      * Initializes the controller class.
@@ -47,18 +51,15 @@ public class ApplyForLeaveSceneController implements Initializable {
         // TODO
     }    
 
-    @FXML
     private void goHomeButtonOnClick(ActionEvent event) {
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/FXMLScenes.Users.samira/AdminDashboardScene.fxml", true);
     }
 
-    @FXML
     private void submitApplicationButtonOnClick(ActionEvent event) {
         applicationTextArea.clear();
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/FXMLScenes.Users.samira/AdminDashboardScene.fxml", true);
     }
 
-    @FXML
     private void goBackButtonOnClick(ActionEvent event) {
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Go Back");
@@ -69,4 +70,24 @@ public class ApplyForLeaveSceneController implements Initializable {
             SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/FXMLScenes.Users.samira/AdminDashboardScene.fxml", true);
       }
     } 
+
+    @FXML
+    private void goHomeButtonOnClick(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void showMenuOptionsOnClick(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void showSettingsOnClick(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void submitApplicationButtonOnClick(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void goBackButtonOnClick(javafx.event.ActionEvent event) {
+    }
 }
