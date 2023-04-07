@@ -10,6 +10,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.stage.Stage;
+import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
  * FXML Controller class
@@ -52,6 +55,7 @@ public class LibraryMemberDashboardController implements Initializable {
 
     @FXML
     private void logOutButtonOnClick(ActionEvent event) {
+        SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(), "/FXMLScenes/LogonUI.fxml");
     }
     
 }

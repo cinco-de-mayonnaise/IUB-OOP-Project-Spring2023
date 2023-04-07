@@ -30,9 +30,18 @@
    <left>
       <VBox prefHeight="630.0" prefWidth="190.0" style="-fx-background-color: CFF2B7; -fx-border-color: E97E40; -fx-border-width: 0px 4px 0px 0px;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#registrationOnclick" text="Registration" />
-            <Button mnemonicParsing="false" onAction="#resultOnClick" text="Result" />
-            <Button mnemonicParsing="false" onAction="#room" text="Classroom Info" />
+            <Button mnemonicParsing="false" onAction="#registrationOnclick" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Registration">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#resultOnClick" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Result">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#room" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Classroom Info">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
          </children>
       </VBox>
    </left>

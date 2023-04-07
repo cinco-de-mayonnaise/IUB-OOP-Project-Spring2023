@@ -20,14 +20,13 @@ import projectbritishcouncil.common.util.SceneSwitcher;
  */
 public class InstructorDashboardController implements Initializable {
 
-
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void registrationOnclick(ActionEvent event) {
@@ -43,5 +42,5 @@ public class InstructorDashboardController implements Initializable {
     private void room(ActionEvent event) {
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/ClassroomInformation.fxml", false);
     }
-    
+
 }

@@ -26,7 +26,7 @@ public class AdminDashboardSceneController implements Initializable {
      @FXML
     ImageView myImageView;
     
-    Image myImage = new Image(getClass().getResourceAsStream("BClogo.png"));
+    Image myImage = new Image(getClass().getResourceAsStream("/FXMLScenes/Users/samira/images/BClogo.png"));
     public void displayImage(){
         myImageView.setImage(myImage);
     }
