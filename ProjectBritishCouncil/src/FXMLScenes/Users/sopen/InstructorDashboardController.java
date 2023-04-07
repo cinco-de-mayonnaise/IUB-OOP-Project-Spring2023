@@ -7,7 +7,11 @@ package FXMLScenes.Users.sopen;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Hyperlink;
+import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
  * FXML Controller class
@@ -22,6 +26,21 @@ public class InstructorDashboardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
+    @FXML
+    private void registrationOnclick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/StudentRegistration.fxml", false);
+    }
+
+    @FXML
+    private void resultOnClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/Result.fxml", false);
+    }
+
+    @FXML
+    private void room(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/ClassroomInformation.fxml", false);
+    }
+
 }

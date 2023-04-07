@@ -3,8 +3,9 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -29,7 +30,7 @@
                <top>
                   <HBox prefHeight="82.0" prefWidth="750.0" style="-fx-background-color: A6ED8D;" BorderPane.alignment="CENTER">
                      <children>
-                        <Label alignment="CENTER" prefHeight="82.0" prefWidth="251.0" text="Classroom Info">
+                        <Label alignment="CENTER" prefHeight="82.0" prefWidth="251.0" text="Classroom Info.">
                            <font>
                               <Font name="Calibri Bold" size="30.0" />
                            </font>
@@ -56,21 +57,14 @@
                         <Text layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instructor ID:" />
                         <Text layoutX="14.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Session:" />
                         <Button layoutX="117.0" layoutY="127.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: transparent; -fx-border-color: AAE24E; -fx-border-width: .5px .5px 3px .5px;" text="Get results" />
-                        <TextArea layoutX="14.0" layoutY="194.0" prefHeight="123.0" prefWidth="294.0" />
-                        <Text layoutX="14.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result shown below-" />
-                        <Text layoutX="340.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
-                        <TextField layoutX="535.0" layoutY="92.0" prefHeight="26.0" prefWidth="106.0" promptText="Enter your surname" />
-                        <Text layoutX="490.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surame:" />
+                        <Text layoutX="14.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result shown below-" />
+                        <Text layoutX="340.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C. Code" />
                         <TextField layoutX="535.0" layoutY="56.0" prefHeight="26.0" prefWidth="106.0" />
-                        <TextField layoutX="402.0" layoutY="95.0" prefHeight="26.0" prefWidth="82.0" promptText="Enter your first name" />
+                        <TextField layoutX="402.0" layoutY="95.0" prefHeight="26.0" prefWidth="239.0" promptText="Enter Class Code here" />
                         <Text layoutX="340.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Awarding Body:" />
                         <Text layoutX="492.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Session:" />
                         <ComboBox layoutX="424.0" layoutY="57.0" prefHeight="26.0" prefWidth="59.0" />
-                        <Text layoutX="338.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth:" />
-                        <DatePicker layoutX="414.0" layoutY="131.0" prefHeight="26.0" prefWidth="150.0" />
-                        <TextField layoutX="415.0" layoutY="166.0" />
-                        <Text layoutX="339.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Doc. No:" />
-                        <Text layoutX="340.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get your 0-Level/A-Level results">
+                        <Text layoutX="340.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload Resourse for Student">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
@@ -78,6 +72,15 @@
                         <TextArea layoutX="342.0" layoutY="225.0" prefHeight="91.0" prefWidth="294.0" />
                         <Text layoutX="342.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result shown below-" />
                         <ComboBox layoutX="91.0" layoutY="91.0" prefWidth="150.0" />
+                        <TableView layoutX="14.0" layoutY="193.0" prefHeight="114.0" prefWidth="298.0">
+                          <columns>
+                            <TableColumn prefWidth="49.60001182556152" text="C. Code" />
+                            <TableColumn prefWidth="59.20001220703125" text="Name" />
+                              <TableColumn prefWidth="48.80004119873047" text="Section" />
+                              <TableColumn prefWidth="65.60003662109375" text="Room No" />
+                              <TableColumn prefWidth="75.0" text="Class Time" />
+                          </columns>
+                        </TableView>
                      </children>
                   </AnchorPane>
                </center>
