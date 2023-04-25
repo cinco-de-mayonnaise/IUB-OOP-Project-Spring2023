@@ -4,6 +4,7 @@
  */
 package projectbritishcouncil.common;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Date;
  * @author Abdullah
  */
 // All users of British council have the following things in common. Ensure to inherit from this
-public abstract class BasicUser
+public abstract class BasicUser implements Serializable
 {
     final protected String Email;
     protected String Password;
@@ -29,11 +30,11 @@ public abstract class BasicUser
         return Email;
     }
 
-    protected String getPassword() {
+    public String getPassword() {
         return Password;
     }
 
-    protected void setPassword(String Password) {
+    public void setPassword(String Password) {
         this.Password = Password;
     }
 

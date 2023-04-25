@@ -5,14 +5,11 @@
 package FXMLScenes;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
@@ -20,8 +17,17 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
+import projectbritishcouncil.Users.abdullah.Librarian;
+import projectbritishcouncil.Users.abdullah.PrivateCandidate;
+import projectbritishcouncil.Users.protik.IELTSCandidate;
 import projectbritishcouncil.Users.protik.LibraryMember;  // this is how you import other people's user if you need it
+import projectbritishcouncil.Users.samira.Admin;
+import projectbritishcouncil.Users.samira.Examiner;
+import projectbritishcouncil.Users.sopen.Invigilator;
+import projectbritishcouncil.common.BasicUser;
+import projectbritishcouncil.common.util.CommonInstancesClass;
+import static projectbritishcouncil.common.util.Identifiers.ALL_USER_LIST;
+import static projectbritishcouncil.common.util.Identifiers.CURRENT_USER;
 import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
@@ -51,13 +57,15 @@ public class LogonUIController implements Initializable {
     private MenuItem Debug_OpenLibraryMemberDashboard;
     @FXML
     private MenuItem Debug_OpenInvigilatorDashboard;
-
+    
+    CommonInstancesClass CIC;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        this.CIC = CommonInstancesClass.getInstance();
     }    
 
     @FXML
@@ -65,9 +73,98 @@ public class LogonUIController implements Initializable {
     }
 
     @FXML
-    private void click_Login(MouseEvent event) {
+    private void click_Login(MouseEvent event)
+    {
+        String ID = TF_EmailID.getText();
+        String pw = PasswordField_AccPassword.getText();
+        
+        if (ID.equals("") || pw.equals(""))
+        {
+            SceneSwitcher.raiseAlert_GenericError(
+                        "Invalid credentials", 
+                        "", 
+                        "Invalid Email/ID/Password combination, please try again. "
+            );
+            return;
+        }
+        // get list of users
+        ArrayList<BasicUser> allusers = (ArrayList<BasicUser>) CIC.getObject(ALL_USER_LIST);
+        
+        for (BasicUser u: allusers)
+        {
+            if (u.getEmail().equals(ID))
+            {
+                if (u.getPassword().equals(pw)) // password correct, move to relevant scene with data.
+                {
+                    // assign current user
+                    CIC.putObject(CURRENT_USER, u);
+                    // move to relevant scene
+                    DetermineUserTypeAndSwitchScene(u);
+                }
+                else  // password incorrect.
+                {
+                    SceneSwitcher.raiseAlert_GenericError(
+                        "Invalid credentials", 
+                        "", 
+                        "Incorrect Password entered, please try again. "
+                    );
+                }
+            }
+        }
+        
+        SceneSwitcher.raiseAlert_GenericError(
+                        "Invalid credentials", 
+                        "", 
+                        "An account associated with this ID does not exist. Please contact British Council if you think this is in error. "
+        );
+        
+        return;
     }
 
+    private void DetermineUserTypeAndSwitchScene(BasicUser user)
+    {
+        Stage cur_stage = SceneSwitcher.getStageFromNode(Btn_Login);
+        if (user.getClass().equals(Librarian.class))
+        {
+            cur_stage.setResizable(true);
+            SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/abdullah/LibrarianDashboard.fxml");
+        }
+        else if (user.getClass().equals(PrivateCandidate.class))
+        {
+            cur_stage.setResizable(true);
+            SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/abdullah/PrivateCandidateDashboard.fxml");
+        }
+        else if (user.getClass().equals(Admin.class))
+        {
+            cur_stage.setResizable(true);
+            SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/samira/AdminDashboardScene.fxml");
+        }
+        else if (user.getClass().equals(Examiner.class))
+        {
+            SceneSwitcher.raiseAlert_NotImplemented();
+            
+        }
+        else if (user.getClass().equals(IELTSCandidate.class))
+        {
+            cur_stage.setResizable(true);
+            SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/protik/IELTSCandidate/IELTSCandidateDashboard .fxml");
+        }
+        else if (user.getClass().equals(LibraryMember.class))
+        {
+            cur_stage.setResizable(true);
+            SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/protik/LibraryMember/LibraryMemberDashboard.fxml");
+        }
+        else if (user.getClass().equals(Invigilator.class))
+        {
+            cur_stage.setResizable(true);
+            SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/sopen/InvigilatorDeshboard.fxml");
+        }
+        else // impossibru error: the user is of a type whose class does not exist yet!
+        {
+            SceneSwitcher.raiseAlert_BugCheck("Impossible: the user is of a type whose class does not exist yet!\n" + user.toString());
+        }
+    }
+    
     @FXML
     private void Debug_OpenDashboard(ActionEvent event)
     {
@@ -84,13 +181,13 @@ public class LogonUIController implements Initializable {
     }
 
     @FXML
-private void Debug_OpenIELTSCandidateDashboard(ActionEvent event){
-    Stage cur_stage = (Stage) Btn_Login.getScene().getWindow();
-    if (event.getSource().equals(Debug_OpenIELTSCandidateDashboard)){
-        cur_stage.setResizable(true);
-        SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/protik/IELTSCandidate/IELTSCandidateDashboard .fxml");
-    } 
-}
+    private void Debug_OpenIELTSCandidateDashboard(ActionEvent event){
+        Stage cur_stage = (Stage) Btn_Login.getScene().getWindow();
+        if (event.getSource().equals(Debug_OpenIELTSCandidateDashboard)){
+            cur_stage.setResizable(true);
+            SceneSwitcher.switchToScene(cur_stage, "/FXMLScenes/Users/protik/IELTSCandidate/IELTSCandidateDashboard .fxml");
+        } 
+    }
 
     @FXML
     private void Debug_OpenAdminDashboard(ActionEvent event) {
