@@ -12,9 +12,9 @@ import projectbritishcouncil.common.BasicUser;
  * @author samir
  */
 public class Admin extends BasicUser {
-    
-    public Admin(String Email, String Password, Date DOJ, Date DOB) {
-        super(Email, Password, DOJ, DOB);
+
+    public Admin(String Name, String Email, String Password, Date DOJ, Date DOB) {
+        super(Name, Email, Password, DOJ, DOB);
     }
     
 }

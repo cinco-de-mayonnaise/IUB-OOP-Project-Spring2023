@@ -13,8 +13,9 @@ import projectbritishcouncil.common.BasicUser;
  */
 public class Librarian extends BasicUser
 {
-    public Librarian(String Email, String Password, Date DOJ, Date DOB) {
-        super(Email, Password, DOJ, DOB);
+    public Librarian(String Name, String Email, String Password, Date DOJ, Date DOB) {
+        super(Name, Email, Password, DOJ, DOB);
     }
+    
     
 }

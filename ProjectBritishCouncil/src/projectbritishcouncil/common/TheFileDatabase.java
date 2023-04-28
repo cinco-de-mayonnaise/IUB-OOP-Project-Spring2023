@@ -28,4 +28,9 @@ public class TheFileDatabase implements Serializable
         
         return 0;
     }
+    
+    static int ReadFromFile()
+    {
+        return 0;
+    }
 }

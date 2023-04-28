@@ -69,7 +69,9 @@ public class LogonUIController implements Initializable {
     }    
 
     @FXML
-    private void click_Forgot_Password(MouseEvent event) {
+    private void click_Forgot_Password(MouseEvent event)
+    {
+        
     }
 
     @FXML
@@ -90,11 +92,11 @@ public class LogonUIController implements Initializable {
         // get list of users
         ArrayList<BasicUser> allusers = (ArrayList<BasicUser>) CIC.getObject(ALL_USER_LIST);
         
-        for (BasicUser u: allusers)
+        for (BasicUser u: allusers)  // realistically we would have a hashtable of all users, because checking against every one is slow, but this is a small toy program so this is enough
         {
             if (u.getEmail().equals(ID))
             {
-                if (u.getPassword().equals(pw)) // password correct, move to relevant scene with data.
+                if (u.verifyPassword(pw)) // password correct, move to relevant scene with data.
                 {
                     // assign current user
                     CIC.putObject(CURRENT_USER, u);
@@ -109,16 +111,17 @@ public class LogonUIController implements Initializable {
                         "Incorrect Password entered, please try again. "
                     );
                 }
+                
+                return;
             }
         }
         
+        // wow you managed to come here, means all accounts were checked...
         SceneSwitcher.raiseAlert_GenericError(
                         "Invalid credentials", 
                         "", 
                         "An account associated with this ID does not exist. Please contact British Council if you think this is in error. "
         );
-        
-        return;
     }
 
     private void DetermineUserTypeAndSwitchScene(BasicUser user)

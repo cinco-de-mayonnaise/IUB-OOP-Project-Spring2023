@@ -16,13 +16,13 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="762.0" maxWidth="1113.0" minHeight="553.0" minWidth="794.0" prefHeight="668.0" prefWidth="987.0" stylesheets="@../styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.abdullah.Librarian_BorrowersListPhase.Librarian_BorrowersListPhase_MainController">
+<BorderPane maxHeight="762.0" maxWidth="1113.0" minHeight="553.0" minWidth="755.0" prefHeight="668.0" prefWidth="807.0" stylesheets="@../styles_Librarian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.abdullah.Librarian_MembersListPhase.Librarian_MembersListPhase_MainController">
    <top>
       <StackPane alignment="BOTTOM_LEFT" prefHeight="98.0" prefWidth="733.0" BorderPane.alignment="CENTER">
          <children>
             <HBox fx:id="topbarWizardHBoxLibrarian" alignment="CENTER_LEFT" prefHeight="98.0" prefWidth="762.0">
                <children>
-                  <Label text="List of Borrowers and Borrowed Books">
+                  <Label text="List of All Library Members">
                      <font>
                         <Font name="System Bold" size="19.0" />
                      </font>
@@ -32,7 +32,7 @@
                   <Insets bottom="10.0" left="50.0" right="25.0" top="25.0" />
                </padding>
             </HBox>
-            <Line fx:id="line33" endX="782.0" endY="90.0" startY="90.0" strokeWidth="3.0">
+            <Line fx:id="line33" endX="781.878662109375" endY="90.0" startY="90.0" strokeWidth="3.0">
                <stroke>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>
@@ -63,7 +63,7 @@
                   <Button fx:id="Btn_Close" mnemonicParsing="false" onMouseClicked="#click_Close" prefHeight="31.0" prefWidth="96.0" text="Close" />
                </children>
             </HBox>
-            <Line fx:id="line33" endX="792.0" endY="492.0" startX="1.0" startY="492.0">
+            <Line fx:id="line33" endX="792.0" endY="492.0" startY="492.0">
                <stroke>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>
@@ -84,11 +84,11 @@
          <children>
             <GridPane>
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="0.0" prefWidth="5.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="431.0" minWidth="10.0" prefWidth="431.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="0.0" prefWidth="124.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="431.0" minWidth="10.0" prefWidth="316.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="353.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="0.0" prefWidth="4.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="242.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="0.0" prefWidth="122.0" />
               </columnConstraints>
               <rowConstraints>
                   <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
@@ -100,15 +100,13 @@
                   <RowConstraints maxHeight="74.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TableView prefHeight="200.0" prefWidth="816.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.rowSpan="3" GridPane.vgrow="ALWAYS">
+                  <TableView prefHeight="334.0" prefWidth="696.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.rowSpan="3" GridPane.vgrow="ALWAYS">
                     <columns>
                       <TableColumn prefWidth="50.0" text="ID" />
                       <TableColumn prefWidth="149.0" text="Member Name" />
-                        <TableColumn minWidth="4.0" prefWidth="148.0" text="ISBN" />
-                        <TableColumn minWidth="0.0" prefWidth="261.0" text="Book Name" />
-                        <TableColumn minWidth="0.0" prefWidth="126.0" text="Date Borrowed" />
-                        <TableColumn minWidth="0.0" prefWidth="89.0" text="Date Due" />
-                        <TableColumn minWidth="0.0" prefWidth="67.0" text="Late" />
+                        <TableColumn minWidth="0.0" prefWidth="193.0" text="Books Currently Borrowed" />
+                        <TableColumn minWidth="0.0" prefWidth="64.0" text="Late" />
+                        <TableColumn minWidth="0.0" prefWidth="99.0" text="Fees Due" />
                     </columns>
                   </TableView>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFF0F0; -fx-border-radius: 11; -fx-border-color: #ff0000; -fx-background-radius: 11; -fx-border-width: 2;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />

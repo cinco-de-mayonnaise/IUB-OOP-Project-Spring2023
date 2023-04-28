@@ -168,4 +168,19 @@ public class SceneSwitcher
         
         win.showAndWait();
     }
+    
+    public static void raiseAlert_GenericWarning(String title, String header, String content)
+    {
+        Alert win = new Alert(AlertType.WARNING);
+        if (!title.equals(""))
+            win.setTitle(title);
+        
+        if (!header.equals(""))
+            win.setHeaderText(header);
+        
+        if (!content.equals(""))
+            win.setContentText(content);
+        
+        win.showAndWait();
+    }
 }
