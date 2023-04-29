@@ -11,82 +11,89 @@
 
 <AnchorPane id="AnchorPane" prefHeight="687.0" prefWidth="902.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.protik.IELTSCandidate.IELTSRegistrationSceneController">
    <children>
-      <Label layoutX="538.0" layoutY="56.0" text="Your Name">
+      <Label layoutX="550.0" layoutY="77.0" text="Your Name">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="538.0" layoutY="104.0" text="Mothers Name">
+      <Label layoutX="550.0" layoutY="120.0" text="Mothers Name">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font></Label>
-      <Label layoutX="541.0" layoutY="145.0" text="Fathers Name">
+      <Label layoutX="553.0" layoutY="165.0" text="Fathers Name">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font></Label>
-      <Label layoutX="545.0" layoutY="186.0" prefHeight="26.0" prefWidth="69.0" text="Passport No">
+      <Label layoutX="549.0" layoutY="205.0" prefHeight="26.0" prefWidth="85.0" text="Passport No">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font></Label>
-      <Label layoutX="541.0" layoutY="243.0" text="Contact No">
+      <Label layoutX="549.0" layoutY="255.0" text="Contact No">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font></Label>
-      <Label layoutX="552.0" layoutY="287.0" text="Gender">
+      <Label layoutX="557.0" layoutY="305.0" text="Gender">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font></Label>
-      <TextField fx:id="namefxid" layoutX="660.0" layoutY="48.0" prefHeight="34.0" prefWidth="180.0" />
-      <TextField fx:id="mothersnamefxid" layoutX="660.0" layoutY="91.0" prefHeight="34.0" prefWidth="180.0" />
-      <TextField fx:id="passportnofxid" layoutX="660.0" layoutY="179.0" prefHeight="34.0" prefWidth="180.0" />
-      <TextField fx:id="fathersnamefxid" layoutX="660.0" layoutY="136.0" prefHeight="34.0" prefWidth="180.0" />
-      <TextField fx:id="contactnofxid" layoutX="660.0" layoutY="226.0" prefHeight="34.0" prefWidth="180.0" />
-      <RadioButton fx:id="maleradiofxid" layoutX="681.0" layoutY="287.0" mnemonicParsing="false" text="Male" />
-      <RadioButton fx:id="femaleradiofxid" layoutX="750.0" layoutY="287.0" mnemonicParsing="false" text="Female" />
-      <Button layoutX="802.0" layoutY="614.0" mnemonicParsing="false" onAction="#goBackbuttonOnClick" text="Back" />
-      <Label layoutX="61.0" layoutY="56.0" text="Start By Scelecting Country">
+      <TextField fx:id="namefxid" layoutX="663.0" layoutY="70.0" prefHeight="34.0" prefWidth="180.0" />
+      <TextField fx:id="mothersnamefxid" layoutX="663.0" layoutY="113.0" prefHeight="34.0" prefWidth="180.0" />
+      <TextField fx:id="passportnofxid" layoutX="663.0" layoutY="201.0" prefHeight="34.0" prefWidth="180.0" />
+      <TextField fx:id="fathersnamefxid" layoutX="663.0" layoutY="158.0" prefHeight="34.0" prefWidth="180.0" />
+      <TextField fx:id="contactnofxid" layoutX="663.0" layoutY="248.0" prefHeight="34.0" prefWidth="180.0" />
+      <RadioButton fx:id="maleradiofxid" layoutX="682.0" layoutY="306.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="femaleradiofxid" layoutX="751.0" layoutY="306.0" mnemonicParsing="false" text="Female" />
+      <Button layoutX="761.0" layoutY="602.0" mnemonicParsing="false" onAction="#goBackbuttonOnClick" prefHeight="26.0" prefWidth="70.0" text="Cancel" />
+      <Label layoutX="61.0" layoutY="56.0" prefHeight="18.0" prefWidth="355.0" text="Fill Out all the fields to Register">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="61.0" layoutY="127.0" text="Test Type">
+      <Label layoutX="283.0" layoutY="97.0" text="Test Type">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="262.0" layoutY="127.0" text="Disability Requirements">
+      <Label layoutX="283.0" layoutY="160.0" text="Disability Requirements">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="262.0" layoutY="56.0" text="City">
+      <Label layoutX="65.0" layoutY="95.0" text="City">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox layoutX="262.0" layoutY="78.0" prefWidth="150.0" />
-      <ComboBox layoutX="57.0" layoutY="78.0" prefWidth="150.0" />
-      <ComboBox layoutX="57.0" layoutY="150.0" prefWidth="150.0" />
-      <ComboBox layoutX="262.0" layoutY="150.0" prefWidth="150.0" />
-      <Label layoutX="61.0" layoutY="204.0" text="Choose Venue">
+      <ComboBox fx:id="cityCombobox" layoutX="61.0" layoutY="123.0" prefHeight="26.0" prefWidth="198.0" />
+      <ComboBox fx:id="testTypeCombobox" layoutX="282.0" layoutY="123.0" prefHeight="26.0" prefWidth="170.0" />
+      <ComboBox fx:id="disabilityCombobox" layoutX="283.0" layoutY="186.0" prefHeight="26.0" prefWidth="170.0" />
+      <Label layoutX="65.0" layoutY="160.0" text="Choose Venue">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox layoutX="57.0" layoutY="230.0" prefWidth="150.0" />
-      <Label layoutX="262.0" layoutY="204.0" text="Choose Date and Time">
+      <ComboBox fx:id="venueCombobox" layoutX="61.0" layoutY="186.0" prefHeight="26.0" prefWidth="198.0" />
+      <Label layoutX="61.0" layoutY="234.0" prefHeight="20.0" prefWidth="94.0" text="Time">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox layoutX="262.0" layoutY="230.0" prefWidth="150.0" />
+      <ComboBox fx:id="timeCombobox" layoutX="61.0" layoutY="262.0" prefHeight="26.0" prefWidth="198.0" />
       <Button layoutX="259.0" layoutY="355.0" mnemonicParsing="false" onAction="#RegisterbuttonOnClick" prefHeight="34.0" prefWidth="206.0" text="Register">
          <font>
-            <Font name="System Bold Italic" size="12.0" />
+            <Font name="System Bold Italic" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Label layoutX="64.0" layoutY="297.0" text="N.B: Ielts Exams Takes Place on 15th of Every Consecutive Month" textFill="WHITE" />
+      <Label layoutX="283.0" layoutY="235.0" prefHeight="20.0" prefWidth="94.0" text="Month">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="monthCombobox" layoutX="283.0" layoutY="263.0" prefHeight="26.0" prefWidth="170.0" />
+      <Label fx:id="labelfxId" layoutX="368.0" layoutY="400.0" prefHeight="34.0" prefWidth="236.0" style="-fx-background-color: grey;" text="registation status" textFill="RED" />
    </children>
 </AnchorPane>
