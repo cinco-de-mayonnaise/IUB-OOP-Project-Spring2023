@@ -5,15 +5,19 @@
 package FXMLScenes.Users.samira;
 
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
 import projectbritishcouncil.common.util.SceneSwitcher;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -26,9 +30,10 @@ import javafx.stage.Stage;
  * @author samir
  */
 public class AdminDashboardSceneController implements Initializable {
+    @FXML
      ImageView myImageView;
     
-    Image myImage = new Image(getClass().getResourceAsStream("BClogo.png"));
+    Image myImage = new Image(getClass().getResourceAsStream("/FXMLScenes/Users/samira/images/BClogo.png"));
     @FXML
     private BorderPane borderPane;
     @FXML
@@ -40,37 +45,86 @@ public class AdminDashboardSceneController implements Initializable {
     public void displayImage(){
         myImageView.setImage(myImage);
     }
-    private ComboBox<String> MenuComboBox;
-    private ComboBox<String> settingsComboBox;
+   
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        MenuComboBox.getItems().addAll("Profile", "All Tasks", "Applications", "Complaints and feedbacks", "Provide IT support");
-        settingsComboBox.getItems().addAll("Account", "Privacy", "About", "Help");
+       
         // TODO
     }    
-
     private void goHomeButtonOnClick(ActionEvent event) {
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/AdminDashboardScene.fxml", false);
     }
 
+
     @FXML
     private void goHomeButtonOnClick(javafx.event.ActionEvent event) {
+         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminDashboardScene.fxml");
+    }
+
+
+    @FXML
+    private void addUser(javafx.event.ActionEvent event) {
+         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/ViewListOfUsersScene.fxml");
     }
 
     @FXML
-    private void showMenuOptionsOnClick(javafx.event.ActionEvent event) {
+    private void removeUser(javafx.event.ActionEvent event) {
+        SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/ViewListOfUsersScene.fxml");
     }
 
     @FXML
-    private void showSettingsOnClick(javafx.event.ActionEvent event) {
+    private void publishNotice(javafx.event.ActionEvent event) {
+        SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminViewBulletinBoardScene.fxml");
     }
 
     @FXML
-    private void goBackButtonOnClick(javafx.event.ActionEvent event) {
+    private void viewComplaints(javafx.event.ActionEvent event) {
+        SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminViewComplaintsScene.fxml");
+    }
+
+    @FXML
+    private void reviewApplications(javafx.event.ActionEvent event) {
+        SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminViewComplaintsScene.fxml");
+    }
+
+    @FXML
+    private void resolveBillingDisputes(javafx.event.ActionEvent event) { 
+    }
+
+    @FXML
+    private void resolveRequests(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void help(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void logout(javafx.event.ActionEvent event) throws IOException {
+          Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Logout");
+            alert.setHeaderText("Are you sure you want to Logout?");
+            alert.setContentText("Click OK to Confirm");
+       
+           Optional <ButtonType> result = alert.showAndWait();
+            if(result.get() == ButtonType.OK){
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("ExaminerDashboardScene.fxml"));
+                Parent homePageParent = loader.load();
+                Scene homaPageScene = new Scene(homePageParent);
+           
+                Stage currentStage = (Stage)settignsMenuBar.getScene().getWindow();
+                currentStage.setScene(homaPageScene);
+                currentStage.show();
+           
+       }
+       
+       else{
+           
+       }
     }
   
 }
