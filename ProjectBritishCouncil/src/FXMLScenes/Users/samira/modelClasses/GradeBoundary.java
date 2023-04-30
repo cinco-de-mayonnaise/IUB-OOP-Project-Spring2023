@@ -9,5 +9,28 @@ package FXMLScenes.Users.samira.modelClasses;
  * @author samir
  */
 public class GradeBoundary {
+    String month;
+    int year;
+
+    public GradeBoundary() {
+    }
+
+    public GradeBoundary(String month) {
+        this.month = month;
+        this.year = year;
+    }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+ 
+    }
     
-}
+    
+    
+
