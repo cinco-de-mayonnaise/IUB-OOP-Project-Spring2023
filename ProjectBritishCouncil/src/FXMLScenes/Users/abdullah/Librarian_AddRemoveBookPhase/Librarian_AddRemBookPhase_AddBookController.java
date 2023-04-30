@@ -18,7 +18,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Window;
+import projectbritishcouncil.Users.abdullah.Book;
+import projectbritishcouncil.common.DataImage;
 import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
@@ -52,13 +55,21 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
     private Button Btn_Add_Book;
     @FXML
     private ImageView IV_BookImage;
-
+    
+    String newBookName;
+    String newBookISBN;
+    String newBookCategory;
+    DataImage newBookCover;
+    
+    
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb)
+    {
+        Btn_Add_Book.setDisable(true);
+        
     }    
     
     @FXML
@@ -71,6 +82,8 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
     @FXML
     private void click_Add_Book(ActionEvent event)
     {
+        Book b = new Book(newBookName, newBookISBN, newBookCategory, newBookCover);
+        
         // close the window
         SceneSwitcher.getStageFromEvent(event).close();
     }
@@ -80,6 +93,9 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
     {
         FileChooser fc = new FileChooser();
         fc.setTitle("Open Image for Book");
+        fc.setSelectedExtensionFilter(new ExtensionFilter("*.png", "*.bmp", "*.gif", ".jpeg"));
+        
         File selectedImage = fc.showOpenDialog(SceneSwitcher.getStageFromEvent(event));
+        newBookCover = new DataImage(selectedImage.getPath());
     }
 }

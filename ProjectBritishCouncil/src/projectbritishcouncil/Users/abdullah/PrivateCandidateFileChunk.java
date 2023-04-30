@@ -4,18 +4,13 @@
  */
 package projectbritishcouncil.Users.abdullah;
 
-import java.util.Date;
-import projectbritishcouncil.common.BasicUser;
+import projectbritishcouncil.common.FileChunk;
 
 /**
  *
  * @author Abdullah
  */
-public class Librarian extends BasicUser
+public class PrivateCandidateFileChunk implements FileChunk
 {
-    public Librarian(String Name, String Email, String Password, Date DOJ, Date DOB) {
-        super(Name, Email, Password, DOJ, DOB);
-    }
-    
     
 }

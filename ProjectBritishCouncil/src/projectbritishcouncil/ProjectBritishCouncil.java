@@ -10,6 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import projectbritishcouncil.common.util.CommonInstancesClass;
+import static projectbritishcouncil.common.util.Identifiers.GLOBAL_CLASS_HANDLE;
+import static projectbritishcouncil.common.util.Identifiers.MAIN_STAGE;
 
 /**
  *
@@ -23,13 +25,18 @@ public class ProjectBritishCouncil extends Application {
         CommonInstancesClass c = CommonInstancesClass.getInstance();
         
         /* holds a getClass() to the project that allows us to get URLs to FXML files easily*/
-        c.putObject("global_class_handle", getClass());
+        c.putObject(GLOBAL_CLASS_HANDLE, getClass());
         
         /* the top level highest window/stage of this application. 
         This may change fron login screen to a dashboard, but 
         will always be the parent of all other created windows. 
         If this window is closed, the application exits. */
-        c.putObject("main_stage", stage);      
+        c.putObject(MAIN_STAGE, stage);      
+        /////
+        
+        
+        ///// Experimental stuff: if we need to overload standard file loading/saving behavior
+        Experimental.insert_some_stuff_in_ht();
         
         ///// Initializing login screen (and creating window for it)
         Parent root = FXMLLoader.load(getClass().getResource("/FXMLScenes/LogonUI.fxml"));
@@ -47,5 +54,7 @@ public class ProjectBritishCouncil extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    
+    
     
 }

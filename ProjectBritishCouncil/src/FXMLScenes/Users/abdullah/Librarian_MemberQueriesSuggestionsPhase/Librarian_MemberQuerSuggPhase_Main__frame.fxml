@@ -38,12 +38,12 @@
                   <TableColumn prefWidth="96.0" text="Resolved" />
               </columns>
             </TableView>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets top="10.0" />
                </GridPane.margin>
                <children>
-                  <Button fx:id="Btn_Select_Query_Debug" mnemonicParsing="false" onAction="#click_Btn_Select_Query_Debug" text="Select a Query and then See more options" />
+                  <Button fx:id="Btn_Close" mnemonicParsing="false" onAction="#click_Close" prefHeight="25.0" prefWidth="64.0" text="Close" />
                </children>
             </HBox>
          </children>
@@ -67,7 +67,7 @@
                   <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
                </padding>
             </HBox>
-            <Line endX="643.5" startX="-100.0">
+            <Line fx:id="liine33" endX="643.5">
                <stroke>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>

@@ -4,10 +4,18 @@
  */
 package projectbritishcouncil.Users.sopen;
 
+import java.util.Date;
+import projectbritishcouncil.common.BasicUser;
+
 /**
  *
  * @author Abdullah
  */
-public class Invigilator {
+public class Invigilator extends BasicUser
+{
+    public Invigilator(String Name, String Email, String Password, Date DOJ, Date DOB) {
+        super(Name, Email, Password, DOJ, DOB);
+    }
+    
     
 }

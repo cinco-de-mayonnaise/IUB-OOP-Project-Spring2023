@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -7,47 +8,72 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="588.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.LogonUIController">
-   <children>
-      <TextField fx:id="TF_EmailID" layoutX="242.0" layoutY="221.0" prefHeight="31.0" prefWidth="309.0" promptText="Email Address or User ID" />
-      <PasswordField fx:id="PasswordField_AccPassword" layoutX="241.0" layoutY="275.0" prefHeight="31.0" prefWidth="310.0" promptText="Password" />
-      <Label fx:id="Label_Forgot_Password" alignment="CENTER_RIGHT" layoutX="441.0" layoutY="384.0" onMouseClicked="#click_Forgot_Password" text="Forgot Password?" underline="true" />
-      <Button fx:id="Btn_Login" layoutX="241.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#click_Login" prefHeight="31.0" prefWidth="310.0" style="-fx-background-color: #2532a4;" text="Login" textFill="WHITE" />
-      <MenuBar layoutX="241.0" layoutY="14.0" prefHeight="32.0" prefWidth="94.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Debug">
+<BorderPane prefHeight="525.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.LogonUIController">
+   <top>
+      <MenuBar prefHeight="32.0" prefWidth="94.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Debug">
                <items>
                   <Menu mnemonicParsing="false" text="Force Open a User Dashboard">
-                    <items>
+                     <items>
                         <MenuItem fx:id="Debug_OpenIELTSCandidateDashboard" mnemonicParsing="false" onAction="#Debug_OpenIELTSCandidateDashboard" text="IELTSCandidateDashboard" />
                         <MenuItem fx:id="Debug_OpenLibraryMemberDashboard" mnemonicParsing="false" onAction="#Debug_OpenLibraryMemberDashboard" text="LibraryMemberDashboard" />
-                      <MenuItem fx:id="Debug_OpenLibrarianDashboard" mnemonicParsing="false" onAction="#Debug_OpenDashboard" text="LibrarianDashboard" />
+                        <MenuItem fx:id="Debug_OpenLibrarianDashboard" mnemonicParsing="false" onAction="#Debug_OpenDashboard" text="LibrarianDashboard" />
                         <MenuItem fx:id="Debug_OpenAdminDashboard" mnemonicParsing="false" onAction="#Debug_OpenAdminDashboard" text="AdminDashboard" />
                         <MenuItem fx:id="Debug_OpenInstructorDashboard" mnemonicParsing="false" onAction="#Debug_OpenInstructorDashboard" text="InstructorDashboard" />
                         <MenuItem fx:id="Debug_OpenInvigilatorDashboard" mnemonicParsing="false" onAction="#Debug_OpenInvigilatorDashboard" text="InvigilaltorDashboard" />
-                    </items>
+                     </items>
                   </Menu>
                </items>
-          </Menu>
-        </menus>
+            </Menu>
+         </menus>
       </MenuBar>
-      <Pane layoutX="-6.0" layoutY="-1.0" prefHeight="554.0" prefWidth="224.0" style="-fx-background-color: #2532a4;">
+   </top>
+   <left>
+      <Pane prefHeight="554.0" prefWidth="224.0" style="-fx-background-color: #2532a4;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="17.0" layoutY="81.0" prefHeight="49.0" prefWidth="198.0" text="British Council" textAlignment="CENTER" textFill="#f7f4f4" underline="true">
+            <Label layoutX="13.0" layoutY="46.0" prefHeight="49.0" prefWidth="198.0" text="British Council" textAlignment="CENTER" textFill="#f7f4f4" underline="true">
                <font>
                   <Font name="Verdana Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="57.0" layoutY="122.0" text="A public Corporation" textFill="#f7f4f4" />
+            <Label layoutX="43.0" layoutY="265.0" text="A public Corporation" textFill="#f7f4f4" />
             <Label layoutX="31.0" layoutY="476.0" text="Copyright (C). All Rights Reserved" textFill="WHITE">
                <font>
                   <Font size="11.0" />
-               </font></Label>
+               </font>
+            </Label>
          </children>
       </Pane>
-   </children>
-</AnchorPane>
+   </left>
+   <center>
+      <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="88.0" prefWidth="284.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="TF_EmailID" prefHeight="31.0" prefWidth="309.0" promptText="Email Address or User ID" />
+                  <PasswordField fx:id="PasswordField_AccPassword" prefHeight="31.0" prefWidth="310.0" promptText="Password" />
+               </children>
+            </VBox>
+            <Button fx:id="Btn_Login" mnemonicParsing="false" onMouseClicked="#click_Login" prefHeight="31.0" prefWidth="310.0" style="-fx-background-color: #2532a4;" text="Login" textFill="WHITE" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="284.0">
+               <children>
+                  <Label fx:id="Label_Forgot_Password" alignment="CENTER_RIGHT" onMouseClicked="#click_Forgot_Password" text="Forgot Password?" underline="true" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

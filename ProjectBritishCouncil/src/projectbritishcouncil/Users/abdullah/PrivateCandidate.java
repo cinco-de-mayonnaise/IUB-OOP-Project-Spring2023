@@ -13,8 +13,9 @@ import projectbritishcouncil.common.BasicUser;
  */
 public class PrivateCandidate extends BasicUser
 {
-    public PrivateCandidate(String Email, String Password, Date DOJ, Date DOB) {
-        super(Email, Password, DOJ, DOB);
+
+    public PrivateCandidate(String Name, String Email, String Password, Date DOJ, Date DOB) {
+        super(Name, Email, Password, DOJ, DOB);
     }
-    
+   
 }

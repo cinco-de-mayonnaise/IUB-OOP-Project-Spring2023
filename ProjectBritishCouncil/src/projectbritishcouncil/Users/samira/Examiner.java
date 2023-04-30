@@ -13,8 +13,8 @@ import projectbritishcouncil.common.BasicUser;
  */
 public class Examiner extends BasicUser {
     
-    public Examiner(String Email, String Password, Date DOJ, Date DOB) {
-        super(Email, Password, DOJ, DOB);
+    public Examiner(String Name, String Email, String Password, Date DOJ, Date DOB) {
+        super(Name, Email, Password, DOJ, DOB);
     }
     
 }
