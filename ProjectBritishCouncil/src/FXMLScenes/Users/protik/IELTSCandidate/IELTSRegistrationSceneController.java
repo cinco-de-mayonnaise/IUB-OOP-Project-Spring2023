@@ -133,8 +133,8 @@ public class IELTSRegistrationSceneController implements Initializable {
             String gender, String month, String city, String venue, String time, String testType, String disability) {
     try {
         FileWriter writer = new FileWriter("Registration Data.txt", true);
-        writer.write("Name:"+name+", Mothers Name: "+mothersName+", Fathers Name: "+", Contact No: "+contactNo+", Passport No: "+passportNo+
-     ", Gender: "+gender+"\n"+", Month: "+month+ "City: "+ city+", Venue: "+venue+", Time: "+time+", Test Type: "+testType+", Disability: ");
+        writer.write("Name:"+name+", Mothers Name: "+mothersName+", Fathers Name: "+fathersName+", Contact No: "+contactNo+", Passport No: "+passportNo+
+     ", Gender: "+gender+"\n"+", Month: "+month+ "City: "+ city+", Venue: "+venue+", Time: "+time+", Test Type: "+testType+", Disability: "+disability);
         writer.close();
         labelfxId.setText("Text File generated Successfully");
         } catch (IOException e) {
