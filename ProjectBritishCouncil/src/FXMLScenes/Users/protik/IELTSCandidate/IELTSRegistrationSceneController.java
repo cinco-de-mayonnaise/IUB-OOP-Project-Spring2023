@@ -5,10 +5,15 @@
  */
 package FXMLScenes.Users.protik.IELTSCandidate;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,6 +27,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
+import projectbritishcouncil.Users.protik.IELTSCandidate;
 import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
@@ -127,9 +133,49 @@ public class IELTSRegistrationSceneController implements Initializable {
     String time = timeCombobox.getValue();
     String testType = testTypeCombobox.getValue();
     String disability = disabilityCombobox.getValue();
+    
+    File f = null;
+    FileOutputStream fos = null;      
+    ObjectOutputStream oos = null;
+        
+    try {
+        f = new File("RegistrationObjects.bin");
+        if(f.exists()){
+            fos = new FileOutputStream(f,true);
+            oos = new AppendableObjectOutputStream(fos);                
+        }
+        else{
+            fos = new FileOutputStream(f);
+            oos = new ObjectOutputStream(fos);               
+        }
+        IELTSCandidate e = new IELTSCandidate(
+            namefxid.getText(),
+            mothersnamefxid.getText(),    
+            fathersnamefxid.getText(),
+            contactnofxid.getText(),
+            passportnofxid.getText(),
+            maleradiofxid.isSelected() ? "Male" : "Female",
+            monthCombobox.getValue(),
+            cityCombobox.getValue(),
+            venueCombobox.getValue(),
+            timeCombobox.getValue(),
+            testTypeCombobox.getValue(),
+            disabilityCombobox.getValue()
+        );
+            oos.writeObject(e);
+
+        } catch (IOException ex) {
+            Logger.getLogger(IELTSRegistrationSceneController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(oos != null) oos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(IELTSRegistrationSceneController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
     
-    public void writeToFile(String name,String mothersName,String fathersName, String contactNo, String passportNo, 
+    /*public void writeToFile(String name,String mothersName,String fathersName, String contactNo, String passportNo, 
             String gender, String month, String city, String venue, String time, String testType, String disability) {
     try {
         FileWriter writer = new FileWriter("Registration Data.txt", true);
@@ -141,5 +187,8 @@ public class IELTSRegistrationSceneController implements Initializable {
             labelfxId.setText("An error occurred while writing to the file");
         }
     }
+*/
+
+  
 }
 

@@ -3,8 +3,5 @@ package projectbritishcouncil.Users.protik;
 import java.util.Date;
 
 public class IELTSCandidate {
-    String name;
-    int id, age, passportNo;
-    Date birthday , passportExpiryDate;
-    
+private String name,mothersName,fathersName,contactNo,passportNo,gender,month,city,venue,time,testType,disability;
 }
