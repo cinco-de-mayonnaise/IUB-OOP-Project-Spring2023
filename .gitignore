@@ -11,5 +11,6 @@ ProjectBritishCouncil/.nb-gradle/
 ProjectBritishCouncil/nbproject/*
 
 # but do update these two files in that folder
-!ProjectBritishCouncil/nbproject/project.properties
-!ProjectBritishCouncil/nbproject/project.xml
+# nvm, version mismatches are causing corruption, now we will rely on everyone having their own nbproject folder
+#!ProjectBritishCouncil/nbproject/project.properties
+#!ProjectBritishCouncil/nbproject/project.xml
