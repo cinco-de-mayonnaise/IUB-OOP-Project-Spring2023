@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
@@ -20,19 +19,23 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <MenuButton fx:id="MenuMenuBar" mnemonicParsing="false" onAction="#showMenuOptionsOnClick" prefHeight="56.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Menu" textFill="#fffbfb" wrapText="true">
+            <MenuButton fx:id="menuMenuBar" mnemonicParsing="false" prefHeight="56.0" prefWidth="172.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Menu" textFill="#fffbfb" wrapText="true">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                  <MenuItem mnemonicParsing="false" onAction="#checkAnswers" text="Check Answers" />
+                  <MenuItem mnemonicParsing="false" onAction="#checkMarkScheme" text="Check Mark Scheme" />
+                  <MenuItem mnemonicParsing="false" onAction="#reportCandidate" text="Report A Candidate" />
+                  <MenuItem mnemonicParsing="false" onAction="#pulishResults" text="Publish Results" />
+                  <MenuItem mnemonicParsing="false" onAction="#applyForLeave" text="Apply For Leave" />
+                  <MenuItem mnemonicParsing="false" onAction="#writeQuestions" text="Write Questions" />
                </items>
                <font>
                   <Font size="15.0" />
                </font>
             </MenuButton>
-            <MenuButton fx:id="settignsMenuBar" mnemonicParsing="false" onAction="#showSettingsOnClick" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Settings" textFill="#fffbfb" wrapText="true">
+            <MenuButton fx:id="settingsMenuBar" mnemonicParsing="false" prefHeight="52.0" prefWidth="170.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Settings" textFill="#fffbfb" wrapText="true">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                  <MenuItem mnemonicParsing="false" onAction="#help" text="Help" />
+                  <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
                </items>
                <font>
                   <Font size="15.0" />
@@ -40,24 +43,22 @@
             </MenuButton>
          </children>
       </VBox>
-      <TableView fx:id="gbTtableView" layoutX="223.0" layoutY="210.0" prefHeight="241.0" prefWidth="264.0">
+      <TableView fx:id="gbTtableView" layoutX="241.0" layoutY="128.0" prefHeight="241.0" prefWidth="307.0">
         <columns>
-          <TableColumn fx:id="monthColumn" prefWidth="133.0" text="Month" />
-          <TableColumn fx:id="yearColumn" prefWidth="128.0" text="Year" />
+          <TableColumn fx:id="monthColumn" prefWidth="145.0" text="Month" />
+          <TableColumn fx:id="yearColumn" prefWidth="158.0" text="Year" />
         </columns>
       </TableView>
-      <ComboBox fx:id="yearComboBox" layoutX="547.0" layoutY="40.0" prefWidth="150.0" promptText="Select Year" />
-      <ComboBox fx:id="monthComboBox" layoutX="547.0" layoutY="81.0" prefWidth="150.0" promptText="Select Month" />
-      <Button layoutX="487.0" layoutY="155.0" mnemonicParsing="false" onAction="#viewGradeBoundaryButtonOnClick" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="View Grade Boundary" textFill="#fcfafa">
+      <Button layoutX="400.0" layoutY="37.0" mnemonicParsing="false" onAction="#viewGradeBoundaryButtonOnClick" prefHeight="33.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="View Grade Boundary" textFill="#fcfafa">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Hyperlink fx:id="hyperlink" alignment="CENTER" focusTraversable="false" layoutX="565.0" layoutY="248.0" onAction="#hyperlink" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
-      <Hyperlink fx:id="hyperlink2" alignment="CENTER" focusTraversable="false" layoutX="565.0" layoutY="279.0" onAction="#hyperlink2" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
-      <Hyperlink fx:id="hyperlink3" alignment="CENTER" focusTraversable="false" layoutX="565.0" layoutY="308.0" onAction="#hyperlink3" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
-      <Hyperlink fx:id="hyperlink4" alignment="CENTER" focusTraversable="false" layoutX="565.0" layoutY="345.0" onAction="#hyperlink4" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
-      <Hyperlink fx:id="hyperlink5" alignment="CENTER" focusTraversable="false" layoutX="565.0" layoutY="379.0" onAction="#hyperlink5" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="143.0" onAction="#hyperlink" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink2" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="180.0" onAction="#hyperlink2" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink3" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="217.0" onAction="#hyperlink3" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink4" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="253.0" onAction="#hyperlink4" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink5" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="295.0" onAction="#hyperlink5" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
       <Button layoutX="147.0" layoutY="1.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="12.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 2px 2px 0px;" text="Back" textFill="#eeebeb" />
    </children>
 </AnchorPane>

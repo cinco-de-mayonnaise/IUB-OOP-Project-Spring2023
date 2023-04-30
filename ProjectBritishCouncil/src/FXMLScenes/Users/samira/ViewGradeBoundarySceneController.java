@@ -7,7 +7,11 @@ package FXMLScenes.Users.samira;
 import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,7 +20,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -24,7 +27,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import projectbritishcouncil.common.util.SceneSwitcher;
-
+import FXMLScenes.Users.samira.modelClasses.GradeBoundary;
 /**
  * FXML Controller class
  *
@@ -32,18 +35,30 @@ import projectbritishcouncil.common.util.SceneSwitcher;
  */
 public class ViewGradeBoundarySceneController implements Initializable {
 
+    @FXML
     private TableView<GradeBoundary> gbTtableView;
+    @FXML
     private TableColumn<GradeBoundary, String> monthColumn;
+    @FXML
     private TableColumn<GradeBoundary, String> yearColumn;
     @FXML
     private AnchorPane anchorpane;
     @FXML
-    private MenuButton MenuMenuBar;
+    private MenuButton menuMenuBar;
     @FXML
-    private MenuButton settignsMenuBar;
+    private MenuButton settingsMenuBar;
     @FXML
-    private Label complaintMadeByWhichUserLabel;
-
+    private Hyperlink hyperlink;
+    @FXML
+    private Hyperlink hyperlink2;
+    @FXML
+    private Hyperlink hyperlink3;
+    @FXML
+    private Hyperlink hyperlink4;
+    @FXML
+    private Hyperlink hyperlink5;
+    ArrayList<String> yearList;
+    ArrayList<GradeBoundary> monthList;
     /**
      * Initializes the controller class.
      */
@@ -52,22 +67,13 @@ public class ViewGradeBoundarySceneController implements Initializable {
         monthColumn.setCellValueFactory(new PropertyValueFactory<GradeBoundary, String>("month"));
         yearColumn.setCellValueFactory(new PropertyValueFactory<GradeBoundary, String>("year"));
         
-       gbTtableView.setItems(getPeople());
+       
         // TODO
     }    
     
     
-    public ObservableList<GradeBoundary> getPeople(){
-        ObservableList<GradeBoundary> people =FXCollections.observableArrayList();
-        people.add(new GradeBoundary("Jan", "2017"));
-        people.add(new GradeBoundary("Jan", "2017"));
-        people.add(new GradeBoundary("Jan", "2017"));
-        people.add(new GradeBoundary("Jan", "2017"));
-        people.add(new GradeBoundary("Jan", "2017"));
-        
-        
-        return people;
-}
+
+    
     @FXML
     private void goHomeButtonOnClick(ActionEvent event) {
          SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/ExaminerDashboardScene.fxml", false);
@@ -79,47 +85,107 @@ public class ViewGradeBoundarySceneController implements Initializable {
          Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
          stage.close();
     }
-
+    @FXML
     private void hyperlink(ActionEvent event) throws IOException {
         Desktop desktop = Desktop.getDesktop();
-        desktop.browse(java.net.URI.create("https://www.google.com/search?q=igcse+2017+mark+schemes&rlz=1C1BNSD_enBD1030BD1030&oq=igcse+2017+mark+schemes&aqs=chrome..69i57j0i22i30l2j0i390i650l2.11687j0j15&sourceid=chrome&ie=UTF-8"));
+        desktop.browse(java.net.URI.create("https://qualifications.pearson.com/content/dam/pdf/Support/Grade-boundaries/International-GCSE/international-gcse-grade-boundaries-1701.pdf"));
     }
 
-   /* @FXML
+    @FXML
     private void hyperlink2(ActionEvent event) {
         Desktop desktop = Desktop.getDesktop();
-        desktop.browse(java.net.URI.create("https://www.google.com/search?q=igcse+june+2017+mark+schemes&rlz=1C1BNSD_enBD1030BD1030&sxsrf=APwXEdeSGrM75pNYOHCYAmoTn_5s-zF8lw%3A1680730818396&ei=wuotZID0F7C74-EP7oGfkAo&ved=0ahUKEwiA3ZKb2pP-AhWw3TgGHe7AB6IQ4dUDCA8&uact=5&oq=igcse+june+2017+mark+schemes&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEMgUIABCiBDoKCAAQRxDWBBCwAzoGCAAQBxAeOgUIABCABDoICAAQBRAHEB46BggAEAUQHjoICAAQigUQhgM6CAghEKABEMMESgQIQRgAUNIrWMVcYPZraAFwAHgAgAHXAYgB6QqSAQU4LjQuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp"));
+        try {
+            desktop.browse(java.net.URI.create("https://qualifications.pearson.com/content/dam/pdf/Support/Grade-boundaries/International-GCSE/1706-international-gcse-grade-boundaries-v2.pdf"));
+        } catch (IOException ex) {
+            Logger.getLogger(ViewGradeBoundarySceneController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
     private void hyperlink3(ActionEvent event) {
-        Desktop desktop = Desktop.getDesktop();
-        desktop.browse(java.net.URI.create
+          Desktop desktop = Desktop.getDesktop();
+        try {
+        desktop.browse(java.net.URI.create("https://www.google.com/search?q=igcse+2017+mark+schemes&rlz=1C1BNSD_enBD1030BD1030&oq=igcse+2017+mark+schemes&aqs=chrome..69i57j0i22i30l2j0i390i650l2.11687j0j15&sourceid=chrome&ie=UTF-8"));
+        } catch (IOException ex) {
+            Logger.getLogger(ViewGradeBoundarySceneController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
     private void hyperlink4(ActionEvent event) {
         Desktop desktop = Desktop.getDesktop();
-        desktop.browse(java.net.URI.create
+        
+        try {
+            desktop.browse(java.net.URI.create("https://www.google.com/search?q=igcse+2017+mark+schemes&rlz=1C1BNSD_enBD1030BD1030&oq=igcse+2017+mark+schemes&aqs=chrome..69i57j0i22i30l2j0i390i650l2.11687j0j15&sourceid=chrome&ie=UTF-8"));
+        } catch (IOException ex) {
+            Logger.getLogger(ViewGradeBoundarySceneController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
     private void hyperlink5(ActionEvent event) {
-        Desktop desktop = Desktop.getDesktop();
-        desktop.browse(java.net.URI.create
-    }*/
-
+         Desktop desktop = Desktop.getDesktop();
+        try {
+            desktop.browse(java.net.URI.create("https://www.google.com/search?q=igcse+2017+mark+schemes&rlz=1C1BNSD_enBD1030BD1030&oq=igcse+2017+mark+schemes&aqs=chrome..69i57j0i22i30l2j0i390i650l2.11687j0j15&sourceid=chrome&ie=UTF-8"));
+        } catch (IOException ex) {
+            Logger.getLogger(ViewGradeBoundarySceneController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+    }
     @FXML
-    private void showMenuOptionsOnClick(ActionEvent event) {
+    private void checkAnswers(ActionEvent event) {
     }
 
     @FXML
-    private void showSettingsOnClick(ActionEvent event) {
+    private void checkMarkScheme(ActionEvent event) {
     }
 
     @FXML
-    private void writeAReplyButtonOnClick(ActionEvent event) {
+    private void reportCandidate(ActionEvent event) {
     }
+
+    @FXML
+    private void pulishResults(ActionEvent event) {
+    }
+
+    @FXML
+    private void applyForLeave(ActionEvent event) {
+    }
+
+    @FXML
+    private void writeQuestions(ActionEvent event) {
+    }
+
+    @FXML
+    private void help(ActionEvent event) {
+    }
+
+    @FXML
+    private void logout(ActionEvent event) {
+    }
+
+    @FXML
+    private void viewGradeBoundaryButtonOnClick(ActionEvent event) {
+            monthList.add(new GradeBoundary("January"));
+            monthList.add(new GradeBoundary("January"));
+            monthList.add(new GradeBoundary("January"));
+            monthList.add(new GradeBoundary("January"));
+            monthList.add(new GradeBoundary("January"));
+            yearList.add("2017");
+            yearList.add("2017");
+            yearList.add("2017");
+            yearList.add("2017");
+            yearList.add("2017");
+            
+            
+           gbTtableView.getItems().clear();
+           int i = 0;
+           for( GradeBoundary gb : monthList ){
+              // gbTtableView.getItems().add(yearList.get(), monthList.get(i));
+               i++;
+           }
+    }
+}
+   
 
     
-}

@@ -12,28 +12,32 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.AdminViewBulletinBoardSceneController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.AdminViewBulletinBoardSceneController">
    <left>
-      <VBox prefHeight="400.0" prefWidth="111.0" style="-fx-background-color: #14242B; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="600.0" prefWidth="158.0" style="-fx-background-color: #14242B; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#goHomeButtonOnClick" prefHeight="46.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="#eeebeb">
+            <Button mnemonicParsing="false" onAction="#goHomeButtonOnClick" prefHeight="46.0" prefWidth="163.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="#eeebeb">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <MenuButton fx:id="MenuMenuBar" mnemonicParsing="false" onAction="#showMenuOptionsOnClick" prefHeight="45.0" prefWidth="111.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Menu" textFill="#fffbfb" wrapText="true">
+            <MenuButton fx:id="MenuMenuBar" mnemonicParsing="false" prefHeight="45.0" prefWidth="208.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Menu" textFill="#fffbfb" wrapText="true">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewComplaints" text="View Complaints" />
+                  <MenuItem mnemonicParsing="false" onAction="#addUser" text="Add new user" />
+                  <MenuItem mnemonicParsing="false" onAction="#removeUser" text="Remove User" />
+                  <MenuItem mnemonicParsing="false" onAction="#reviewApplications" text="Review Applications" />
+                  <MenuItem mnemonicParsing="false" onAction="#resolveBillingDisputes" text="Resolve Billing Disputes" />
+                  <MenuItem mnemonicParsing="false" onAction="#resolveRequests" text="Resolve Requests" />
                </items>
                <font>
                   <Font size="15.0" />
                </font>
             </MenuButton>
-            <MenuButton fx:id="settignsMenuBar" mnemonicParsing="false" onAction="#showSettingsOnClick" prefHeight="45.0" prefWidth="111.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Settings" textFill="#fffbfb" wrapText="true">
+            <MenuButton fx:id="settignsMenuBar" mnemonicParsing="false" prefHeight="51.0" prefWidth="199.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Settings" textFill="#fffbfb" wrapText="true">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                  <MenuItem mnemonicParsing="false" onAction="#help" text="Help" />
+                  <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
                </items>
                <font>
                   <Font size="15.0" />
@@ -43,7 +47,7 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane fx:id="anchorPane" prefHeight="415.0" prefWidth="489.0" style="-fx-background-color: #0D1824; -fx-border-width: 0px 0px 2px 0px;" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="anchorPane" prefHeight="444.0" prefWidth="757.0" style="-fx-background-color: #0D1824; -fx-border-width: 0px 0px 2px 0px;" BorderPane.alignment="CENTER">
          <children>
             <Label alignment="CENTER" layoutX="74.0" layoutY="87.0" prefHeight="17.0" prefWidth="153.0" textFill="#f8f6f6">
                <font>
@@ -59,7 +63,7 @@
             <RadioButton fx:id="allUserRB" layoutX="79.0" layoutY="316.0" mnemonicParsing="false" text="All Users" textFill="#eeeaea" />
             <RadioButton fx:id="specificUserRB" layoutX="204.0" layoutY="316.0" mnemonicParsing="false" text="Specific Users" textFill="#f5f4f4" />
             <ComboBox fx:id="specifyUsersComboBox" layoutX="356.0" layoutY="312.0" prefHeight="25.0" prefWidth="224.0" promptText="Specify Users" />
-            <Button layoutY="1.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="12.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 2px 2px 0px;" text="Back" textFill="#eeebeb" />
+            <Button layoutY="1.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 2px 2px 0px;" text="Back" textFill="#eeebeb" />
             <Button layoutX="309.0" layoutY="373.0" mnemonicParsing="false" onAction="#postButtonOnClick" prefHeight="27.0" prefWidth="106.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px px 2px 1px;" text="Post" textFill="#eeebeb" />
          </children>
       </AnchorPane>
