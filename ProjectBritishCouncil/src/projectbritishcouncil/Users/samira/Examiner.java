@@ -4,6 +4,8 @@
  */
 package projectbritishcouncil.Users.samira;
 
+import FXMLScenes.Users.samira.modelClasses.ExaminerInfo;
+import java.util.ArrayList;
 import java.util.Date;
 import projectbritishcouncil.common.BasicUser;
 
@@ -12,9 +14,13 @@ import projectbritishcouncil.common.BasicUser;
  * @author samir
  */
 public class Examiner extends BasicUser {
-    
+    private ExaminerInfo examinerInfo;
+   private ArrayList<Exam> exams; 
+
     public Examiner(String Name, String Email, String Password, Date DOJ, Date DOB) {
         super(Name, Email, Password, DOJ, DOB);
     }
+    
+    
     
 }

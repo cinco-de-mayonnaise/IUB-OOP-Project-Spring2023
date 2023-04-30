@@ -2,29 +2,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package FXMLScenes.Users.samira.modelClasses;
-
-import java.util.List;
+package projectbritishcouncil.Users.samira;
+import java.util.ArrayList;
 
 /**
  *
  * @author samir
  */
-class Exam {
+public class Exam {
     
      private String title;
-    private List<Question> questions;
+     private ArrayList<Question> questions;
 
-    public Exam(String title, List<Question> questions) {
+    public Exam(String title, ArrayList<Question> questions) {
         this.title = title;
-        this.questions = questions;
+        this.questions =  questions;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public List<Question> getQuestions() {
+    public ArrayList<Question> getQuestions() {
         return questions;
     }
     

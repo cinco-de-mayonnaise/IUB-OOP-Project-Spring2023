@@ -27,7 +27,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import projectbritishcouncil.common.util.SceneSwitcher;
-import FXMLScenes.Users.samira.modelClasses.GradeBoundary;
+import projectbritishcouncil.Users.samira.GradeBoundary;
 /**
  * FXML Controller class
  *

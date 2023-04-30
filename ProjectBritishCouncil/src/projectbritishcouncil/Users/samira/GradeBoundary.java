@@ -3,39 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package projectbritishcouncil.Users.samira;
-
-import javafx.beans.property.SimpleStringProperty;
-
+import java.util.Date;
+import projectbritishcouncil.common.BasicUser;
+import java.util.ArrayList;
 /**
  *
  * @author samir
  */
-public class GradeBoundary {
-    private SimpleStringProperty month, year;
+    public class GradeBoundary extends BasicUser {
+        ArrayList<String> yearList;
 
-    
-
-    public GradeBoundary(String month, String year) {
-        this.month = new SimpleStringProperty(month);
-        this.year =  new SimpleStringProperty(year);
+    public GradeBoundary(String Name, String Email, String Password, Date DOJ, Date DOB) {
+        super(Name, Email, Password, DOJ, DOB);
     }
 
-    public String getMonth() {
-        return month.get();
-    }
-  
-    public void setMonth(SimpleStringProperty month) {
-        this.month = month;
-    }  
-    
+ 
 
-
-    public String getYear() {
-        return year.get();
-    }
-
-    public void setYear(SimpleStringProperty year) {
-        this.year = year;
+ 
     }
     
-}
