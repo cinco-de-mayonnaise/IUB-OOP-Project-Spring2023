@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -95,5 +96,6 @@
       </Label>
       <ComboBox fx:id="monthCombobox" layoutX="283.0" layoutY="263.0" prefHeight="26.0" prefWidth="170.0" />
       <Label fx:id="labelfxId" layoutX="368.0" layoutY="400.0" prefHeight="34.0" prefWidth="236.0" style="-fx-background-color: grey;" textFill="RED" />
+      <TextArea fx:id="textAreafxid" layoutX="14.0" layoutY="417.0" prefHeight="134.0" prefWidth="858.0" />
    </children>
 </AnchorPane>

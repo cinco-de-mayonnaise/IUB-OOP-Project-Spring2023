@@ -2,11 +2,12 @@ package FXMLScenes.Users.protik.IELTSCandidate;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
@@ -19,11 +20,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 import projectbritishcouncil.Users.protik.IELTSCandidate;
 import projectbritishcouncil.common.util.SceneSwitcher;
+import projectbritishcouncil.common.util.Identifiers;
+
 /**
  * FXML Controller class
  *
@@ -64,6 +68,8 @@ public class IELTSRegistrationSceneController implements Initializable {
     private ObservableList<String> sylhetVenues = FXCollections.observableArrayList("British Council,Sylhet");
     private ObservableList<String> rajshahiVenues = FXCollections.observableArrayList("Project Headway Rajshahi");
     private ObservableList<String> khulnaVenues = FXCollections.observableArrayList("Lexicon Ava Center Khulna");
+    @FXML
+    private TextArea textAreafxid;
     /**
      * Initializes the controller class.
      * @param url
@@ -124,6 +130,28 @@ public class IELTSRegistrationSceneController implements Initializable {
         } catch (IOException e) {
             labelfxId.setText("An error occurred while writing to the file");
         }
+
+        File f = null;
+        Scanner sc; String str; String[] tokens;
+        try {
+            f = new File("Registration_Data.txt");
+            sc = new Scanner(f);
+            if(f.exists()){
+                textAreafxid.appendText("Content of Registration.txt:\n");
+                while(sc.hasNextLine()){
+                    str=sc.nextLine();
+                    tokens = str.split(",");
+                    textAreafxid.appendText(tokens[0]+tokens[1]+tokens[2]+tokens[3]+tokens[4]+tokens[5]+tokens[6]+tokens[7]+"\n");
+                }
+            }
+            else 
+                textAreafxid.setText("oops! Registration_Data.txt does not exist...");
+        } 
+        catch (IOException ex) {
+            Logger.getLogger(IELTSRegistrationSceneController.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        finally {
+        } 
 }
 }
 
