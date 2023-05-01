@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package FXMLScenes.Users.protik.IELTSCandidate;
 
 import java.io.File;
@@ -29,20 +24,12 @@ import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 import projectbritishcouncil.Users.protik.IELTSCandidate;
 import projectbritishcouncil.common.util.SceneSwitcher;
-
 /**
  * FXML Controller class
  *
  * @author Protik Hasan
  */
 public class IELTSRegistrationSceneController implements Initializable {
-    
-    //String[] dhakaVenues = {"Mentors Education Mirpur","Mentors Education Uttara", "Futureed Ahmed Tower Banani", "Wings Learning Center Dhanmondi", "Penstone English Institute Uttara"};
-    //String[] chittagongVenues = {"Radisson Blu Chittagong"};
-    //String[] sylhetVenues = {"British Council,Sylhet"};
-    //String[] rajshahiVenues = {"Project Headway Rajshahi"};
-    //String[] khulnaVenues = {"Lexicon Ava Center Khulna"};
-    
     @FXML
     private TextField namefxid;
     @FXML
@@ -72,13 +59,11 @@ public class IELTSRegistrationSceneController implements Initializable {
     private ComboBox<String> monthCombobox;
     @FXML
     private Label labelfxId;
-    
     private final ObservableList<String> dhakaVenues = FXCollections.observableArrayList("Mentors Education Mirpur","Mentors Education Uttara", "Futureed Ahmed Tower Banani", "Wings Learning Center Dhanmondi", "Penstone English Institute Uttara");
     private ObservableList<String> chittagongVenues = FXCollections.observableArrayList("Radisson Blu Chittagong");
     private ObservableList<String> sylhetVenues = FXCollections.observableArrayList("British Council,Sylhet");
     private ObservableList<String> rajshahiVenues = FXCollections.observableArrayList("Project Headway Rajshahi");
     private ObservableList<String> khulnaVenues = FXCollections.observableArrayList("Lexicon Ava Center Khulna");
-
     /**
      * Initializes the controller class.
      * @param url
@@ -90,7 +75,6 @@ public class IELTSRegistrationSceneController implements Initializable {
         maleradiofxid.setToggleGroup(tg);
         femaleradiofxid.setToggleGroup(tg);
         //maleradiofxid.setSelected(true);
-        
         disabilityCombobox.getItems().addAll("None","Enlarged Print Test Paper", "Braille Test Paper", "Amanuensis", "Amplification Equipment", "Voice Activated Software");
         testTypeCombobox.getItems().addAll("Academic on Paper", "Academic on Computer", "General Training on Paper","General Training on Computer");
         cityCombobox.getItems().addAll("Dhaka", "Rajshahi", "Sylhet", "Khulna", "Chattogram");
@@ -112,13 +96,11 @@ public class IELTSRegistrationSceneController implements Initializable {
     }
         );
     }    
-
     @FXML
     private void goBackbuttonOnClick(ActionEvent event) {
     Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
     stage.close();
     }
-
     @FXML
     private void RegisterbuttonOnClick(ActionEvent event) {
     String name = namefxid.getText();
@@ -133,52 +115,8 @@ public class IELTSRegistrationSceneController implements Initializable {
     String time = timeCombobox.getValue();
     String testType = testTypeCombobox.getValue();
     String disability = disabilityCombobox.getValue();
-    
-    File f = null;
-    FileOutputStream fos = null;      
-    ObjectOutputStream oos = null;
-        
     try {
-        f = new File("RegistrationObjects.bin");
-        if(f.exists()){
-            fos = new FileOutputStream(f,true);
-            oos = new AppendableObjectOutputStream(fos);                
-        }
-        else{
-            fos = new FileOutputStream(f);
-            oos = new ObjectOutputStream(fos);               
-        }
-        IELTSCandidate e = new IELTSCandidate(
-            namefxid.getText(),
-            mothersnamefxid.getText(),    
-            fathersnamefxid.getText(),
-            contactnofxid.getText(),
-            passportnofxid.getText(),
-            maleradiofxid.isSelected() ? "Male" : "Female",
-            monthCombobox.getValue(),
-            cityCombobox.getValue(),
-            venueCombobox.getValue(),
-            timeCombobox.getValue(),
-            testTypeCombobox.getValue(),
-            disabilityCombobox.getValue()
-        );
-            oos.writeObject(e);
-
-        } catch (IOException ex) {
-            Logger.getLogger(IELTSRegistrationSceneController.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                if(oos != null) oos.close();
-            } catch (IOException ex) {
-                Logger.getLogger(IELTSRegistrationSceneController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }
-    
-    /*public void writeToFile(String name,String mothersName,String fathersName, String contactNo, String passportNo, 
-            String gender, String month, String city, String venue, String time, String testType, String disability) {
-    try {
-        FileWriter writer = new FileWriter("Registration Data.txt", true);
+        FileWriter writer = new FileWriter("Registration_Data.txt", true);
         writer.write("Name:"+name+", Mothers Name: "+mothersName+", Fathers Name: "+fathersName+", Contact No: "+contactNo+", Passport No: "+passportNo+
      ", Gender: "+gender+"\n"+", Month: "+month+ "City: "+ city+", Venue: "+venue+", Time: "+time+", Test Type: "+testType+", Disability: "+disability);
         writer.close();
@@ -186,9 +124,6 @@ public class IELTSRegistrationSceneController implements Initializable {
         } catch (IOException e) {
             labelfxId.setText("An error occurred while writing to the file");
         }
-    }
-*/
-
-  
+}
 }
 

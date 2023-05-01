@@ -166,11 +166,11 @@ public class ViewGradeBoundarySceneController implements Initializable {
 
     @FXML
     private void viewGradeBoundaryButtonOnClick(ActionEvent event) {
+           /* monthList.add(new GradeBoundary("January"));
             monthList.add(new GradeBoundary("January"));
             monthList.add(new GradeBoundary("January"));
             monthList.add(new GradeBoundary("January"));
-            monthList.add(new GradeBoundary("January"));
-            monthList.add(new GradeBoundary("January"));
+            monthList.add(new GradeBoundary("January"));*/
             yearList.add("2017");
             yearList.add("2017");
             yearList.add("2017");

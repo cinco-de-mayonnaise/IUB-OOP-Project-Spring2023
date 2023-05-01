@@ -94,6 +94,6 @@
          </font>
       </Label>
       <ComboBox fx:id="monthCombobox" layoutX="283.0" layoutY="263.0" prefHeight="26.0" prefWidth="170.0" />
-      <Label fx:id="labelfxId" layoutX="368.0" layoutY="400.0" prefHeight="34.0" prefWidth="236.0" style="-fx-background-color: grey;" text="registation status" textFill="RED" />
+      <Label fx:id="labelfxId" layoutX="368.0" layoutY="400.0" prefHeight="34.0" prefWidth="236.0" style="-fx-background-color: grey;" textFill="RED" />
    </children>
 </AnchorPane>
