@@ -34,13 +34,37 @@ public class InstructorDashboardController implements Initializable {
     }
 
     @FXML
-    private void resultOnClick(ActionEvent event) {
-        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/Result.fxml", false);
-    }
-
-    @FXML
     private void room(ActionEvent event) {
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/ClassroomInformation.fxml", false);
     }
 
+    @FXML
+    private void classroomresourseOnClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/ClassroomResources.fxml", false);
+    }
+
+    @FXML
+    private void messageOnClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/Message.fxml", false);
+    }
+
+    @FXML
+    private void mocktestOnClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/MockTest.fxml", false);
+    }
+    
+    @FXML
+    private void resultOnClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/Result.fxml", false);
+    }
+    
+    @FXML
+    private void announcementOnClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/Announcement.fxml", false);
+    }
+    
+    @FXML
+    private void itsupportOnClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/sopen/Instructor/ITSupport.fxml", false);
+    }
 }
