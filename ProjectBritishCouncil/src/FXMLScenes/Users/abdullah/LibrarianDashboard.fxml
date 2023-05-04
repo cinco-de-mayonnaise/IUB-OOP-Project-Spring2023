@@ -28,7 +28,7 @@
          <top>
             <HBox fx:id="topbarimageLibrarian" alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="888.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="Btn_Logout" mnemonicParsing="false" text="Log Out" />
+                  <Button fx:id="Btn_Logout" mnemonicParsing="false" onAction="#click_LogOutLibrarian" text="Log Out" />
                </children>
                <opaqueInsets>
                   <Insets />

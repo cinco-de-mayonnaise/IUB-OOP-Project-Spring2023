@@ -69,7 +69,7 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
     public void initialize(URL url, ResourceBundle rb)
     {
         Btn_Add_Book.setDisable(true);
-        
+        CB_Category.getItems().addAll("Sci-Fi", "Horror", "Non-Fiction", "Educational");
     }    
     
     @FXML
@@ -87,7 +87,8 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
         // close the window
         SceneSwitcher.getStageFromEvent(event).close();
     }
-
+    
+    
     @FXML
     private void click_Choose_Image(ActionEvent event)
     {
@@ -96,6 +97,18 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
         fc.setSelectedExtensionFilter(new ExtensionFilter("*.png", "*.bmp", "*.gif", ".jpeg"));
         
         File selectedImage = fc.showOpenDialog(SceneSwitcher.getStageFromEvent(event));
+        if (selectedImage == null)
+            return;    // file was not selected.
+        
+        
         newBookCover = new DataImage(selectedImage.getPath());
+        
+    }
+
+    @FXML
+    private void check_if_done(ActionEvent event)
+    {
+        //if (TF_Name.getText() == null || TF_ISBN == null || TF_)
+            
     }
 }

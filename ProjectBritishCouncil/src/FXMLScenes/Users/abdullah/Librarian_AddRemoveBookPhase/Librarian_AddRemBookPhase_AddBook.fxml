@@ -87,12 +87,12 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="TF_Name" layoutX="120.0" layoutY="121.0" prefHeight="31.0" prefWidth="182.0" />
+            <TextField fx:id="TF_Name" layoutX="120.0" layoutY="121.0" onAction="#check_if_done" prefHeight="31.0" prefWidth="182.0" />
             <Label layoutX="56.0" layoutY="126.0" text="Name" />
-            <TextField fx:id="TF_ISBN" layoutX="120.0" layoutY="170.0" prefHeight="31.0" prefWidth="182.0" />
+            <TextField fx:id="TF_ISBN" layoutX="120.0" layoutY="170.0" onAction="#check_if_done" prefHeight="31.0" prefWidth="182.0" />
             <Label layoutX="56.0" layoutY="175.0" text="ISBN" />
             <Label layoutX="56.0" layoutY="222.0" text="Category" />
-            <ComboBox fx:id="CB_Category" layoutX="152.0" layoutY="217.0" prefWidth="150.0" />
+            <ComboBox fx:id="CB_Category" layoutX="152.0" layoutY="217.0" onAction="#check_if_done" prefWidth="150.0" />
             <StackPane layoutX="385.0" layoutY="52.0" prefHeight="265.0" prefWidth="224.0" style="-fx-background-color: ece98d;">
                <children>
                   <Label text="No image selected!" />

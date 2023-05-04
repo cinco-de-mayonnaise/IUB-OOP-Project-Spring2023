@@ -4,6 +4,7 @@
  */
 package projectbritishcouncil.Users.protik;
 
+import java.io.Serializable;
 import java.util.Date;
 import projectbritishcouncil.common.BasicUser;
 
@@ -11,7 +12,7 @@ import projectbritishcouncil.common.BasicUser;
  *
  * @author Abdullah
  */
-public class LibraryMember extends BasicUser{
+public class LibraryMember extends BasicUser implements Serializable{
 
     public LibraryMember(String Name, String Email, String Password, Date DOJ, Date DOB) {
         super(Name, Email, Password, DOJ, DOB);

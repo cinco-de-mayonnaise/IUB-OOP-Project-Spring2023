@@ -18,6 +18,7 @@ import java.util.Date;
 import projectbritishcouncil.Users.abdullah.AbdullahFileChunk;
 import projectbritishcouncil.Users.abdullah.Librarian;
 import projectbritishcouncil.Users.abdullah.PrivateCandidate;
+import projectbritishcouncil.Users.protik.IELTSCandidate;
 import projectbritishcouncil.Users.protik.LibraryMember;
 import projectbritishcouncil.Users.protik.ProtikFileChunk;
 import projectbritishcouncil.Users.samira.Admin;
@@ -38,7 +39,7 @@ import static projectbritishcouncil.common.util.Identifiers.SOPEN_FILE_CHUNK;
  */
 public class TheFileDatabase implements Serializable
 {
-    private final static TheFileDatabase INSTANCE = new TheFileDatabase();
+    //private final static TheFileDatabase INSTANCE = new TheFileDatabase();
     
     // This is the object that will be written and saved into a single "database.dat" file.
     private static File dir;
@@ -46,20 +47,14 @@ public class TheFileDatabase implements Serializable
     
     //****// File Structure: The following things exist in order, and must be read/written to in the same order or will crash
     //*** User Information: Store all users that can login/that exist, in here
-    public CommonsFileChunk commonFile;
-    
-    public AbdullahFileChunk abdFile;
-    public SamiraFileChunk samFile;
-    public ProtikFileChunk proFile;
-    public SopenFileChunk sopFile;
+    public static CommonsFileChunk commonFile;
+    public static AbdullahFileChunk abdFile;
+    public static SamiraFileChunk samFile;
+    public static ProtikFileChunk proFile;
+    public static SopenFileChunk sopFile;
 
     private TheFileDatabase()
     {}
-    
-    public static TheFileDatabase getInstance()
-    {
-        return INSTANCE;
-    }
     
     public static void setFile(File f) throws IOException
     {
@@ -72,7 +67,7 @@ public class TheFileDatabase implements Serializable
         throw new IOException("Could not open the database file for use!");
     }
     
-    public int WriteToFile()
+    public static int WriteToFile()
     {
         // backup not default
         if (dir == null)
@@ -82,11 +77,11 @@ public class TheFileDatabase implements Serializable
         try
         {
             oos = new ObjectOutputStream(new FileOutputStream(dir));
-            oos.writeObject(this.commonFile);
-            oos.writeObject(this.abdFile);
-            oos.writeObject(this.samFile);
-            oos.writeObject(this.proFile);
-            oos.writeObject(this.sopFile);
+            oos.writeObject(commonFile);
+            oos.writeObject(abdFile);
+            oos.writeObject(samFile);
+            oos.writeObject(proFile);
+            oos.writeObject(sopFile);
         }
         catch (IOException e)
         {
@@ -97,7 +92,7 @@ public class TheFileDatabase implements Serializable
     }
     
     
-    public int ReadFromFile() throws Exception
+    public static int ReadFromFile() throws Exception
     {
         if (dir == null)
             return 1;
@@ -131,7 +126,7 @@ public class TheFileDatabase implements Serializable
         return 0;
     }
     
-    public int CreateNewFile()   
+    public static int CreateNewFile()   
     {
         // this function is called when a file does not exist, create new instances of everything and write to file...
         // this also does the work of ReadFromFile, so calling that is not necessary... (wait first)
@@ -149,6 +144,15 @@ public class TheFileDatabase implements Serializable
         commonFile.allusers.add(new LibraryMember("Testing LibraryMember", "testlibrarymember@britishcouncil.com", "1234", new Date(), new Date()));
         commonFile.allusers.add(new Examiner("Testing Examiner", "testexaminer@britishcouncil.com", "1234", new Date(), new Date()));
         commonFile.allusers.add(new Invigilator("Testing Invigilator", "testinvigilator@britishcouncil.com", "1234", new Date(), new Date()));
+        commonFile.allusers.add(new IELTSCandidate("Testing IELTSCandidate", "testieltscandidate@britishcouncil.com", "1234", new Date(), new Date()));
+        
+        
+        CommonInstancesClass CIC = CommonInstancesClass.getInstance();
+        CIC.overwriteObject(COMMONS_FILE_CHUNK, commonFile);
+        CIC.overwriteObject(ABDULLAH_FILE_CHUNK, commonFile);
+        CIC.overwriteObject(SAMIRA_FILE_CHUNK, commonFile);
+        CIC.overwriteObject(PROTIK_FILE_CHUNK, commonFile);
+        CIC.overwriteObject(SOPEN_FILE_CHUNK, commonFile);
         
         WriteToFile();
         

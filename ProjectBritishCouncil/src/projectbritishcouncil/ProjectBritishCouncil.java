@@ -47,13 +47,13 @@ public class ProjectBritishCouncil extends Application {
             // handle creating new file here, it should at least contain a dummy user of every type so that login is possible...
             dbfile.createNewFile();
             TheFileDatabase.setFile(dbfile);
-            TheFileDatabase.getInstance().CreateNewFile();
+            TheFileDatabase.CreateNewFile();
         }
         else
         {
             TheFileDatabase.setFile(dbfile);
             // read the file into memory.
-            TheFileDatabase.getInstance().ReadFromFile();
+            TheFileDatabase.ReadFromFile();
         }
         
         
