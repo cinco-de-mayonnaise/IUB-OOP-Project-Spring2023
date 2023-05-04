@@ -70,6 +70,8 @@ public class IELTSRegistrationSceneController implements Initializable {
     private ObservableList<String> khulnaVenues = FXCollections.observableArrayList("Lexicon Ava Center Khulna");
     @FXML
     private TextArea textAreafxid;
+    @FXML
+    private Button Registerbutton;
     /**
      * Initializes the controller class.
      * @param url
@@ -126,10 +128,10 @@ public class IELTSRegistrationSceneController implements Initializable {
         writer.write(name+", "+mothersName+", "+fathersName+", "+contactNo+", "+passportNo+", "+gender+", "+month+", "+ city+", "+venue+", "+time+", "+testType+", "+disability+"\n");
         writer.close();
         labelfxId.setText("Text File generated Successfully");
+        Registerbutton.setDisable(true);
         } catch (IOException e) {
             labelfxId.setText("An error occurred while writing to the file");
-        }
-
+        }    
         File f = null;
         Scanner sc; String str; String[] tokens;
         try {
@@ -140,7 +142,7 @@ public class IELTSRegistrationSceneController implements Initializable {
                 while(sc.hasNextLine()){
                     str=sc.nextLine();
                     tokens = str.split(",");
-                    textAreafxid.appendText(tokens[0]+tokens[1]+tokens[2]+tokens[3]+tokens[4]+tokens[5]+tokens[6]+tokens[7]+tokens[8]+tokens[9]+tokens[10]+tokens[11]+"\n");
+                    textAreafxid.appendText("Name:"+tokens[0]+", Mothers Name:"+tokens[1]+", Fathers Name:"+tokens[2]+", Concact No:"+tokens[3]+", Passport No:"+tokens[4]+", Gender:"+tokens[5]+", Month:"+tokens[6]+", City:"+tokens[7]+", Venue:"+tokens[8]+", Time:"+tokens[9]+", Test:"+tokens[10]+", Disability:"+tokens[11]+"\n");
                 }
             }
             else 
@@ -149,8 +151,9 @@ public class IELTSRegistrationSceneController implements Initializable {
         catch (IOException ex) {
             Logger.getLogger(IELTSRegistrationSceneController.class.getName()).log(Level.SEVERE, null, ex);
         } 
-        finally {
+        finally {         
         } 
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/PaymentMethod.fxml", false);
 }
 }
 

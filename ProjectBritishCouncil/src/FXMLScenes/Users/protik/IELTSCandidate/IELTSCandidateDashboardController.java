@@ -48,10 +48,12 @@ public class IELTSCandidateDashboardController implements Initializable {
 
     @FXML
     private void ieltsCertificateonClick(ActionEvent event) {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
 
     @FXML
     private void IeltsResourcesOnClick(ActionEvent event) {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
 
     @FXML
