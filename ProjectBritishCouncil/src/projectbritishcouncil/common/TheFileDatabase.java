@@ -146,7 +146,6 @@ public class TheFileDatabase implements Serializable
         commonFile.allusers.add(new Invigilator("Testing Invigilator", "testinvigilator@britishcouncil.com", "1234", new Date(), new Date()));
         commonFile.allusers.add(new IELTSCandidate("Testing IELTSCandidate", "testieltscandidate@britishcouncil.com", "1234", new Date(), new Date()));
         
-        
         CommonInstancesClass CIC = CommonInstancesClass.getInstance();
         CIC.overwriteObject(COMMONS_FILE_CHUNK, commonFile);
         CIC.overwriteObject(ABDULLAH_FILE_CHUNK, commonFile);

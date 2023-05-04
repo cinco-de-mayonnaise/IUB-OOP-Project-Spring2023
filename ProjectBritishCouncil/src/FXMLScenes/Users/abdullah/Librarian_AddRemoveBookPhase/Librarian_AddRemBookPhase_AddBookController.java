@@ -14,7 +14,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.InputEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
@@ -22,6 +24,9 @@ import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Window;
 import projectbritishcouncil.Users.abdullah.Book;
 import projectbritishcouncil.common.DataImage;
+import projectbritishcouncil.common.util.CommonInstancesClass;
+import static projectbritishcouncil.common.util.Identifiers.IMAGE_NOTOK;
+import static projectbritishcouncil.common.util.Identifiers.IMAGE_OK;
 import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
@@ -61,15 +66,33 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
     String newBookCategory;
     DataImage newBookCover;
     
-    
+    CommonInstancesClass cic = CommonInstancesClass.getInstance();
+    Image im_ok, im_notok;
+    final String[] invalidinfo_messages = {"Please fill in the empty fields.", "Please enter a valid ISBN"};
+    @FXML
+    private HBox HBox_InvalidInfo;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
+        im_ok = (Image) cic.getObject(IMAGE_OK);
+        im_notok = (Image) cic.getObject(IMAGE_NOTOK);
+        
         Btn_Add_Book.setDisable(true);
         CB_Category.getItems().addAll("Sci-Fi", "Horror", "Non-Fiction", "Educational");
+    
+        IV_BookImage.setPreserveRatio(true);
+        IV_BookImage.setFitHeight(IV_BookImage.getLayoutY());
+        
+       
+        IV_InvalidInfo.setPreserveRatio(true);
+        IV_InvalidInfo.setFitHeight(IV_InvalidInfo.getLayoutY());
+        
+         // initially fields are empty so its not ok
+        IV_InvalidInfo.setImage(im_notok);
+        Label_InvalidInfo.setText(invalidinfo_messages[0]);
     }    
     
     @FXML
@@ -106,9 +129,35 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
     }
 
     @FXML
-    private void check_if_done(ActionEvent event)
+    private void check_if_done_A(ActionEvent event)
     {
-        //if (TF_Name.getText() == null || TF_ISBN == null || TF_)
+        if (TF_Name.getText().equals("") || TF_ISBN.getText().equals("") || CB_Category.getValue() == null)
+        {
+            Btn_Add_Book.setDisable(true);
+        }
+        else
+        {
+            Btn_Add_Book.setDisable(false);
+        }
+    }
+    
+    @FXML
+    private void check_if_done_I(InputEvent event)
+    {
+        
+        if (TF_Name.getText().equals("") || TF_ISBN.getText().equals("") || CB_Category.getValue() == null)
+        {
+            Btn_Add_Book.setDisable(true);
+            Label_InvalidInfo
             
+        }
+        else
+        {
+            Image im_ok = 
+            
+            Btn_Add_Book.setDisable(false);
+            IV_InvalidInfo.setImage(im_ok);
+            IV_InvalidInfo.set
+        }
     }
 }

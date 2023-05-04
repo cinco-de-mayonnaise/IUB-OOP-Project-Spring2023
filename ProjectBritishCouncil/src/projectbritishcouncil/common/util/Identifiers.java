@@ -29,10 +29,11 @@ public final class Identifiers  // Identifiers for use in CommonInstancesClass
         public static final String PROTIK_FILE_CHUNK = "protik_PLEASE_STOP_MESSING_UP_DA_CODE_BASE_file_chunk";
         public static final String SOPEN_FILE_CHUNK = "sopen_are_you_alive_file_chunk_234234123a";
     ////
-    //// Librarian
-        public static final String LIBRARIAN_FILE_CHUNK = "libr_fc_main";
+        public static final String IMAGE_OK = "imageok e_chunk_234234123a";
+        public static final String IMAGE_NOTOK = "imagenotok e_ch354354621113a";
+    //// 
     ////////
     //////////
-            public static final String LIBRARIAN_FC_LISTOFMEMBERS = "Librarian_listofmembers";
+            
     
 }

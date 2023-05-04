@@ -16,7 +16,7 @@ public class ResourceImage
     protected Image Img;
     protected String Url;
 
-    public ResourceImage(String url)
+    public ResourceImage(String url) throws Exception
     {
         this.Url = url;
         this.Img = new Image(url);

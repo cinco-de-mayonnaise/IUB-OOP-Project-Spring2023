@@ -14,6 +14,7 @@ import projectbritishcouncil.common.TheFileDatabase;
 import projectbritishcouncil.common.util.CommonInstancesClass;
 import static projectbritishcouncil.common.util.Identifiers.GLOBAL_CLASS_HANDLE;
 import static projectbritishcouncil.common.util.Identifiers.MAIN_STAGE;
+import projectbritishcouncil.common.util.ResourceLoader;
 import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
@@ -56,7 +57,8 @@ public class ProjectBritishCouncil extends Application {
             TheFileDatabase.ReadFromFile();
         }
         
-        
+        ///// ResourceLoader
+        ResourceLoader.loadResources(c);
         
         ///// Experimental stuff: if we need to overload standard file loading/saving behavior
         Experimental.insert_some_stuff_in_ht();
