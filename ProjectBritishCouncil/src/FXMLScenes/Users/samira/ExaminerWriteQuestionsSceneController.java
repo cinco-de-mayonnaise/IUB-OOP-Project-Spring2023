@@ -32,8 +32,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
  * FXML Controller class
@@ -53,7 +55,7 @@ public class ExaminerWriteQuestionsSceneController implements Initializable {
     @FXML
     private TextArea textArea;
     
-    
+     private AnchorPane scenePane;
     private ArrayList<TextField> textFieldsList = new ArrayList<>();
     /**
      * Initializes the controller class.
@@ -70,13 +72,15 @@ public class ExaminerWriteQuestionsSceneController implements Initializable {
     @FXML
     private void goHomeButtonOnClick(ActionEvent event) throws IOException {
       
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ExaminerDashboardScene.fxml"));
-        Parent root = loader.load();
-        Scene nextScene = new Scene(root);
-        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        currentStage.setScene(nextScene);
-        currentStage.show();
+         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Go Back");
+        alert.setHeaderText("You're about to leave this page");
+        alert.setContentText("Are you sure you want to leave this page?: ");
+        if(alert.showAndWait().get() == ButtonType.OK){
+          Stage stage = (Stage) scenePane.getScene().getWindow();
+            SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/FXMLScenes.Users.samira/ExaminerDashboardScene.fxml", true);
 
+      }
     }
 
     @FXML

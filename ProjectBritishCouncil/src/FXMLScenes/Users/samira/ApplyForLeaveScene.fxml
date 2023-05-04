@@ -17,22 +17,22 @@
          <children>
             <Button mnemonicParsing="false" onAction="#goHomeButtonOnClick" prefHeight="56.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="#fcf8f8">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold Italic" size="20.0" />
                </font>
             </Button>
-            <MenuButton fx:id="MenuMenuBar" mnemonicParsing="false" onAction="#showMenuOptionsOnClick" prefHeight="56.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Menu" textFill="#fffbfb" wrapText="true">
+            <MenuButton fx:id="MenuMenuBar" mnemonicParsing="false" prefHeight="56.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Menu" textFill="#fffbfb" wrapText="true">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                  <MenuItem mnemonicParsing="false" text="Write Questions" />
+                  <MenuItem mnemonicParsing="false" text="View Grade Boundary" />
+                  <MenuItem mnemonicParsing="false" text="Check Papers" />
                </items>
                <font>
                   <Font size="15.0" />
                </font>
             </MenuButton>
-            <MenuButton fx:id="settignsMenuBar" mnemonicParsing="false" onAction="#showSettingsOnClick" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Settings" textFill="#fffbfb" wrapText="true">
+            <MenuButton fx:id="settignsMenuBar" mnemonicParsing="false" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Settings" textFill="#fffbfb" wrapText="true">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                  <MenuItem mnemonicParsing="false" text="Action 2" />
+                  <MenuItem mnemonicParsing="false" text="logout" />
                </items>
                <font>
                   <Font size="15.0" />
@@ -42,13 +42,13 @@
       </VBox>
       <ComboBox fx:id="employeeCategoryComboBox" layoutX="547.0" layoutY="40.0" prefWidth="150.0" promptText="Employee category" />
       <TextField fx:id="employeeIdTextField" layoutX="548.0" layoutY="91.0" prefHeight="33.0" prefWidth="147.0" text="Employee ID" />
-      <Button layoutX="467.0" layoutY="440.0" mnemonicParsing="false" onAction="#submitApplicationButtonOnClick" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Submit" textFill="#fcfafa">
+      <Button layoutX="485.0" layoutY="384.0" mnemonicParsing="false" onAction="#submitApplicationButtonOnClick" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Submit" textFill="#fcfafa">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <TextArea fx:id="applicationTextArea" layoutX="415.0" layoutY="234.0" prefHeight="179.0" prefWidth="443.0" />
-      <Label layoutX="215.0" layoutY="181.0" prefHeight="33.0" prefWidth="248.0" text="Write your application here:" textFill="#f5f0f0">
+      <TextArea fx:id="applicationTextArea" layoutX="412.0" layoutY="189.0" prefHeight="179.0" prefWidth="443.0" promptText="Write your application here..." />
+      <Label fx:id="showLabel" alignment="CENTER" layoutX="346.0" layoutY="453.0" prefHeight="33.0" prefWidth="486.0" textAlignment="CENTER" textFill="#f5f0f0">
          <font>
             <Font size="15.0" />
          </font>

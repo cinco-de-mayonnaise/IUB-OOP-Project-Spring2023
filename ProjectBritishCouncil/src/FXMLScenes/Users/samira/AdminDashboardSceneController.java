@@ -56,7 +56,7 @@ public class AdminDashboardSceneController implements Initializable {
         // TODO
     }    
     private void goHomeButtonOnClick(ActionEvent event) {
-        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/AdminDashboardScene.fxml", false);
+        SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminDashboardScene.fxml");
     }
 
 

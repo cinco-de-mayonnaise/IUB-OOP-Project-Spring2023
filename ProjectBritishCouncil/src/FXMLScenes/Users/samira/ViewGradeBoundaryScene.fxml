@@ -22,9 +22,7 @@
             <MenuButton fx:id="menuMenuBar" mnemonicParsing="false" prefHeight="56.0" prefWidth="172.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Menu" textFill="#fffbfb" wrapText="true">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#checkAnswers" text="Check Answers" />
-                  <MenuItem mnemonicParsing="false" onAction="#checkMarkScheme" text="Check Mark Scheme" />
                   <MenuItem mnemonicParsing="false" onAction="#reportCandidate" text="Report A Candidate" />
-                  <MenuItem mnemonicParsing="false" onAction="#pulishResults" text="Publish Results" />
                   <MenuItem mnemonicParsing="false" onAction="#applyForLeave" text="Apply For Leave" />
                   <MenuItem mnemonicParsing="false" onAction="#writeQuestions" text="Write Questions" />
                </items>
@@ -43,22 +41,22 @@
             </MenuButton>
          </children>
       </VBox>
-      <TableView fx:id="gbTtableView" layoutX="241.0" layoutY="128.0" prefHeight="241.0" prefWidth="307.0">
+      <TableView fx:id="gbTtableView" layoutX="217.0" layoutY="186.0" prefHeight="241.0" prefWidth="307.0">
         <columns>
           <TableColumn fx:id="monthColumn" prefWidth="145.0" text="Month" />
           <TableColumn fx:id="yearColumn" prefWidth="158.0" text="Year" />
         </columns>
       </TableView>
-      <Button layoutX="400.0" layoutY="37.0" mnemonicParsing="false" onAction="#viewGradeBoundaryButtonOnClick" prefHeight="33.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="View Grade Boundary" textFill="#fcfafa">
+      <Button layoutX="393.0" layoutY="101.0" mnemonicParsing="false" onAction="#viewGradeBoundaryButtonOnClick" prefHeight="33.0" prefWidth="263.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="View Grade Boundary" textFill="#fcfafa">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Hyperlink fx:id="hyperlink" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="143.0" onAction="#hyperlink" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
-      <Hyperlink fx:id="hyperlink2" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="180.0" onAction="#hyperlink2" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
-      <Hyperlink fx:id="hyperlink3" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="217.0" onAction="#hyperlink3" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
-      <Hyperlink fx:id="hyperlink4" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="253.0" onAction="#hyperlink4" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
-      <Hyperlink fx:id="hyperlink5" alignment="CENTER" focusTraversable="false" layoutX="594.0" layoutY="295.0" onAction="#hyperlink5" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink" alignment="CENTER" focusTraversable="false" layoutX="568.0" layoutY="215.0" onAction="#hyperlink" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink2" alignment="CENTER" focusTraversable="false" layoutX="568.0" layoutY="253.0" onAction="#hyperlink2" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink3" alignment="CENTER" focusTraversable="false" layoutX="568.0" layoutY="295.0" onAction="#hyperlink3" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink4" alignment="CENTER" focusTraversable="false" layoutX="568.0" layoutY="332.0" onAction="#hyperlink4" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
+      <Hyperlink fx:id="hyperlink5" alignment="CENTER" focusTraversable="false" layoutX="568.0" layoutY="366.0" onAction="#hyperlink5" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
       <Button layoutX="147.0" layoutY="1.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="12.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 2px 2px 0px;" text="Back" textFill="#eeebeb" />
    </children>
 </AnchorPane>
