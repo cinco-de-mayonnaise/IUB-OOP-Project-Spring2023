@@ -123,8 +123,7 @@ public class IELTSRegistrationSceneController implements Initializable {
     String disability = disabilityCombobox.getValue();
     try {
         FileWriter writer = new FileWriter("Registration_Data.txt", true);
-        writer.write("Name:"+name+", Mothers Name: "+mothersName+", Fathers Name: "+fathersName+", Contact No: "+contactNo+", Passport No: "+passportNo+
-     ", Gender: "+gender+"\n"+", Month: "+month+ "City: "+ city+", Venue: "+venue+", Time: "+time+", Test Type: "+testType+", Disability: "+disability);
+        writer.write(name+", "+mothersName+", "+fathersName+", "+contactNo+", "+passportNo+", "+gender+", "+month+", "+ city+", "+venue+", "+time+", "+testType+", "+disability+"\n");
         writer.close();
         labelfxId.setText("Text File generated Successfully");
         } catch (IOException e) {
@@ -137,11 +136,11 @@ public class IELTSRegistrationSceneController implements Initializable {
             f = new File("Registration_Data.txt");
             sc = new Scanner(f);
             if(f.exists()){
-                textAreafxid.appendText("Content of Registration.txt:\n");
+                //textAreafxid.appendText("Content of Registration.txt:\n");
                 while(sc.hasNextLine()){
                     str=sc.nextLine();
                     tokens = str.split(",");
-                    textAreafxid.appendText(tokens[0]+tokens[1]+tokens[2]+tokens[3]+tokens[4]+tokens[5]+tokens[6]+tokens[7]+"\n");
+                    textAreafxid.appendText(tokens[0]+tokens[1]+tokens[2]+tokens[3]+tokens[4]+tokens[5]+tokens[6]+tokens[7]+tokens[8]+tokens[9]+tokens[10]+tokens[11]+"\n");
                 }
             }
             else 
