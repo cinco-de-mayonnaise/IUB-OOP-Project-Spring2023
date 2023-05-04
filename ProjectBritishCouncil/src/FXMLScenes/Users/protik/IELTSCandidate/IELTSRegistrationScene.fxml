@@ -44,7 +44,7 @@
       <TextField fx:id="contactnofxid" layoutX="663.0" layoutY="248.0" prefHeight="34.0" prefWidth="180.0" />
       <RadioButton fx:id="maleradiofxid" layoutX="682.0" layoutY="306.0" mnemonicParsing="false" text="Male" />
       <RadioButton fx:id="femaleradiofxid" layoutX="751.0" layoutY="306.0" mnemonicParsing="false" text="Female" />
-      <Button layoutX="761.0" layoutY="602.0" mnemonicParsing="false" onAction="#goBackbuttonOnClick" prefHeight="26.0" prefWidth="70.0" text="Cancel" />
+      <Button layoutX="761.0" layoutY="602.0" mnemonicParsing="false" onAction="#goBackbuttonOnClick" prefHeight="26.0" prefWidth="91.0" text="Go Back" />
       <Label layoutX="61.0" layoutY="56.0" prefHeight="18.0" prefWidth="355.0" text="Fill Out all the fields to Register">
          <font>
             <Font name="System Bold Italic" size="18.0" />
@@ -80,7 +80,7 @@
          </font>
       </Label>
       <ComboBox fx:id="timeCombobox" layoutX="61.0" layoutY="262.0" prefHeight="26.0" prefWidth="198.0" />
-      <Button layoutX="259.0" layoutY="355.0" mnemonicParsing="false" onAction="#RegisterbuttonOnClick" prefHeight="34.0" prefWidth="206.0" text="Register">
+      <Button fx:id="Registerbutton" layoutX="259.0" layoutY="355.0" mnemonicParsing="false" onAction="#RegisterbuttonOnClick" prefHeight="34.0" prefWidth="206.0" text="Register">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
@@ -99,6 +99,6 @@
          <font>
             <Font size="13.0" />
          </font></Label>
-      <TextArea fx:id="textAreafxid" layoutX="38.0" layoutY="449.0" prefHeight="134.0" prefWidth="805.0" />
+      <TextArea fx:id="textAreafxid" layoutX="3.0" layoutY="449.0" prefHeight="108.0" prefWidth="894.0" />
    </children>
 </AnchorPane>

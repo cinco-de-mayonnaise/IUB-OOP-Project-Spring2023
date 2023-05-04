@@ -31,26 +31,32 @@ public class LibraryMemberDashboardController implements Initializable {
 
     @FXML
     private void availableBooksOnClick(ActionEvent event) {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
 
     @FXML
     private void borrowBookOnClick(ActionEvent event) {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
 
     @FXML
     private void extendBorrowaldateonClick(ActionEvent event) {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
 
     @FXML
     private void makePaymentonClick(ActionEvent event) {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
 
     @FXML
     private void requestforanUnavailableBookonClick(ActionEvent event) {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
 
     @FXML
     private void bookRoomOnClick(ActionEvent event) {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
 
     @FXML

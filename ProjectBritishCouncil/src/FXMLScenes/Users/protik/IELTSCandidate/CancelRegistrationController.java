@@ -26,6 +26,7 @@ public class CancelRegistrationController implements Initializable {
 
     @FXML
     private void YesButtonOnClick(ActionEvent event) {
+        SceneSwitcher.raiseAlert_NotImplemented();
     }
 
     @FXML
