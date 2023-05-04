@@ -17,27 +17,42 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import projectbritishcouncil.common.util.SceneSwitcher;
 
-/**
- * FXML Controller class
- *
- * @author Protik Hasan
- */
 public class IELTSCandidateDashboardController implements Initializable {
 
     @FXML
-    private TextArea statusfxid;
+    private Label statusfxid;
     @FXML
     private Label welcomeLabel;
-    
-    
+    @FXML
+    private TextArea textareafxid;
+    @FXML
+    private Button registerButton;    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    try {
+    File f = new File("Registration_Data.txt");
+    Scanner sc; String str; String[] tokens;
+    sc = new Scanner(f);
+    if(f.exists()){
+        textareafxid.appendText("You are not registered for IELTS\n");
+        while(sc.hasNextLine()){
+            str=sc.nextLine();
+            tokens = str.split(",");
+            textareafxid.appendText("Candidate Name: "+tokens[0]+"\nYour exam is in :"+tokens[6]+",\nCity:"+tokens[7]+",\nVenue:"+tokens[8]+",\nTime:"+tokens[9]+",\nTest:"+tokens[10]+",\nDisability Requirement:"+tokens[11]+"\n");
+            statusfxid.setText("You are Registered For IELTS");
+            registerButton.setDisable(true);
+        }
+    }
+    // TODO
+}  catch (FileNotFoundException ex) {
+    Logger.getLogger(IELTSCandidateDashboardController.class.getName()).log(Level.SEVERE, null, ex);
+}
 
     }    
 
     @FXML
     private void registerforIELTSonClick(ActionEvent event) {
-
+    
     SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/IELTSRegistrationScene.fxml", false);
 
     //SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(), "/FXMLScenes/Users/protik/IELTSCandidate/IELTSRegistrationScene.fxml");
@@ -51,6 +66,7 @@ public class IELTSCandidateDashboardController implements Initializable {
 
     @FXML
     private void makePaymentonClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/PaymentMethod.fxml", false);
     }
 
     @FXML

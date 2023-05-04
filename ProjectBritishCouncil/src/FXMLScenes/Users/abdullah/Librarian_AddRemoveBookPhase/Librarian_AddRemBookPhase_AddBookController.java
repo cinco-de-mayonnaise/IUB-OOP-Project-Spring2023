@@ -125,7 +125,7 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
             return;    // file was not selected.
         
         
-        newBookCover = new DataImage(selectedImage.getPath());
+        //newBookCover = new DataImage(selectedImage.getPath());
         
     }
 

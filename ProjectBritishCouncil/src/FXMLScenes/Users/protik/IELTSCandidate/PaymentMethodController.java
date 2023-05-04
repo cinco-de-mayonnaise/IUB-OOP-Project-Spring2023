@@ -51,7 +51,8 @@ public class PaymentMethodController implements Initializable {
 
     @FXML
     private void cancelButtonOnClick(ActionEvent event) {
-        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/IELTSRegistrationScene.fxml", false);
+    Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    stage.close();
     }
     
 }

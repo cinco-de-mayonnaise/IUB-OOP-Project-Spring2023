@@ -12,15 +12,15 @@ import javafx.scene.image.Image;
  */
 
 // ALL PICTURES/IMAGES USED IN THIS PROJECT MUST USE THIS CLASS
-public class DataImage extends ResourceImage
+public class DataImage extends ResourceImage 
 {
     protected String description = "None";
     
-    public DataImage(String url) {
+    public DataImage(String url) throws Exception{
         super(url);
     }
     
-    public DataImage(String url, String description) {
+    public DataImage(String url, String description) throws Exception{
         super(url);
         this.description = description;
     }
