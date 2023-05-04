@@ -10,6 +10,10 @@ package projectbritishcouncil.common.util;
  */
 public final class Identifiers  // Identifiers for use in CommonInstancesClass
 {
+    // prevent instantiation
+    private Identifiers()
+    {}
+    
     //////// Utility identifiers
     public static final String GLOBAL_CLASS_HANDLE = "global_class_handle";
     public static final String MAIN_STAGE = "main_stage";

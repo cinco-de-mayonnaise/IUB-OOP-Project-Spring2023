@@ -4,14 +4,17 @@
  */
 package projectbritishcouncil;
 
+import java.io.File;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import projectbritishcouncil.common.TheFileDatabase;
 import projectbritishcouncil.common.util.CommonInstancesClass;
 import static projectbritishcouncil.common.util.Identifiers.GLOBAL_CLASS_HANDLE;
 import static projectbritishcouncil.common.util.Identifiers.MAIN_STAGE;
+import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
  *
@@ -33,6 +36,26 @@ public class ProjectBritishCouncil extends Application {
         If this window is closed, the application exits. */
         c.putObject(MAIN_STAGE, stage);      
         /////
+        
+        // default file loading: load a file called database.dat at root, or create a file database.dat if it doesnt exist, 
+        File dbfile = new File("database.dat");
+        
+        // check if file exists or not
+        if (!dbfile.exists())
+        {
+            SceneSwitcher.raiseAlert_GenericWarning("Database file not found", "", "The database file does not exist. A new database file will be created. If necessary, please override the database file from the debug menu. ");
+            // handle creating new file here, it should at least contain a dummy user of every type so that login is possible...
+            dbfile.createNewFile();
+            TheFileDatabase.setFile(dbfile);
+            TheFileDatabase.getInstance().CreateNewFile();
+        }
+        else
+        {
+            TheFileDatabase.setFile(dbfile);
+            // read the file into memory.
+            TheFileDatabase.getInstance().ReadFromFile();
+        }
+        
         
         
         ///// Experimental stuff: if we need to overload standard file loading/saving behavior
