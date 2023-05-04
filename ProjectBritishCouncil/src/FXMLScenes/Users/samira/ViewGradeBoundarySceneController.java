@@ -27,9 +27,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -51,9 +53,13 @@ public class ViewGradeBoundarySceneController implements Initializable {
     @FXML
     private AnchorPane anchorpane;
     @FXML
-    private MenuButton menuMenuBar;
-    @FXML
     private MenuButton settingsMenuBar;
+    ArrayList<String> yearList;
+     private AnchorPane scenePane;
+    ArrayList<GradeBoundary> monthList;
+     private ObservableList<GradeBoundary> gradeBoundaryData = FXCollections.observableArrayList();
+    @FXML
+    private MenuButton menuMenuBar;
     @FXML
     private Hyperlink hyperlink;
     @FXML
@@ -64,10 +70,6 @@ public class ViewGradeBoundarySceneController implements Initializable {
     private Hyperlink hyperlink4;
     @FXML
     private Hyperlink hyperlink5;
-    ArrayList<String> yearList;
-     private AnchorPane scenePane;
-    ArrayList<GradeBoundary> monthList;
-     private ObservableList<GradeBoundary> gradeBoundaryData = FXCollections.observableArrayList();
     /**
      * Initializes the controller class.
      */
@@ -171,9 +173,6 @@ public class ViewGradeBoundarySceneController implements Initializable {
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/ExaminerWriteQuestionsScene.fxml", false);
     }
 
-    @FXML
-    private void help(ActionEvent event) {
-    }
 
     @FXML
     private void logout(ActionEvent event) throws IOException {
@@ -232,6 +231,11 @@ public class ViewGradeBoundarySceneController implements Initializable {
         }
             
            
+    }
+
+
+    @FXML
+    private void help(ActionEvent event) {
     }
 
 }

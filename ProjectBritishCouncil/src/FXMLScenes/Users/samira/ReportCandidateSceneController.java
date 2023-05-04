@@ -5,17 +5,22 @@
 package FXMLScenes.Users.samira;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import projectbritishcouncil.common.util.SceneSwitcher;
 
 /**
  * FXML Controller class
@@ -59,18 +64,25 @@ public class ReportCandidateSceneController implements Initializable {
 
     @FXML
     private void goHomeButtonOnClick(ActionEvent event) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/FXMLScenes.Users.samira/ExaminerDashboardScene.fxml", true);
     }
 
-    @FXML
-    private void showMenuOptionsOnClick(ActionEvent event) {
-    }
-
-    @FXML
-    private void showSettingsOnClick(ActionEvent event) {
-    }
 
     @FXML
     private void reportStudentOnClick(ActionEvent event) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    alert.setTitle("Go Back");
+    alert.setHeaderText("You're about to leave this page");
+    alert.setContentText("Are you sure you want to leave this page?");
+
+    ButtonType confirmButtonType = new ButtonType("Yes", ButtonBar.ButtonData.OK_DONE);
+    ButtonType cancelButtonType = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+    alert.getButtonTypes().setAll(confirmButtonType, cancelButtonType);
+
+    Optional<ButtonType> result = alert.showAndWait();
+    if (result.isPresent() && result.get() == confirmButtonType) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/FXMLScenes.Users.samira/ExaminerDashboardScene.fxml", true);
+     }
+  }
     }
     
-}
