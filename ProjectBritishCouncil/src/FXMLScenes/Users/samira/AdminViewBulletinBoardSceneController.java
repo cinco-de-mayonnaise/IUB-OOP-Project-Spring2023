@@ -175,7 +175,7 @@ public class AdminViewBulletinBoardSceneController implements Initializable {
                 Parent homePageParent = loader.load();
                 Scene homaPageScene = new Scene(homePageParent);
            
-                Stage currentStage = (Stage)settignsMenuBar.getScene().getWindow();
+                Stage currentStage = (Stage)settingsMenuBar.getScene().getWindow();
                 currentStage.setScene(homaPageScene);
                 currentStage.show();
            
