@@ -30,11 +30,41 @@
    <left>
       <VBox prefHeight="630.0" prefWidth="190.0" style="-fx-background-color: ECCFAE;" BorderPane.alignment="CENTER">
          <children>
-            <Hyperlink text="Hyperlink" />
-            <Hyperlink text="Hyperlink" />
-            <Hyperlink text="Hyperlink" />
-            <Hyperlink text="Hyperlink" />
-            <Hyperlink text="Hyperlink" />
+            <Hyperlink onAction="#examscheduleOnClick" text="Examination Schedule">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink onAction="#checkstatusOnClick" text="Check Status">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink onAction="#invigilationtimeOnClick" text="Choose Invigilating Time">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Hyperlink>
+            <Hyperlink onAction="#attendanceOnClick" text="Attendance">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Hyperlink>
+            <Hyperlink onAction="#leaveapplicationOnClick" text="Leave Application">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Hyperlink>
+            <Hyperlink onAction="#reportstudentOnClick" text="Report Student">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink onAction="#observationreportOnClick" text="Observation Report">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Hyperlink>
+            <Hyperlink onAction="#itsupportOnClick" text="IT Support">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Hyperlink>
          </children>
       </VBox>
    </left>

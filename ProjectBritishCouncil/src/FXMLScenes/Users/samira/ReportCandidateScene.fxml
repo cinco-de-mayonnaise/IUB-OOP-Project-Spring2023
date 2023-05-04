@@ -12,16 +12,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.ReportCandidateSceneController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.ReportCandidateSceneController">
    <left>
-      <VBox prefHeight="400.0" prefWidth="111.0" style="-fx-background-color: #14242B; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="119.0" style="-fx-background-color: #14242B; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#goHomeButtonOnClick" prefHeight="46.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="#eeebeb">
+            <Button mnemonicParsing="false" onAction="#goHomeButtonOnClick" prefHeight="46.0" prefWidth="124.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="#eeebeb">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <MenuButton fx:id="MenuMenuBar" mnemonicParsing="false" onAction="#showMenuOptionsOnClick" prefHeight="56.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Menu" textFill="#fffbfb" wrapText="true">
+            <MenuButton fx:id="MenuMenuBar" mnemonicParsing="false" prefHeight="56.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Menu" textFill="#fffbfb" wrapText="true">
                <items>
                   <MenuItem mnemonicParsing="false" text="Action 1" />
                   <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -30,7 +30,7 @@
                   <Font size="15.0" />
                </font>
             </MenuButton>
-            <MenuButton fx:id="settignsMenuBar" mnemonicParsing="false" onAction="#showSettingsOnClick" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Settings" textFill="#fffbfb" wrapText="true">
+            <MenuButton fx:id="settignsMenuBar" mnemonicParsing="false" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Settings" textFill="#fffbfb" wrapText="true">
                <items>
                   <MenuItem mnemonicParsing="false" text="Action 1" />
                   <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -43,7 +43,7 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane fx:id="anchorPane" prefHeight="415.0" prefWidth="489.0" style="-fx-background-color: #0D1824; -fx-border-width: 0px 0px 2px 0px;" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="anchorPane" prefHeight="523.0" prefWidth="489.0" style="-fx-background-color: #0D1824; -fx-border-width: 0px 0px 2px 0px;" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="studentIdTextField" layoutX="270.0" layoutY="47.0" style="-fx-background-color: #5f5f5f; -fx-border-color: white;" text="Student ID">
                <font>

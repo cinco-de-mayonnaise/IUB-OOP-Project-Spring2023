@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="528.0" prefWidth="922.0" style="-fx-background-color: #0D1824;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.ViewGradeBoundarySceneController">
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="528.0" prefWidth="922.0" style="-fx-background-color: #0D1824;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.ViewGradeBoundarySceneController">
    <children>
       <VBox prefHeight="528.0" prefWidth="147.0" style="-fx-background-color: #14242B;">
          <children>
@@ -57,6 +57,6 @@
       <Hyperlink fx:id="hyperlink3" alignment="CENTER" focusTraversable="false" layoutX="568.0" layoutY="295.0" onAction="#hyperlink3" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
       <Hyperlink fx:id="hyperlink4" alignment="CENTER" focusTraversable="false" layoutX="568.0" layoutY="332.0" onAction="#hyperlink4" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
       <Hyperlink fx:id="hyperlink5" alignment="CENTER" focusTraversable="false" layoutX="568.0" layoutY="366.0" onAction="#hyperlink5" prefHeight="23.0" prefWidth="76.0" text="Hyperlink" />
-      <Button layoutX="147.0" layoutY="1.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="12.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 2px 2px 0px;" text="Back" textFill="#eeebeb" />
+      <Button layoutX="147.0" layoutY="1.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 2px 2px 0px;" text="Back" textFill="#eeebeb" />
    </children>
 </AnchorPane>

@@ -113,4 +113,8 @@ public class ApplyForLeaveSceneController implements Initializable {
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/FXMLScenes.Users.samira/ExaminerDashboardScene.fxml", true);
      }
   }
+
+    @FXML
+    private void submitApplicationButtonOnClick(javafx.event.ActionEvent event) {
+    }
 }

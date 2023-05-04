@@ -20,15 +20,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 /**
  * FXML Controller class
  *
  * @author samir
  */
 public class ExaminerDashboardSceneController implements Initializable {
-    private ImageView myImageView;
     
     Image myImage = new Image(getClass().getResourceAsStream("/FXMLScenes/Users/samira/images/BClogo.png"));
     
@@ -36,6 +38,12 @@ public class ExaminerDashboardSceneController implements Initializable {
     private MenuButton menuMenuBar;
     @FXML
     private MenuButton settingsMenuBar;
+    @FXML
+    private ComboBox<?> numFieldsCombo;
+    @FXML
+    private VBox textFieldsVbox;
+    @FXML
+    private TextArea textArea;
    
    
     /**
@@ -110,9 +118,24 @@ public class ExaminerDashboardSceneController implements Initializable {
        }
     }      
 
-    @FXML
     private void writeQuestions(ActionEvent event) {
         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes.Users.samira/ExaminerWriteQuestionsScene.fxml");
+    }
+
+    @FXML
+    private void showSettingsOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void generateTextFields(ActionEvent event) {
+    }
+
+    @FXML
+    private void showQuestions(ActionEvent event) {
+    }
+
+    @FXML
+    private void saveTextFields(ActionEvent event) {
     }
 }
     

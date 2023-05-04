@@ -20,6 +20,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuButton;
@@ -44,7 +45,7 @@ public class AdminViewBulletinBoardSceneController implements Initializable {
     @FXML
     private MenuButton MenuMenuBar;
     @FXML
-    private MenuButton settignsMenuBar;
+    private MenuButton settingsMenuBar;
     @FXML
     private AnchorPane anchorPane;
     @FXML
@@ -58,6 +59,7 @@ public class AdminViewBulletinBoardSceneController implements Initializable {
     private ComboBox<String> specifyUsersComboBox;
     private ArrayList<String> usersList;
      private ToggleGroup tg;
+   
    
     /**
      * Initializes the controller class.
@@ -84,11 +86,22 @@ public class AdminViewBulletinBoardSceneController implements Initializable {
 
     @FXML
     private void goBackButtonOnClick(ActionEvent event) {
-         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(), "/FXMLScenes/Users/samira/ExaminerDashboardScene.fxml");
-    }
-     public void setStage(Stage stage) {
-        this.stage = stage;
+          Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    alert.setTitle("Go Back");
+    alert.setHeaderText("You're about to leave this page");
+    alert.setContentText("Are you sure you want to leave this page?");
+
+    ButtonType confirmButtonType = new ButtonType("Yes", ButtonBar.ButtonData.OK_DONE);
+    ButtonType cancelButtonType = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+    alert.getButtonTypes().setAll(confirmButtonType, cancelButtonType);
+
+    Optional<ButtonType> result = alert.showAndWait();
+    if (result.isPresent() && result.get() == confirmButtonType) {
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/samira/FXMLScenes.Users.samira/AdminDashboardScene.fxml", true);
      }
+  }
+
+
 
     @FXML
     private void postButtonOnClick(ActionEvent event) {
@@ -141,25 +154,15 @@ public class AdminViewBulletinBoardSceneController implements Initializable {
     }
 
 
-    @FXML
-    private void reviewApplications(ActionEvent event) {
-    }
 
-    @FXML
-    private void resolveBillingDisputes(ActionEvent event) {
-    }
-
-    @FXML
     private void resolveRequests(ActionEvent event) {
         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(), "/FXMLScenes/Users/samira/AdminViewComplaintsScene.fxml");
     }
 
-    @FXML
     private void help(ActionEvent event) {
         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(), "/FXMLScenes/Users/samira/AdminViewComplaintsScene.fxml");
     }
 
-    @FXML
     private void logout(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Logout");

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="922.0" style="-fx-background-color: #0D1824;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.CheckingPaperSceneController">
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="922.0" style="-fx-background-color: #0D1824;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.CheckingPaperSceneController">
    <children>
       <VBox prefHeight="528.0" prefWidth="147.0" style="-fx-background-color: #14242B;">
          <children>
@@ -47,7 +47,7 @@
          </font>
       </Button>
       <TextArea fx:id="answerTextArea" editable="false" layoutX="162.0" layoutY="187.0" prefHeight="181.0" prefWidth="382.0" />
-      <Button layoutX="147.0" layoutY="1.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="12.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 2px 2px 0px;" text="Back" textFill="#eeebeb" />
+      <Button layoutX="147.0" layoutY="1.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 2px 2px 0px;" text="Back" textFill="#eeebeb" />
       <ComboBox fx:id="examTypeComboBox" layoutX="295.0" layoutY="79.0" onAction="#examTypeComboBoxSelected" prefWidth="150.0" promptText="Select Exam Type" />
       <TextField fx:id="marksTextField" layoutX="568.0" layoutY="286.0" prefHeight="25.0" prefWidth="232.0" text="Marks obtained: " />
       <Button layoutX="248.0" layoutY="136.0" mnemonicParsing="false" onAction="#viewAnswersButtonOnClick" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="View Answers" textFill="#fcfafa">

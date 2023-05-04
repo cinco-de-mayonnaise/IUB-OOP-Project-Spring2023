@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="613.0" prefWidth="770.0" style="-fx-background-color: #0D1824;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.ExaminerDashboardSceneController">
+<AnchorPane id="AnchorPane" prefHeight="613.0" prefWidth="770.0" style="-fx-background-color: #0D1824;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLScenes.Users.samira.ExaminerDashboardSceneController">
    <children>
       <VBox prefHeight="692.0" prefWidth="169.0" style="-fx-border-color: black; -fx-background-color: #14242B;">
          <children>
@@ -44,7 +44,7 @@
             </MenuButton>
          </children>
       </VBox>
-      <ImageView fx:id="myImageView" fitHeight="159.0" fitWidth="388.0" layoutX="229.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="myImageView" fitHeight="159.0" fitWidth="388.0" layoutX="275.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/BClogo.png" />
          </image>

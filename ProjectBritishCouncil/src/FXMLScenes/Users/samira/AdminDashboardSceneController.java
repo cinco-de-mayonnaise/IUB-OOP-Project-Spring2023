@@ -17,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuButton;
 import javafx.scene.image.Image;
@@ -40,7 +41,7 @@ public class AdminDashboardSceneController implements Initializable {
     @FXML
     private AnchorPane anchorPane;
     @FXML
-    private BorderPane bP;
+    private BorderPane borderPane;
     public void displayImage(){
         myImageView.setImage(myImage);
     }
@@ -54,9 +55,7 @@ public class AdminDashboardSceneController implements Initializable {
        
         // TODO
     }    
-    private void goHomeButtonOnClick(ActionEvent event) {
-        SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminDashboardScene.fxml");
-    }
+  
 
 
     @FXML
@@ -81,9 +80,7 @@ public class AdminDashboardSceneController implements Initializable {
         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminViewComplaintsScene.fxml");
     }
 
-    private void reviewApplications(javafx.event.ActionEvent event) {
-        SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminViewComplaintsScene.fxml");
-    }
+   
 
 
     private void logout(javafx.event.ActionEvent event) throws IOException {
@@ -116,6 +113,11 @@ public class AdminDashboardSceneController implements Initializable {
     @FXML
     private void showSettingsOnClick(javafx.event.ActionEvent event) {
     }
+
+    @FXML
+    private void goBackButtonOnClick(javafx.event.ActionEvent event) {
+    }
+
   
 }
      
