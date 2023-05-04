@@ -1,2 +1,0 @@
-aa, bb, cc, ee, dd, Male, March, Sylhet, British Council,Sylhet, 9am to 11.30am, General Training on Paper, Enlarged Print Test Paper
-a, b, c, e, d, Male, March, Dhaka, null, 4pm to 6.30pm, Academic on Computer, Braille Test Paper
