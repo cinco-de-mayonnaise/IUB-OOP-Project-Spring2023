@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 import projectbritishcouncil.Users.protik.IELTSCandidate;
+import projectbritishcouncil.Users.protik.IELTS_Registration_Info;
 import projectbritishcouncil.common.util.SceneSwitcher;
 import projectbritishcouncil.common.util.Identifiers;
 
@@ -123,6 +124,7 @@ public class IELTSRegistrationSceneController implements Initializable {
     String time = timeCombobox.getValue();
     String testType = testTypeCombobox.getValue();
     String disability = disabilityCombobox.getValue();
+        IELTS_Registration_Info Registration_Info = new IELTS_Registration_Info(name,mothersName,fathersName,contactNo,passportNo,gender,month,city,venue,time,testType,disability);
     try {
         FileWriter writer = new FileWriter("Registration_Data.txt", true);
         writer.write(name+", "+mothersName+", "+fathersName+", "+contactNo+", "+passportNo+", "+gender+", "+month+", "+ city+", "+venue+", "+time+", "+testType+", "+disability+"\n");

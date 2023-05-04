@@ -11,5 +11,6 @@ import java.io.Serializable;
  * @author Abdullah
  */
 public class ProtikFileChunk implements Serializable {
+    public String registrationInfo;
     
 }

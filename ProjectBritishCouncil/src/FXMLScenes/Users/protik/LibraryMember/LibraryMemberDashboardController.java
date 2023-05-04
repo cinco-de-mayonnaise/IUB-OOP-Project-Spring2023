@@ -46,7 +46,7 @@ public class LibraryMemberDashboardController implements Initializable {
 
     @FXML
     private void makePaymentonClick(ActionEvent event) {
-        SceneSwitcher.raiseAlert_NotImplemented();
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/PaymentMethod.fxml", false);
     }
 
     @FXML

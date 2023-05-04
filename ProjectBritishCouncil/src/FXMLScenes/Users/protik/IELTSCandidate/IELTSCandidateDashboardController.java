@@ -71,7 +71,7 @@ public class IELTSCandidateDashboardController implements Initializable {
 
     @FXML
     private void ieltsCertificateonClick(ActionEvent event) {
-        SceneSwitcher.raiseAlert_NotImplemented();
+        SceneSwitcher.createStagewithScene("/FXMLScenes/Users/protik/IELTSCandidate/IeltsCertificateScene.fxml", false);
     }
 
     @FXML
