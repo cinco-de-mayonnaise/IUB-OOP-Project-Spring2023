@@ -34,14 +34,39 @@
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#resultOnClick" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Result">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font></Button>
             <Button mnemonicParsing="false" onAction="#room" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Classroom Info">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
+            <Button mnemonicParsing="false" onAction="#classroomresourseOnClick" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Classroom Resourse">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#mocktestOnClick" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Mock Test">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#resultOnClick" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Result">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#messageOnClick" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Message">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#announcementOnClick" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="Announcement">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#itsupportOnClick" style="-fx-background-color: transparent; -fx-border-color: E97E40; -fx-border-width: 0px 0px 2px 0px;" text="IT Support">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </VBox>
    </left>
