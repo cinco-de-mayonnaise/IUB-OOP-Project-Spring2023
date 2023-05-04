@@ -60,6 +60,8 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
     private Button Btn_Add_Book;
     @FXML
     private ImageView IV_BookImage;
+    @FXML
+    private HBox HBox_InvalidInfo;
     
     String newBookName;
     String newBookISBN;
@@ -69,8 +71,7 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
     CommonInstancesClass cic = CommonInstancesClass.getInstance();
     Image im_ok, im_notok;
     final String[] invalidinfo_messages = {"Please fill in the empty fields.", "Please enter a valid ISBN"};
-    @FXML
-    private HBox HBox_InvalidInfo;
+    
     /**
      * Initializes the controller class.
      */
@@ -141,23 +142,58 @@ public class Librarian_AddRemBookPhase_AddBookController implements Initializabl
         }
     }
     
+    static boolean isValidISBN(String isbn)
+    {
+        // length must be 10
+        int n = isbn.length();
+        if (n != 10)
+            return false;
+  
+        // Computing weighted sum
+        // of first 9 digits
+        int sum = 0;
+        for (int i = 0; i < 9; i++) 
+        {
+            int digit = isbn.charAt(i) - '0';
+            if (0 > digit || 9 < digit)
+                return false;
+            sum += (digit * (10 - i));
+        }
+  
+        // Checking last digit.
+        char last = isbn.charAt(9);
+        if (last != 'X' && (last < '0' || 
+                            last > '9'))
+            return false;
+  
+        // If last digit is 'X', add 10 
+        // to sum, else add its value
+        sum += ((last == 'X') ? 10 : (last - '0'));
+  
+        // Return true if weighted sum 
+        // of digits is divisible by 11.
+        return (sum % 11 == 0);
+    }
+   
     @FXML
     private void check_if_done_I(InputEvent event)
     {
+        boolean namenotok = TF_Name.getText().equals("");
+        boolean isbnnotok = TF_ISBN.getText().equals("");
+        boolean catnotok = CB_Category.getValue() == null;
         
-        if (TF_Name.getText().equals("") || TF_ISBN.getText().equals("") || CB_Category.getValue() == null)
+        if (namenotok || isbnnotok || catnotok)
         {
             Btn_Add_Book.setDisable(true);
-            Label_InvalidInfo
-            
+            IV_InvalidInfo.setImage(im_notok);
+            Label_InvalidInfo.setText(invalidinfo_messages[0]);
         }
+        
         else
         {
-            Image im_ok = 
-            
             Btn_Add_Book.setDisable(false);
             IV_InvalidInfo.setImage(im_ok);
-            IV_InvalidInfo.set
+            Label_InvalidInfo.setText("");
         }
     }
 }
