@@ -162,6 +162,16 @@ public class LibrarianDashboardController implements Initializable {
     {
         SceneSwitcher.createStagewithScene("/FXMLScenes/Users/abdullah/Librarian_MembersListPhase/Librarian_MembersListPhase_Main.fxml", true);
     }
+
+    @FXML
+    private void click_LogOutLibrarian(ActionEvent event)
+    {
+        // clean up current user
+        CommonInstancesClass CIC = CommonInstancesClass.getInstance();
+        CIC.deleteObject(CURRENT_USER);
+        // move out
+        SceneSwitcher.switchToScene(SceneSwitcher.getStageFromEvent(event), "/FXMLScenes/LogonUI.fxml");
+    }
     
     
 }

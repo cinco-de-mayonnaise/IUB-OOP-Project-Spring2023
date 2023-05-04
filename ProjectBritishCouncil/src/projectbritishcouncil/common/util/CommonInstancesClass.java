@@ -54,13 +54,18 @@ public class CommonInstancesClass
         return RuntimeObjects.get(identifier);
     }
     
-    public void putObject(String identifier, Object obj)
+    public Object putObject(String identifier, Object obj)
     {
-        RuntimeObjects.putIfAbsent(identifier, obj);
+        return RuntimeObjects.putIfAbsent(identifier, obj);
     }
     
     public Object deleteObject(String identifier)
     {
         return RuntimeObjects.remove(identifier);
+    }
+    
+    public void overwriteObject(String identifier, Object obj)
+    {
+        RuntimeObjects.put(identifier, obj);
     }
 }

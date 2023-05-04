@@ -6,16 +6,23 @@ package projectbritishcouncil.common;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import projectbritishcouncil.common.util.CommonInstancesClass;
 
 /**
  *
  * @author Abdullah
  */
-abstract public class CommonsFileChunk implements Serializable
+public class CommonsFileChunk implements Serializable
 {
+    
     // it is the responsibility of a file chunk manager (programmer) to ensure that all data in this class is exposed to other classes that need them
     // and also handle instantiation if the file chunk is empty...
-    static public ArrayList<BasicUser> allusers;
     
+    //// list of all users, required when logging in...
+    public ArrayList<BasicUser> allusers;
     
+    public CommonsFileChunk()
+    {
+        
+    }
 }

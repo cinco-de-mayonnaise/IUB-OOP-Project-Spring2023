@@ -30,18 +30,17 @@ import javafx.stage.Stage;
  * @author samir
  */
 public class AdminDashboardSceneController implements Initializable {
-    @FXML
-     ImageView myImageView;
+    ImageView myImageView;
     
     Image myImage = new Image(getClass().getResourceAsStream("/FXMLScenes/Users/samira/images/BClogo.png"));
-    @FXML
-    private BorderPane borderPane;
     @FXML
     private MenuButton MenuMenuBar;
     @FXML
     private MenuButton settignsMenuBar;
     @FXML
     private AnchorPane anchorPane;
+    @FXML
+    private BorderPane bP;
     public void displayImage(){
         myImageView.setImage(myImage);
     }
@@ -66,44 +65,27 @@ public class AdminDashboardSceneController implements Initializable {
     }
 
 
-    @FXML
     private void addUser(javafx.event.ActionEvent event) {
          SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/ViewListOfUsersScene.fxml");
     }
 
-    @FXML
     private void removeUser(javafx.event.ActionEvent event) {
         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/ViewListOfUsersScene.fxml");
     }
 
-    @FXML
     private void publishNotice(javafx.event.ActionEvent event) {
         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminViewBulletinBoardScene.fxml");
     }
 
-    @FXML
     private void viewComplaints(javafx.event.ActionEvent event) {
         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminViewComplaintsScene.fxml");
     }
 
-    @FXML
     private void reviewApplications(javafx.event.ActionEvent event) {
         SceneSwitcher.switchToScene((Stage)((Node)event.getSource()).getScene().getWindow(),"/FXMLScenes/Users/samira/AdminViewComplaintsScene.fxml");
     }
 
-    @FXML
-    private void resolveBillingDisputes(javafx.event.ActionEvent event) { 
-    }
 
-    @FXML
-    private void resolveRequests(javafx.event.ActionEvent event) {
-    }
-
-    @FXML
-    private void help(javafx.event.ActionEvent event) {
-    }
-
-    @FXML
     private void logout(javafx.event.ActionEvent event) throws IOException {
           Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Logout");
@@ -125,6 +107,14 @@ public class AdminDashboardSceneController implements Initializable {
        else{
            
        }
+    }
+
+    @FXML
+    private void showMenuOptionsOnClick(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void showSettingsOnClick(javafx.event.ActionEvent event) {
     }
   
 }
