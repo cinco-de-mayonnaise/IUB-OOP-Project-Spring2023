@@ -6,6 +6,7 @@ package projectbritishcouncil.common;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import projectbritishcouncil.common.util.CommonInstancesClass;
 
 /**
  *
@@ -20,8 +21,8 @@ public class CommonsFileChunk implements Serializable
     //// list of all users, required when logging in...
     public ArrayList<BasicUser> allusers;
     
-    
-    // prevent instantiation
     public CommonsFileChunk()
-    {}
+    {
+        
+    }
 }

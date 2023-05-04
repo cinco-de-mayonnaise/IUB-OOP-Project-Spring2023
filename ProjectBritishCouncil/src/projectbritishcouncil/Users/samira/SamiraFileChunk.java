@@ -5,11 +5,12 @@
 package projectbritishcouncil.Users.samira;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
  * @author Abdullah
  */
 public class SamiraFileChunk implements Serializable {
-    
+    public ArrayList<Exam> listofExams;
 }

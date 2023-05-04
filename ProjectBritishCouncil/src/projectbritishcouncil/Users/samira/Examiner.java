@@ -5,6 +5,7 @@
 package projectbritishcouncil.Users.samira;
 
 import FXMLScenes.Users.samira.modelClasses.ExaminerInfo;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import projectbritishcouncil.common.BasicUser;
@@ -13,7 +14,7 @@ import projectbritishcouncil.common.BasicUser;
  *
  * @author samir
  */
-public class Examiner extends BasicUser {
+public class Examiner extends BasicUser implements Serializable{
     private ExaminerInfo examinerInfo;
    private ArrayList<Exam> exams; 
 

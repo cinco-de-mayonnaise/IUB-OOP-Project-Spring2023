@@ -5,11 +5,13 @@
 package projectbritishcouncil.Users.abdullah;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
  * @author Abdullah
  */
-public class AbdullahFileChunk implements Serializable {
-    
+public class AbdullahFileChunk implements Serializable
+{
+    public ArrayList<Book> allBooksInLibrary = new ArrayList<>();
 }

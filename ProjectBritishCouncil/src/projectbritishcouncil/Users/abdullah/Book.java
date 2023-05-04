@@ -4,13 +4,14 @@
  */
 package projectbritishcouncil.Users.abdullah;
 
+import java.io.Serializable;
 import projectbritishcouncil.common.DataImage;
 
 /**
  *
  * @author Abdullah
  */
-public class Book
+public class Book implements Serializable
 {
     String Name;
     String ISBN;
@@ -24,5 +25,4 @@ public class Book
         this.Category = Category;
         this.BookCover = BookCover;
     }
-    
 }

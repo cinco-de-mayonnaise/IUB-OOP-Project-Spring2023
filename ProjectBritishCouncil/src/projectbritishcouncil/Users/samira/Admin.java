@@ -4,6 +4,7 @@
  */
 package projectbritishcouncil.Users.samira;
 
+import java.io.Serializable;
 import java.util.Date;
 import projectbritishcouncil.common.BasicUser;
 
@@ -11,7 +12,7 @@ import projectbritishcouncil.common.BasicUser;
  *
  * @author samir
  */
-public class Admin extends BasicUser {
+public class Admin extends BasicUser implements Serializable{
 
     public Admin(String Name, String Email, String Password, Date DOJ, Date DOB) {
         super(Name, Email, Password, DOJ, DOB);

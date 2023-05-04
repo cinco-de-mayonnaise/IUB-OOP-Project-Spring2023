@@ -1,9 +1,10 @@
 package projectbritishcouncil.Users.protik;
 
+import java.io.Serializable;
 import java.util.Date;
 import projectbritishcouncil.common.BasicUser;
 
-public class IELTSCandidate extends BasicUser{
+public class IELTSCandidate extends BasicUser implements Serializable{
     private String mothersName,fathersName,contactNo,passportNo,gender,month,city,venue,time,testType,disability;
     
     public IELTSCandidate(String Name, String Email, String Password, Date DOJ, Date DOB) {

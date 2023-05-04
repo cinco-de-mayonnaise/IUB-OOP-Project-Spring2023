@@ -26,6 +26,7 @@ import projectbritishcouncil.Users.samira.Examiner;
 import projectbritishcouncil.Users.sopen.Invigilator;
 import projectbritishcouncil.common.BasicUser;
 import projectbritishcouncil.common.CommonsFileChunk;
+import projectbritishcouncil.common.TheFileDatabase;
 import projectbritishcouncil.common.util.CommonInstancesClass;
 import static projectbritishcouncil.common.util.Identifiers.COMMONS_FILE_CHUNK;
 import static projectbritishcouncil.common.util.Identifiers.CURRENT_USER;
@@ -91,8 +92,9 @@ public class LogonUIController implements Initializable {
             return;
         }
         // get list of users
-        ArrayList<BasicUser> allusers = ((CommonsFileChunk)CIC.getObject(COMMONS_FILE_CHUNK)).allusers;
-        
+        //ArrayList<BasicUser> allusers = //((CommonsFileChunk)CIC.getObject(COMMONS_FILE_CHUNK)).allusers;
+        ArrayList<BasicUser> allusers = TheFileDatabase.commonFile.allusers;
+                
         for (BasicUser u: allusers)  // realistically we would have a hashtable of all users, because checking against every one is slow, but this is a small toy program so this is enough
         {
             if (u.getEmail().equals(ID))
